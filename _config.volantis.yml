@@ -18,9 +18,9 @@ info:
 ############################### Navigation Bar ############################### > start
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
-  visiable: auto # always, auto
+  visiable: always # always, auto
   logo: # choose [img] or [icon + title]
-    img: /img/avatar.png
+    img: /blog/img/avatar.png
     icon:
     title:
   menu:
@@ -350,7 +350,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: /img/avatar.png
+      avatar: /blog/img/avatar.png
       shape: rectangle # circle, rectangle
       url: /about/
       title:
