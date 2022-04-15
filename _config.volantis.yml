@@ -166,7 +166,7 @@ article:
         enable: true
         permalink: '本文永久链接是：'
         content:
-          - 'luochengyu1317@gmail.com'
+          # - 'luochengyu1317@gmail.com'
           - permalink
       # ----------------
       # 打赏组件 (for layout: post)

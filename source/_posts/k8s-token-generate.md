@@ -2,6 +2,8 @@
 title: k8s token generate
 date: 2022-04-08 15:58:27
 tags: Personal-Tips
+categories: Titanium Tech
+author: LCY
 
 ---
 
