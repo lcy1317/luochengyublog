@@ -3,6 +3,8 @@ title: 博弈论小游戏结果2
 date: 2022-04-08 13:31:01
 tags: Interests
 categories: Others
+author: Lcy
+
 
 ---
 

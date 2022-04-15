@@ -3,6 +3,8 @@ title: 树莓派安装FISCO-BCOS
 date: 2021-11-18 21:56:22
 tags: Tips
 categories: FISCO
+author: Lcy
+
 ---
 
 # 树莓派安装FISCO-BCOS
