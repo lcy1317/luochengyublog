@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1649998025817" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1649998552556" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1656,8 +1656,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1649998025817" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1649998025817"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1649998552556" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1649998552556"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2539,9 +2539,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             ><div class='name'>Blockchain</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
+            title="/blog/categories/FISCO/" href="/blog/categories/FISCO/"
+            active-action="action-blogcategoriesFISCO"
+            ><div class='name'>FISCO</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/blog/categories/Others/" href="/blog/categories/Others/"
+            active-action="action-blogcategoriesOthers"
+            ><div class='name'>Others</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/blog/categories/Personal/" href="/blog/categories/Personal/"
+            active-action="action-blogcategoriesPersonal"
+            ><div class='name'>Personal</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/blog/categories/QQRobot/" href="/blog/categories/QQRobot/"
+            active-action="action-blogcategoriesQQRobot"
+            ><div class='name'>QQRobot</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/blog/categories/Titanium-Tech/" href="/blog/categories/Titanium-Tech/"
             active-action="action-blogcategoriesTitanium-Tech"
-            ><div class='name'>Titanium Tech</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>Titanium Tech</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/blog/categories/Useful-Tools/" href="/blog/categories/Useful-Tools/"
+            active-action="action-blogcategoriesUseful-Tools"
+            ><div class='name'>Useful Tools</div><div class='badge'>(2)</div></a></li>
         
       </ul>
     </div>
@@ -2727,8 +2752,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1649998025817')
-      volantis.js('/blog/js/message.js?time=1649998025817', () => {
+      volantis.css('/blog/css/message.css?time=1649998552556')
+      volantis.js('/blog/js/message.js?time=1649998552556', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2773,8 +2798,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1649998025817')
-      volantis.js('/blog/js/message.js?time=1649998025817', () => {
+      volantis.css('/blog/css/message.css?time=1649998552556')
+      volantis.js('/blog/js/message.js?time=1649998552556', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2833,8 +2858,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1649998025817')
-      volantis.js('/blog/js/message.js?time=1649998025817', () => {
+      volantis.css('/blog/css/message.css?time=1649998552556')
+      volantis.js('/blog/js/message.js?time=1649998552556', () => {
         hideMessage(done);
       });
     } else {
@@ -2880,19 +2905,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1649998025817")
+        volantis.js("/blog/js/plugins/sites.js?time=1649998552556")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1649998025817")
+        volantis.js("/blog/js/plugins/friends.js?time=1649998552556")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1649998025817")
+        volantis.js("/blog/js/plugins/contributors.js?time=1649998552556")
       }
     
   };
@@ -2993,7 +3018,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1649998025817').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1649998552556').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3002,7 +3027,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1649998025817.js"></script>
+<script src="/blog/blog/js/app.js?time=1649998552556.js"></script>
 
 
 <!-- optional -->
@@ -3015,7 +3040,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1649998025817");
+    return volantis.js("/blog/js/search/hexo.js?time=1649998552556");
   }
 
   function loadSearchService() {

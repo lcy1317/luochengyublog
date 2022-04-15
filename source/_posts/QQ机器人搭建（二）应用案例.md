@@ -2,6 +2,7 @@
 title: QQ机器人搭建（二）应用案例
 date: 2022-04-04 21:19:34
 tags: QQrobot
+categories: QQRobot
 ---
 
 # QQ robot 协助博客部署

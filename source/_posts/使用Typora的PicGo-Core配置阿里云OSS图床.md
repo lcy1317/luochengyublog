@@ -2,6 +2,7 @@
 title: 使用Typora的PicGo-Core配置阿里云OSS图床
 date: 2022-03-09 16:38:51
 tags: Tools
+categories: Useful Tools
 ---
 
 最近遇到一个比较苟的事情，PicGo可以成功的上传文件，Typora也能够自动调用PicGo，但是PicGo上传完文件后无法将链接返回，直接卡死，所以准备换PicGo-Core来配置图床。

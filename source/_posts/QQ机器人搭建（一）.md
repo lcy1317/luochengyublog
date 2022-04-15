@@ -2,6 +2,8 @@
 title: QQ机器人搭建（一）
 date: 2022-04-04 18:18:22
 tags: QQrobot
+categories: QQRobot
+
 ---
 
 # QA
