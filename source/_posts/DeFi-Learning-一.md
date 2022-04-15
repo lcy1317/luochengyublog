@@ -7,8 +7,7 @@ author: Lcy
 ---
 
 A reading note for 《How to DeFi Beginner》
-
-# Part One: Centralized &Decentralized Finance
+# Part One: Centralized & Decentralized Finance
 
 ## 第一章 中心化和去中心化金融
 
