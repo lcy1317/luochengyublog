@@ -1,7 +1,5 @@
-# demo blog
+# Lcy Blog
 
-Open terminal and run:
+Infact I want everything backup so I did't use .gitignore.
 
-```bash
-git clone https://github.com/volantis-x/demo.git && cd demo && npm i && hexo s
-```
+Too much files. A little annoying.
