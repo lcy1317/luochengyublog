@@ -20,23 +20,23 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1650211051293" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1650212245986" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>DeFi Learning(十三) - Chengyu Luo Blog</title>
   <meta name="keywords" content="Study,null">
-  <meta name="description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第十三章 治理">
+  <meta name="description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第十三章 治理与中心化传统公司不同，DeFi  协议不需要遵循除链上编码之外的任何规则。这通常被称为“代码就是法律”。 AragonAragon是一个社区驱动的项目，其使命是通过为去中心化组织的繁荣创造工具来赋予自由。随着技术以前所未有的速度发展，人">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DeFi Learning(十三)">
 <meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%B8%89/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第十三章 治理">
+<meta property="og:description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第十三章 治理与中心化传统公司不同，DeFi  协议不需要遵循除链上编码之外的任何规则。这通常被称为“代码就是法律”。 AragonAragon是一个社区驱动的项目，其使命是通过为去中心化组织的繁荣创造工具来赋予自由。随着技术以前所未有的速度发展，人">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-17T15:56:46.000Z">
-<meta property="article:modified_time" content="2022-04-17T15:57:16.006Z">
+<meta property="article:modified_time" content="2022-04-17T16:17:18.124Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1650211051293" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650211051293"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1650212245986" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650212245986"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2468,7 +2468,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h1 id="Part-Three-Deep-Diving-into-DeFi"><a href="#Part-Three-Deep-Diving-into-DeFi" class="headerlink" title="Part Three: Deep Diving into DeFi"></a>Part Three: Deep Diving into DeFi</h1><p>A reading note for 《How to DeFi Beginner》</p>
-<h2 id="第十三章-治理"><a href="#第十三章-治理" class="headerlink" title="第十三章 治理"></a>第十三章 治理</h2><div class="story post-story">
+<h2 id="第十三章-治理"><a href="#第十三章-治理" class="headerlink" title="第十三章 治理"></a>第十三章 治理</h2><div class="story post-story"><p>与中心化传统公司不同，DeFi  协议不需要遵循除链上编码之外的任何规则。这通常被称为“代码就是法律”。</p>
+<h3 id="Aragon"><a href="#Aragon" class="headerlink" title="Aragon"></a>Aragon</h3><p><a target="_blank" rel="noopener" href="https://client.aragon.org/#/">Aragon</a>是一个社区驱动的项目，其使命是通过为去中心化组织的繁荣创造工具来赋予自由。随着技术以前所未有的速度发展，人们担心它在创建全球集中控制、监视和压迫制度中的作用。  Aragon 决心创建一个自由、开放、公平的社会。</p>
+<p>Aragon Court 是 Aragon  创建的解决方案，它模仿了传统商业世界中法院的功能。当发生冲突时，参与者可以将其升级到Aragon Court，由陪审员决定是否应惩罚任何一方。</p>
+<p>陪审员从陪审员池中随机选择，通过锁定  ANJ  代币来审查和裁决争议。与传统法院不同，陪审员在投票支持多数结果时会获得争议费用补偿。因此，该系统不适合不偏不倚的决策，而是依靠社会共识。投票支持少数派结果的陪审员将被带走一部分  ANJ  代币，并奖励给投票支持多数派的陪审员。如果结果不令人满意，任何一方都可以支付费用对争议提出上诉，并由大量陪审员进行审查。这个过程可以重复，直到整个陪审员池对争议做出裁决。</p>
+<h3 id="Snapshot"><a href="#Snapshot" class="headerlink" title="Snapshot"></a>Snapshot</h3><p>由于以太坊汽油费上涨，链上投票的成本变得难以承受，阻碍了小代币持有者参与治理过程。 Snapshot试图通过在链下拍摄投票快照来解决这个问题，从而有效地使投票过程无气体。Snapshot 已经看到许多 DeFi 项目利用其工具来建立治理流程。截至 2021  年 1 月，Snapshot 可免费使用，已有多达 418 个不同的项目注册使用 Snapshot。</p>
+<p>缺点：链下投票不受智能合约约束。</p>
+<p><a target="_blank" rel="noopener" href="https://snapshot.page/#/">https://snapshot.page/#/</a></p>
+
 </div>
   </div>
   
@@ -2499,10 +2506,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-17T23:57:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-18T00:17:18+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月17日</p>
+    <p>更新于：2022年4月18日</p>
   </a>
 </div>
 
@@ -2582,6 +2589,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/blog/2022/04/18/DeFi-Learning-%E5%8D%81%E5%9B%9B/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>DeFi Learning(十四)</p>
+          <p class='content'>Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》
+第十四章 DeFi仪表盘
+</p>
+        </a>
+      
       
         <a class='next' href='/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%BA%8C/'>
           <p class='title'>DeFi Learning(十二)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -2635,7 +2649,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%B2%BB%E7%90%86"><span class="toc-text">第十三章 治理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%B2%BB%E7%90%86"><span class="toc-text">第十三章 治理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Aragon"><span class="toc-text">Aragon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Snapshot"><span class="toc-text">Snapshot</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2805,8 +2819,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650211051293')
-      volantis.js('/blog/js/message.js?time=1650211051293', () => {
+      volantis.css('/blog/css/message.css?time=1650212245986')
+      volantis.js('/blog/js/message.js?time=1650212245986', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2851,8 +2865,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650211051293')
-      volantis.js('/blog/js/message.js?time=1650211051293', () => {
+      volantis.css('/blog/css/message.css?time=1650212245986')
+      volantis.js('/blog/js/message.js?time=1650212245986', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2911,8 +2925,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650211051293')
-      volantis.js('/blog/js/message.js?time=1650211051293', () => {
+      volantis.css('/blog/css/message.css?time=1650212245986')
+      volantis.js('/blog/js/message.js?time=1650212245986', () => {
         hideMessage(done);
       });
     } else {
@@ -2958,19 +2972,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1650211051293")
+        volantis.js("/blog/js/plugins/sites.js?time=1650212245986")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1650211051293")
+        volantis.js("/blog/js/plugins/friends.js?time=1650212245986")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1650211051293")
+        volantis.js("/blog/js/plugins/contributors.js?time=1650212245986")
       }
     
   };
@@ -3071,7 +3085,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1650211051293').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1650212245986').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3080,7 +3094,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1650211051293.js"></script>
+<script src="/blog/blog/js/app.js?time=1650212245986.js"></script>
 
 
 <!-- optional -->
@@ -3093,7 +3107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1650211051293");
+    return volantis.js("/blog/js/search/hexo.js?time=1650212245986");
   }
 
   function loadSearchService() {
@@ -3560,7 +3574,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/17/DeFi-Learning-十三/","name":"DeFi Learning(十三)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十三)","description":"","datePublished":"2022-04-17T15:56:46.000Z","dateModified":"2022-04-17T15:57:16.006Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%B8%89/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%B8%89/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/17/DeFi-Learning-十三/","name":"DeFi Learning(十三)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十三)","description":"","datePublished":"2022-04-17T15:56:46.000Z","dateModified":"2022-04-17T16:17:18.124Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%B8%89/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E5%8D%81%E4%B8%89/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
