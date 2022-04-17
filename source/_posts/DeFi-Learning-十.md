@@ -22,5 +22,4 @@ PoolTogether  是一个去中心化的无损彩票或去中心化的奖金储蓄
 
 https://pooltogether.com/zh
 
-可以去上面网站上看看，我没找到支持的货币列表。但是DAI, USDC, UNI, or
-COMP是肯定可以支持的。
+可以去上面网站上看看，我没找到支持的货币列表。但是DAI, USDC, UNI,  COMP是肯定可以支持的。
