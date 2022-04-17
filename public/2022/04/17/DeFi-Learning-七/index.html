@@ -20,23 +20,23 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1650124882623" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1650177550047" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>DeFi Learning(七) - Chengyu Luo Blog</title>
   <meta name="keywords" content="Study,null">
-  <meta name="description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》">
+  <meta name="description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第七章 去中心化的交易所（DEX）DEX的两种类型：  基于订单簿地DEX Order book-based DEX 基于流动性池的DEX Liquidity pool-based DEX  DEX的局限性：  较低的流动性：目前大多是交易还是在中心">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DeFi Learning(七)">
 <meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E4%B8%83/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》">
+<meta property="og:description" content="Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》 第七章 去中心化的交易所（DEX）DEX的两种类型：  基于订单簿地DEX Order book-based DEX 基于流动性池的DEX Liquidity pool-based DEX  DEX的局限性：  较低的流动性：目前大多是交易还是在中心">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-16T16:00:30.000Z">
-<meta property="article:modified_time" content="2022-04-16T16:01:03.171Z">
+<meta property="article:modified_time" content="2022-04-17T06:38:43.219Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1650124882623" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650124882623"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1650177550047" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650177550047"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2468,8 +2468,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h1 id="Part-Three-Deep-Diving-into-DeFi"><a href="#Part-Three-Deep-Diving-into-DeFi" class="headerlink" title="Part Three: Deep Diving into DeFi"></a>Part Three: Deep Diving into DeFi</h1><p>A reading note for 《How to DeFi Beginner》</p>
+<h2 id="第七章-去中心化的交易所（DEX）"><a href="#第七章-去中心化的交易所（DEX）" class="headerlink" title="第七章 去中心化的交易所（DEX）"></a>第七章 去中心化的交易所（DEX）</h2><div class="story post-story"><p>DEX的两种类型：</p>
+<ol>
+<li>基于订单簿地DEX Order book-based DEX</li>
+<li>基于流动性池的DEX Liquidity pool-based DEX</li>
+</ol>
+<p>DEX的局限性：</p>
+<ol>
+<li>较低的流动性：目前大多是交易还是在中心化的交易所上进行的。在CEX里面毕竟大家的交易量是比较大的，对应到DEX里面价差就会较大，买卖双方可能由较大损失。</li>
+<li>功能有限：中心化交易所包括许多高级交易功能，例如限价单、止损单、追踪止损等。大多数这些交易功能在 DEX 上不可用。一些 DEX现在提供限价单，从而提供更好的交易体验。然而，越来越多的 DEX 正在寻求引入这些高级交易功能，以更有效地与 CEX 竞争。</li>
+<li>区块链的互操作性：大多数DEX只允许交易者在同一个区块链生态系统内交换代币。例如，基于以太坊的DEX只允许用户交易以太坊和 ERC-20代币。它不允许交易者交易在Polkadot或Cosmos等其他区块链上发行的代币。 CEX允许用户轻松地在各种区块链上交易代币。正在努力构建<strong>跨链 DEX</strong>，未来，在 DEX  上跨多个区块链交易代币将成为可能。</li>
+<li>费用：随着DeFi的流行，这会导致以太坊网络的拥挤。以太坊交易量的增加，也就会相应的引起Gas的增加带来成本费用的上升。也就是高峰期的时候DEX上的交易大多是昂贵的交易，这在矿难或者大跌的时候是能够经常看到的，交易手续费大幅度上升。</li>
+</ol>
+<h3 id="Uniswap"><a href="#Uniswap" class="headerlink" title="Uniswap"></a>Uniswap</h3><p>Uniswap 是一种基于以太坊的去中心化代币交换协议，允许直接交换代币，而无需使用中心化交易所。</p>
+<p><strong>流动资金池</strong></p>
+<p>流动性池是位于Uniswap智能合约上的代币储备，可供用户交换代币。例如，使用流动性储备中有100ETH和20,000DAI的ETHDAI交易对，想要使用DAI 购买ETH的用户可以向 Uniswap 智能合约发送 202.02DAI以获得1ETH 作为回报。交换完成后，流动资金池将剩下99ETH和20,202.02DAI。流动性池的准备金由流动性提供者提供，他们被激励获得 Uniswap 0.3% 交易费的相应费用。Uniswap上的每次代币交换都会收取此费用。</p>
+<p>任何人都可以提供流动性资金。</p>
+<p><strong>自动的商市机制 Automated Market Maker Mechanism</strong></p>
+<p>资金池中资产的价格是使用Automated Market Maker(AMM) 算法确定的。AMM 的工作原理是根据池两侧的流动性计算。</p>
+<p>用 100 ETH 和 20,000 DAI 的  ETH-DAI 流动性池示例。为了计算恒定乘积，Uniswap 会将这两个金额相乘。</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220417140956310.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220417140956310.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220417140956310"></p>
+<p>AMM要求这个乘积保持不变。</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220417143109793.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220417143109793.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220417143109793"></p>
+<p>所以换的越多费率越高。</p>
+<p>想要尝试一下可以去<a target="_blank" rel="noopener" href="https://app.uniswap.org/">Uniswap</a>了解一波。</p>
+<h3 id="DEX-聚合器"><a href="#DEX-聚合器" class="headerlink" title="DEX 聚合器"></a>DEX 聚合器</h3><p>简单来说就是现在很多的DEX由自己的流动性资金池所以想要换的比较多的话就会面临较高的费率。而DEX聚合器就是自动将你想要换取的路由到多个DEX中，拆分掉你的大宗交易，以此来获得最有的价格。例如<a target="_blank" rel="noopener" href="https://1inch.exchange/">1inch</a>就是一个DEX聚合器。</p>
 
-
+</div>
   </div>
   
   
@@ -2499,7 +2524,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-17T00:01:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-17T14:38:43+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年4月17日</p>
@@ -2582,6 +2607,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/blog/2022/04/17/DeFi-Learning-%E5%85%AB/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>DeFi Learning(八)</p>
+          <p class='content'>Part Three: Deep Diving into DeFiA reading note for 《How to DeFi Beginner》
+第八章 去中心化的衍生品
+</p>
+        </a>
+      
       
         <a class='next' href='/blog/2022/04/16/DeFi-Learning-%E5%85%AD/'>
           <p class='title'>DeFi Learning(六)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -2635,7 +2667,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E4%BA%A4%E6%98%93%E6%89%80%EF%BC%88DEX%EF%BC%89"><span class="toc-text">第七章 去中心化的交易所（DEX）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Uniswap"><span class="toc-text">Uniswap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DEX-%E8%81%9A%E5%90%88%E5%99%A8"><span class="toc-text">DEX 聚合器</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2805,8 +2837,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650124882623')
-      volantis.js('/blog/js/message.js?time=1650124882623', () => {
+      volantis.css('/blog/css/message.css?time=1650177550047')
+      volantis.js('/blog/js/message.js?time=1650177550047', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2851,8 +2883,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650124882623')
-      volantis.js('/blog/js/message.js?time=1650124882623', () => {
+      volantis.css('/blog/css/message.css?time=1650177550047')
+      volantis.js('/blog/js/message.js?time=1650177550047', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2911,8 +2943,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650124882623')
-      volantis.js('/blog/js/message.js?time=1650124882623', () => {
+      volantis.css('/blog/css/message.css?time=1650177550047')
+      volantis.js('/blog/js/message.js?time=1650177550047', () => {
         hideMessage(done);
       });
     } else {
@@ -2958,19 +2990,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1650124882623")
+        volantis.js("/blog/js/plugins/sites.js?time=1650177550047")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1650124882623")
+        volantis.js("/blog/js/plugins/friends.js?time=1650177550047")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1650124882623")
+        volantis.js("/blog/js/plugins/contributors.js?time=1650177550047")
       }
     
   };
@@ -3071,7 +3103,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1650124882623').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1650177550047').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3080,7 +3112,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1650124882623.js"></script>
+<script src="/blog/blog/js/app.js?time=1650177550047.js"></script>
 
 
 <!-- optional -->
@@ -3093,7 +3125,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1650124882623");
+    return volantis.js("/blog/js/search/hexo.js?time=1650177550047");
   }
 
   function loadSearchService() {
@@ -3560,7 +3592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/17/DeFi-Learning-七/","name":"DeFi Learning(七)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(七)","description":"","datePublished":"2022-04-16T16:00:30.000Z","dateModified":"2022-04-16T16:01:03.171Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E4%B8%83/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E4%B8%83/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/17/DeFi-Learning-七/","name":"DeFi Learning(七)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(七)","description":"","datePublished":"2022-04-16T16:00:30.000Z","dateModified":"2022-04-17T06:38:43.219Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E4%B8%83/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/17/DeFi-Learning-%E4%B8%83/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
