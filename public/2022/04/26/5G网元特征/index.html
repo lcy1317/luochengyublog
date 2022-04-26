@@ -20,22 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1650985177845" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1650985268525" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>5G网元特征 - Chengyu Luo Blog</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="article">
+  <meta name="keywords" content="Study,null">
+  <meta name="description" content="5G网元特征核心网网元1.  AMFAMF（Access and Mobility Management Function，接入和移动管理功能）是接入和移动性管理功能实体，AMF可以类比于4G的MME。AMF的主要功能有：  RAN信令接口（N2）的终结点，NAS（N1）信令（MM消息）的终结点； 负责NAS消息的加密和完整性保护，负责注册、接入、移动性管理、鉴权、短信等功能； 此外在和EPS网络">
+<meta property="og:type" content="article">
 <meta property="og:title" content="5G网元特征">
 <meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/26/5G%E7%BD%91%E5%85%83%E7%89%B9%E5%BE%81/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
+<meta property="og:description" content="5G网元特征核心网网元1.  AMFAMF（Access and Mobility Management Function，接入和移动管理功能）是接入和移动性管理功能实体，AMF可以类比于4G的MME。AMF的主要功能有：  RAN信令接口（N2）的终结点，NAS（N1）信令（MM消息）的终结点； 负责NAS消息的加密和完整性保护，负责注册、接入、移动性管理、鉴权、短信等功能； 此外在和EPS网络">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-26T14:31:56.000Z">
-<meta property="article:modified_time" content="2022-04-26T14:31:56.387Z">
+<meta property="article:modified_time" content="2022-04-26T15:01:03.415Z">
 <meta property="article:author" content="Yiheng Jiang">
+<meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1656,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1650985177845" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650985177845"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1650985268525" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650985268525"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2405,9 +2408,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    " class="lazyload" data-srcset="" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==<img itemprop="image" src="" alt="This is a picture without description" >
-    <p itemprop="name">请设置文章作者</p>
+  <a itemprop="url" class='author' href="http://www.seujyh.cn" rel="nofollow">
+    <img itemprop="image" src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+    <p itemprop="name">Chengyu Luo</p>
   </a>
 </div>
 
@@ -2415,6 +2418,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/blog/categories/Dirty-Work/">Dirty Work</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/blog/categories/Dirty-Work/" itemprop="url"><span itemprop="name">Dirty Work</span></a>
+      </span>
+    
+  </div>
+
 
           
         
@@ -2454,8 +2467,92 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h1 id="5G网元特征"><a href="#5G网元特征" class="headerlink" title="5G网元特征"></a>5G网元特征</h1><h2 id="核心网网元"><a href="#核心网网元" class="headerlink" title="核心网网元"></a>核心网网元</h2><div class="story post-story"><h3 id="1-AMF"><a href="#1-AMF" class="headerlink" title="1.  AMF"></a>1.  AMF</h3><p><strong>AMF</strong>（Access and Mobility Management Function，接入和移动管理功能）是接入和移动性管理功能实体，AMF可以类比于4G的MME。AMF的主要功能有：</p>
+<ul>
+<li>RAN信令接口（N2）的终结点，NAS（N1）信令（MM消息）的终结点；</li>
+<li>负责NAS消息的加密和完整性保护，负责注册、接入、移动性管理、鉴权、短信等功能；</li>
+<li>此外在和EPS网络交互时还负责Eps Bearer Id的分配。</li>
+</ul>
+<h3 id="2-SMF"><a href="#2-SMF" class="headerlink" title="2. SMF"></a>2. SMF</h3><p>SMF（Session Management Function，会话管理功能）是会话管理功能实体。SMF的主要功能有：</p>
+<ul>
+<li>NAS消息的SM消息的终结点；</li>
+<li>会话（session）的建立、修改、释放；</li>
+<li>UE IP的分配管理；</li>
+<li>DHCP功能；</li>
+<li>ARP代理或IPv6邻居请求代理（Ethernet PDU场景下）；</li>
+<li>为一个会话选择和控制UPF；</li>
+<li>计费数据的收集以及支持计费接口；</li>
+<li>决定一个会话的SSC模式；</li>
+<li>下行数据指示。</li>
+</ul>
+<h3 id="3-UPF"><a href="#3-UPF" class="headerlink" title="3. UPF"></a>3. UPF</h3><p><strong>UPF</strong>（User Plane Function，用户面管理功能）是用户面功能实体，其类似于4G下的GW（SGW+PGW）。最主要的功能是负责数据包的路由转发、Qos流映射。</p>
+<ul>
+<li>用于RAT内/RAT间移动性的锚点（适用时）。</li>
+<li>外部 PDU 与数据网络互连的会话点。</li>
+<li>分组路由和转发（例如，支持上行链路分类器以将业务流路由到数据网络的实例，支持分支点以支持多宿主PDU会话）。</li>
+<li>数据包检查（例如，基于服务数据流模板的应用流程检测以及从SMF接收的可选PFD）。</li>
+<li>用户平面部分策略规则实施，例如门控，重定向，流量转向）。</li>
+<li>合法拦截（UP收集）。</li>
+<li>流量使用报告。</li>
+<li>用户平面的QoS处理，例如UL/DL速率实施，DL中的反射QoS标记。</li>
+<li>上行链路流量验证（SDF到QoS流量映射）。</li>
+<li>上行链路和下行链路中的传输级分组标记。</li>
+<li>下行数据包缓冲和下行数据通知触发。</li>
+<li>将一个或多个“结束标记”发送和转发到源NG-RAN节点。</li>
+</ul>
+<h3 id="4-PCF"><a href="#4-PCF" class="headerlink" title="4. PCF"></a>4. PCF</h3><p><strong>PCF</strong>（Policy Control Function，策略控制功能）为策略控制功能实体。支持统一的策略框架并管理网络行为，向网络实体提供策略规则，访问统一数据仓库（UDR）的订阅信息，PCF只能访问和其相同PLMN的NDR。</p>
+<h3 id="5-NEF"><a href="#5-NEF" class="headerlink" title="5. NEF"></a>5. NEF</h3><p><strong>NEF</strong>（Network Exposure Function，网络业务呈现功能）是网络呈现功能实体。NEF的主要功能有：</p>
+<ul>
+<li>3GPP的网元都是通过NEF将其能力呈现给其它网元的；</li>
+<li>NEF将相关信息存储到NDR中、也可以从NDR获取相关的信息，NEF只能访问和其相同PLMN的NDR；</li>
+<li>F提供相应的安全保障来保证外部应用到3gpp网络的安全；</li>
+<li>3GPP内部和外部相关信息的转换，例如AF-Service-Identifier和5G核心网内部的DNN、S-NSSAI等的转换，尤其是网络和用户敏感信息一定要对外部网元隐藏；</li>
+<li>NEF可以通过访问NDR获取到其它网元的相关信息，NEF只能访问和其相同PLMN的UDR。</li>
+</ul>
+<h3 id="6-NRF"><a href="#6-NRF" class="headerlink" title="6. NRF"></a>6. NRF</h3><p><strong>NRF</strong>（NF Repository Function，NF贮存功能）是网络贮存功能实体。NRF的主要功能有：</p>
+<ul>
+<li>支持业务发现功能，也就是接收网元发过来的NF-Discovery-Request，然后提供发现的网元信息给请求方；</li>
+<li>维护可用网元实例的特征和其支持的业务能力；</li>
+<li>一个网元的特征参数主要有：网元实例ID、网元类型、PLMN、网络分片的相关ID（如S-NSSAI、NSI、ID）、网元的IP或者域名、网元的能力信息、支持的业务能力名字等</li>
+</ul>
+<h3 id="7-UDM"><a href="#7-UDM" class="headerlink" title="7. UDM"></a>7. UDM</h3><p>UDM（Unified Data Manager，统一数据管理）的主要功能有：</p>
+<ul>
+<li>产生3GPP鉴权证书/鉴权参数；</li>
+<li>存储和管理5G系统的永久性用户ID（SUPI）；</li>
+<li>订阅信息管理；</li>
+<li>MT-SMS递交；</li>
+<li>SMS管理；</li>
+<li>用户的服务网元注册管理（比如当前为终端提供业务的AMF、SMF等）。</li>
+</ul>
+<h3 id="8-AUSF"><a href="#8-AUSF" class="headerlink" title="8. AUSF"></a>8. AUSF</h3><p><strong>AUSF</strong>（Authentication Server Function，鉴权服务器功能）是鉴权服务器网元；支持3GPP接入的鉴权和untrusted non3GPP接入的鉴权。</p>
+<h3 id="9-UDR"><a href="#9-UDR" class="headerlink" title="9. UDR"></a>9. UDR</h3><p><strong>UDR</strong>（Unified Data Repository，统一数据仓库），负责的主要功能有：</p>
+<ul>
+<li>UDM存储订阅数据或读取订阅数据；</li>
+<li>PCF存储策略数据或者读取策略数据；</li>
+<li>存储公开的数据或者从中读取公开的数据；UDR和访问UDR的NF具有相同的PLMN，也就是同一个网络下，也即Nudr接口是一个PLMN内部接口。</li>
+</ul>
+<h3 id="10-SMSF"><a href="#10-SMSF" class="headerlink" title="10. SMSF"></a>10. SMSF</h3><p><strong>SMSF</strong>（SMS Function，短信功能）为短信功能；</p>
+<h3 id="11-RAN"><a href="#11-RAN" class="headerlink" title="11. RAN"></a>11. RAN</h3><p><strong>（R）AN</strong>（Access Network）就是接入网，可以是3GPP的接入网（如LTE、5G-NR），也可以是non-3GPP的接入网（如常见的WiFi接入）。</p>
+</div><h2 id="5G核心网系统架构主要特征"><a href="#5G核心网系统架构主要特征" class="headerlink" title="5G核心网系统架构主要特征"></a>5G核心网系统架构主要特征</h2><div class="story post-story"><p>5G核心网架构为用户提供数据连接和数据业务服务，基于NFV（Network Function Virtualization，网络功能虚拟化）和 SDN（Software Defined Network，软件定义网络）等新技术，其控制面网元之间使用服务化的接口进行交互。5G核心网系统架构主要特征如下：</p>
+<ol>
+<li>承载和控制分离：承载和控制可独立扩展和演进，可集中式或分布式灵活部署；</li>
+<li>模块化功能设计：可以灵活和高效地进行网络切片；</li>
+<li>网元交互流程服务化：按需调用，并服务可重复使用；</li>
+<li>每个网元可以与其他网元直接交互，也可通过中间网元辅助进行控制面的消息路由；</li>
+<li>无线接入和核心网之间弱关联：5G核心网是与接入无关并起到收敛作用的架构，3GPP和非3GPP均通过通用的接口接入5G核心网；</li>
+<li>支持统一的鉴权框架；</li>
+<li>支持无状态的网络功能，即计算资源与存储资源解耦部署；</li>
+<li>基于流的QoS：简化了QoS架构，提升了网络处理能力；</li>
+<li>支持本地集中部署的业务的大量并发接入， 用户面功能可部署在靠近接入网络的位置，以支持低时延业务、本地业务网络接入。</li>
+</ol>
+<p>在网元形态方面，4G EPC 以物理网元形态为主，通常基于专用硬件实现，模块颗粒度较大。 <strong>5GC 以虚拟化网元形态为主，特别是控制面网元的虚拟化比较成熟</strong>，支持云原生部署，可以基于共享云资源池部署 5GCVNF 。</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426225721740.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426225721740.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220426225721740"></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Yolandalt7777777/article/details/105852009#:~:text=%E4%B8%80%E4%B8%AA%E7%BD%91%E5%85%83%E7%9A%84%E7%89%B9%E5%BE%81%E5%8F%82,SSAI%E3%80%81NSI">5G 网络架构（核心网）总结_Yolandalt7777777的博客-CSDN博客_5g核心网</a></li>
+<li><a target="_blank" rel="noopener" href="http://pdf.dfcfw.com/pdf/H3_AP202006071382919340_1.pdf">5G核心网前沿报告</a> 来源： 中国通信学会</li>
+</ol>
 
+</div>
   </div>
   
   
@@ -2485,7 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T22:31:56+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T23:01:03+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年4月26日</p>
@@ -2496,6 +2593,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Study/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Study</p></a></div>
+  <span hidden itemprop="keywords">Study</span>
+
 
         
       
@@ -2608,9 +2709,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%BD%91%E7%BD%91%E5%85%83"><span class="toc-text">核心网网元</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-AMF"><span class="toc-text">1.  AMF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-SMF"><span class="toc-text">2. SMF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-UPF"><span class="toc-text">3. UPF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-PCF"><span class="toc-text">4. PCF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-NEF"><span class="toc-text">5. NEF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-NRF"><span class="toc-text">6. NRF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-UDM"><span class="toc-text">7. UDM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-AUSF"><span class="toc-text">8. AUSF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-UDR"><span class="toc-text">9. UDR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-SMSF"><span class="toc-text">10. SMSF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-RAN"><span class="toc-text">11. RAN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5G%E6%A0%B8%E5%BF%83%E7%BD%91%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E4%B8%BB%E8%A6%81%E7%89%B9%E5%BE%81"><span class="toc-text">5G核心网系统架构主要特征</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2778,8 +2889,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650985177845')
-      volantis.js('/blog/js/message.js?time=1650985177845', () => {
+      volantis.css('/blog/css/message.css?time=1650985268525')
+      volantis.js('/blog/js/message.js?time=1650985268525', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2824,8 +2935,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650985177845')
-      volantis.js('/blog/js/message.js?time=1650985177845', () => {
+      volantis.css('/blog/css/message.css?time=1650985268525')
+      volantis.js('/blog/js/message.js?time=1650985268525', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2884,8 +2995,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650985177845')
-      volantis.js('/blog/js/message.js?time=1650985177845', () => {
+      volantis.css('/blog/css/message.css?time=1650985268525')
+      volantis.js('/blog/js/message.js?time=1650985268525', () => {
         hideMessage(done);
       });
     } else {
@@ -2931,19 +3042,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1650985177845")
+        volantis.js("/blog/js/plugins/sites.js?time=1650985268525")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1650985177845")
+        volantis.js("/blog/js/plugins/friends.js?time=1650985268525")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1650985177845")
+        volantis.js("/blog/js/plugins/contributors.js?time=1650985268525")
       }
     
   };
@@ -3044,7 +3155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1650985177845').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1650985268525').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3053,7 +3164,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1650985177845.js"></script>
+<script src="/blog/blog/js/app.js?time=1650985268525.js"></script>
 
 
 <!-- optional -->
@@ -3066,7 +3177,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1650985177845");
+    return volantis.js("/blog/js/search/hexo.js?time=1650985268525");
   }
 
   function loadSearchService() {
@@ -3533,7 +3644,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/26/5G网元特征/","name":"5G网元特征"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"5G网元特征","description":"","datePublished":"2022-04-26T14:31:56.000Z","dateModified":"2022-04-26T14:31:56.387Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/26/5G%E7%BD%91%E5%85%83%E7%89%B9%E5%BE%81/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/26/5G%E7%BD%91%E5%85%83%E7%89%B9%E5%BE%81/","wordCount":0,"image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Dirty-Work/","name":"Dirty Work"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/26/5G网元特征/","name":"5G网元特征"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"5G网元特征","description":"","datePublished":"2022-04-26T14:31:56.000Z","dateModified":"2022-04-26T15:01:03.415Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/26/5G%E7%BD%91%E5%85%83%E7%89%B9%E5%BE%81/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/26/5G%E7%BD%91%E5%85%83%E7%89%B9%E5%BE%81/","wordCount":0,"articleSection":"Dirty Work","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
