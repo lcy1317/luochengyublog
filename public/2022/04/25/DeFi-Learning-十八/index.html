@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1650901767229" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1650981793385" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-25T15:09:02.000Z">
-<meta property="article:modified_time" content="2022-04-25T15:49:20.962Z">
+<meta property="article:modified_time" content="2022-04-26T14:03:03.024Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1650901767229" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650901767229"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1650981793385" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1650981793385"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2497,7 +2497,43 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>无常损失：流动性池子的流动性变化可能会导致你提供的流动性资产不如直接放在外面来的赚。</li>
 </ul>
 <h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>DEX 在为 DeFi  空间提供动力方面发挥着至关重要的作用，因为它描述了当前的市场行为，尤其是加密货币的价格和流动性。它确定了各种加密货币相对于彼此的价值，并说明了交易和资本流动的动态性质。</p>
-<h3 id="第四章-DEX聚合器"><a href="#第四章-DEX聚合器" class="headerlink" title="第四章 DEX聚合器"></a>第四章 DEX聚合器</h3>
+</div><h2 id="第四章-DEX聚合器"><a href="#第四章-DEX聚合器" class="headerlink" title="第四章 DEX聚合器"></a>第四章 DEX聚合器</h2><div class="story post-story"><p>之前说过DEX聚合器的作用，毕竟在AMM算法的加持下，比如说Uniswap的恒乘积策略下，当交易金额很高的时候对应的手续费也就越高。这显然对于哦我们交易者来说是不可接受的。所以就有了DEX聚合器就是DEX Aggregators。DEX聚合器能够将一笔较大的交易拆分，去不同的去中心化交易所交易，相当于综合了所有的去中心化交易所的流动性，而不用单纯的看一个交易所的流动性，大幅度降低了你作为一个用户来说在一家交易所交易大额所面临的高额手续费又或者减少了你自己去找哪里便宜这种麻烦事。</p>
+<p>评价DEX聚合器的四个指标：</p>
+<ul>
+<li>路由算法</li>
+<li>流动性资源</li>
+<li>当前的市场状态</li>
+<li>交易规模</li>
+</ul>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426145303291.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426145303291.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220426145303291"></p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426145317120.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426145317120.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220426145317120"></p>
+<h3 id="风险提示"><a href="#风险提示" class="headerlink" title="风险提示"></a>风险提示</h3><p>咱就是说有时候DEX聚合器不一定靠谱，对于部分小的交易可能直接去DEX比较方便，成本也是更低的。</p>
+</div><h2 id="第五章-去中心化的借贷"><a href="#第五章-去中心化的借贷" class="headerlink" title="第五章 去中心化的借贷"></a>第五章 去中心化的借贷</h2><div class="story post-story"><p>比较著名的几个借贷协议：Compound、Maker、Avae、Cream</p>
+<p>这些在beginner一书里面说过。</p>
+<h3 id="风险提示-1"><a href="#风险提示-1" class="headerlink" title="风险提示"></a>风险提示</h3><p>注意智能合约漏洞等技术风险。</p>
+<p>黑客可能会利用并耗尽这些协议上的抵押品。此外，许多借贷协议依赖价格预言机（第 12  章会详细介绍）来提供链上价格数据。价格预言可能会失败或被利用。 2020 年 11 月，Compound 的价格预言被利用，将 Coinbase Pro 上的  DAI 价格推高了 30%，导致价值 8900 万美元的贷款被清算。25  但是，作为借款人，主要风险包括因管理不善而失去抵押品抵押率。加密货币以其极端的价格波动而闻名，您的贷款可能会低于其最低抵押品比率并被清算。这不是一个理想的结果，因为您将承担相当大的损失并支付清算费用。因此，持续监控和维持健康的贷款抵押比率至关重要。</p>
+</div><h2 id="第六章-去中心化的稳定币和稳定资产"><a href="#第六章-去中心化的稳定币和稳定资产" class="headerlink" title="第六章 去中心化的稳定币和稳定资产"></a>第六章 去中心化的稳定币和稳定资产</h2><div class="story post-story"><p>USDT就不用再介绍了，太常见了。Tether就是1美元换1USDT。</p>
+<p>DAI也不用说了，是Maker发行的，现在稳如老狗。</p>
+<h3 id="算法稳定币"><a href="#算法稳定币" class="headerlink" title="算法稳定币"></a>算法稳定币</h3><p>算法稳定币就是用算法来控制稳定币的市场结构和基础经济。大多数算法稳定币都与美元挂钩，有些是浮动挂钩，形成了算法稳定资产。与算法稳定币不同，算法稳定资产可以被视为另一种形式的抵押品。</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426155420044.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220426155420044.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220426155420044"></p>
+<h3 id="Rebase-Model"><a href="#Rebase-Model" class="headerlink" title="Rebase Model"></a>Rebase Model</h3><p>变基模型通过改变稳定币的全部供应来控制价格。根据稳定币的价格是高于还是低于预期挂钩，协议将在固定期限内自动增加或减少每个持有者钱包中的供应量。这样做的原因是，通过强制控制供应，可以根据简单的通货膨胀/通货紧缩经济理论来影响稳定币的价格。该模型的开创性协议是 Ampleforth ——AMPL。</p>
+<h3 id="Seigniorage-Model铸币税模型"><a href="#Seigniorage-Model铸币税模型" class="headerlink" title="Seigniorage Model铸币税模型"></a>Seigniorage Model铸币税模型</h3><p>铸币税模型通过引入影响市场动态的奖励系统来控制价格。如果价格高于挂钩，则铸造新的代币并提供给提供流动性或持有代币的参与者。如果价格低于挂钩，则停止铸造代币，并引入机制以减少供应。用户可以购买优惠券来燃烧底层代币以将其从供应中移除。这些优惠券可能会在未来兑换更多代币，但前提是不亏。</p>
+<p>三种基础的铸币税模型例子。</p>
+<ol>
+<li><p>Empty Set Dollar（ESD）</p>
+</li>
+<li><p>Basis Cash</p>
+</li>
+<li><p>Frax Finance</p>
+</li>
+</ol>
+<p>可惜啊，梦想是美好的现实是骨感的。实际上的表现并不是那么尽如人意。这些币最终都跌的一塌糊涂，就UST、sUSD、FRAX最终还能保持和美元的挂钩。</p>
+<h3 id="风险提示-2"><a href="#风险提示-2" class="headerlink" title="风险提示"></a>风险提示</h3><ul>
+<li>目前算法稳定币仍处于试验阶段</li>
+<li>稳定币需要一个比较强大的社区</li>
+<li>建议使用较多的时间来了解之后再考虑投资</li>
+</ul>
+</div><h2 id="第七章-去中心化衍生品"><a href="#第七章-去中心化衍生品" class="headerlink" title="第七章 去中心化衍生品"></a>第七章 去中心化衍生品</h2><div class="story post-story">
 </div>
   </div>
   
@@ -2528,10 +2564,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-25T23:49:20+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T22:03:03+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月25日</p>
+    <p>更新于：2022年4月26日</p>
   </a>
 </div>
 
@@ -2664,7 +2700,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E4%BA%A4%E6%98%93%E6%89%80"><span class="toc-text">第三章 去中心化的交易所</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DEX%E7%A7%8D%E7%B1%BB%EF%BC%9A"><span class="toc-text">DEX种类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMM%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">AMM算法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E4%B9%98%E7%A7%AF"><span class="toc-text">恒乘积</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E5%92%8C"><span class="toc-text">恒和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E5%AE%9A%E5%B9%B3%E5%9D%87"><span class="toc-text">恒定平均</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E4%BA%A4%E6%8D%A2%E4%B8%8D%E5%8F%98%E9%87%8F"><span class="toc-text">稳定交换不变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%8A%A8%E6%80%A7%E6%B1%A0%E7%B1%BB%E5%9E%8B"><span class="toc-text">流动性池类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMM%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-text">AMM的风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-DEX%E8%81%9A%E5%90%88%E5%99%A8"><span class="toc-text">第四章 DEX聚合器</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E4%BA%A4%E6%98%93%E6%89%80"><span class="toc-text">第三章 去中心化的交易所</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DEX%E7%A7%8D%E7%B1%BB%EF%BC%9A"><span class="toc-text">DEX种类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMM%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">AMM算法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E4%B9%98%E7%A7%AF"><span class="toc-text">恒乘积</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E5%92%8C"><span class="toc-text">恒和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%81%92%E5%AE%9A%E5%B9%B3%E5%9D%87"><span class="toc-text">恒定平均</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E4%BA%A4%E6%8D%A2%E4%B8%8D%E5%8F%98%E9%87%8F"><span class="toc-text">稳定交换不变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E5%8A%A8%E6%80%A7%E6%B1%A0%E7%B1%BB%E5%9E%8B"><span class="toc-text">流动性池类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMM%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-text">AMM的风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-DEX%E8%81%9A%E5%90%88%E5%99%A8"><span class="toc-text">第四章 DEX聚合器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA"><span class="toc-text">风险提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%80%9F%E8%B4%B7"><span class="toc-text">第五章 去中心化的借贷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA-1"><span class="toc-text">风险提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E7%A8%B3%E5%AE%9A%E5%B8%81%E5%92%8C%E7%A8%B3%E5%AE%9A%E8%B5%84%E4%BA%A7"><span class="toc-text">第六章 去中心化的稳定币和稳定资产</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E5%B8%81"><span class="toc-text">算法稳定币</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rebase-Model"><span class="toc-text">Rebase Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Seigniorage-Model%E9%93%B8%E5%B8%81%E7%A8%8E%E6%A8%A1%E5%9E%8B"><span class="toc-text">Seigniorage Model铸币税模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA-2"><span class="toc-text">风险提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E8%A1%8D%E7%94%9F%E5%93%81"><span class="toc-text">第七章 去中心化衍生品</span></a></li></ol>
     </div>
   </section>
 
@@ -2834,8 +2870,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650901767229')
-      volantis.js('/blog/js/message.js?time=1650901767229', () => {
+      volantis.css('/blog/css/message.css?time=1650981793385')
+      volantis.js('/blog/js/message.js?time=1650981793385', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2880,8 +2916,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650901767229')
-      volantis.js('/blog/js/message.js?time=1650901767229', () => {
+      volantis.css('/blog/css/message.css?time=1650981793385')
+      volantis.js('/blog/js/message.js?time=1650981793385', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2940,8 +2976,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1650901767229')
-      volantis.js('/blog/js/message.js?time=1650901767229', () => {
+      volantis.css('/blog/css/message.css?time=1650981793385')
+      volantis.js('/blog/js/message.js?time=1650981793385', () => {
         hideMessage(done);
       });
     } else {
@@ -2987,19 +3023,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1650901767229")
+        volantis.js("/blog/js/plugins/sites.js?time=1650981793385")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1650901767229")
+        volantis.js("/blog/js/plugins/friends.js?time=1650981793385")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1650901767229")
+        volantis.js("/blog/js/plugins/contributors.js?time=1650981793385")
       }
     
   };
@@ -3100,7 +3136,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1650901767229').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1650981793385').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3109,7 +3145,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1650901767229.js"></script>
+<script src="/blog/blog/js/app.js?time=1650981793385.js"></script>
 
 
 <!-- optional -->
@@ -3122,7 +3158,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1650901767229");
+    return volantis.js("/blog/js/search/hexo.js?time=1650981793385");
   }
 
   function loadSearchService() {
@@ -3656,7 +3692,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/25/DeFi-Learning-十八/","name":"DeFi Learning(十八)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十八)","description":"","datePublished":"2022-04-25T15:09:02.000Z","dateModified":"2022-04-25T15:49:20.962Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/25/DeFi-Learning-%E5%8D%81%E5%85%AB/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/25/DeFi-Learning-%E5%8D%81%E5%85%AB/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/25/DeFi-Learning-十八/","name":"DeFi Learning(十八)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十八)","description":"","datePublished":"2022-04-25T15:09:02.000Z","dateModified":"2022-04-26T14:03:03.024Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/25/DeFi-Learning-%E5%8D%81%E5%85%AB/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/25/DeFi-Learning-%E5%8D%81%E5%85%AB/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
