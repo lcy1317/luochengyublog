@@ -95,7 +95,7 @@ nps就可以在制定端口开启一个前端的控制界面，可以在上面�
 
 注意这里的客户端ID与上图中的ID保持一致。
 
-windows可在https://github.com/ehang-io/nps/releases/download/v0.26.10/windows_amd64_client.tar.gz下载client或者找合适的release自行下载。
+windows可在[下载链接](https://github.com/ehang-io/nps/releases/download/v0.26.10/windows_amd64_client.tar.gz)下载client或者找合适的release自行下载。
 
 解压文件并以管理员身份运行cmd
 
