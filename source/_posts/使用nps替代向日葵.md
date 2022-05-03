@@ -56,7 +56,7 @@ tar -xvf linux_amd64_server.tar.gz
 
 详细配置含义如图：
 
-![image-20220504012244835](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220504012244835.png)
+<img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220504012244835.png" alt="image-20220504012244835" style="zoom:50%;" />
 
 主要你需要更改的信息如下：
 
@@ -91,7 +91,7 @@ nps就可以在制定端口开启一个前端的控制界面，可以在上面�
 
 同时，新建一个tcp隧道：
 
-![image-20220504021239346](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220504021239346.png)
+![image-20220504022156187](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220504022156187.png)
 
 注意这里的客户端ID与上图中的ID保持一致。
 
@@ -109,7 +109,7 @@ windows可在[下载链接](https://github.com/ehang-io/nps/releases/download/v0
 
 ## 5. 连接
 
-windows电脑连接直接使用电脑自带的远程桌面连接即可：
+windows电脑连接直接使用电脑自带的远程桌面连接即可，这里的端口号就是你在配置TCP隧道时候自己设置的服务端口：
 
 ![image-20220504021455286](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220504021455286.png)
 
