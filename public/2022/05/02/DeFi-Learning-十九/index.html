@@ -20,23 +20,23 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1651498373197" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1651601835696" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>DeFi Learning(十九) - Chengyu Luo Blog</title>
   <meta name="keywords" content="Study,null">
-  <meta name="description" content="Part Two： Evaluation DeFi SectorsA reading note for 《How to DeFi Advance》 第八章 去中心化的保险">
+  <meta name="description" content="Part Two： Evaluation DeFi SectorsA reading note for 《How to DeFi Advance》 第八章 去中心化的保险保险基于两个假设运作：  大数定律：保险承保的损失事件必须是独立的。如果事件足够频繁地重复，结果将收敛到预期值。 风险池：损失事件具有频率低、影响大的特点。因此，一大群人支付的保险费补贴了几笔大额索赔的损失。  现在的DeFi行业">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DeFi Learning(十九)">
 <meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/02/DeFi-Learning-%E5%8D%81%E4%B9%9D/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Part Two： Evaluation DeFi SectorsA reading note for 《How to DeFi Advance》 第八章 去中心化的保险">
+<meta property="og:description" content="Part Two： Evaluation DeFi SectorsA reading note for 《How to DeFi Advance》 第八章 去中心化的保险保险基于两个假设运作：  大数定律：保险承保的损失事件必须是独立的。如果事件足够频繁地重复，结果将收敛到预期值。 风险池：损失事件具有频率低、影响大的特点。因此，一大群人支付的保险费补贴了几笔大额索赔的损失。  现在的DeFi行业">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-02T13:32:02.000Z">
-<meta property="article:modified_time" content="2022-05-02T13:32:33.618Z">
+<meta property="article:modified_time" content="2022-05-02T13:43:11.634Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1651498373197" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1651498373197"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1651601835696" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1651601835696"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2468,7 +2468,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h1 id="Part-Two：-Evaluation-DeFi-Sectors"><a href="#Part-Two：-Evaluation-DeFi-Sectors" class="headerlink" title="Part Two： Evaluation DeFi Sectors"></a>Part Two： Evaluation DeFi Sectors</h1><p>A reading note for 《How to DeFi Advance》</p>
-<h2 id="第八章-去中心化的保险"><a href="#第八章-去中心化的保险" class="headerlink" title="第八章 去中心化的保险"></a>第八章 去中心化的保险</h2><div class="story post-story">
+<h2 id="第八章-去中心化的保险"><a href="#第八章-去中心化的保险" class="headerlink" title="第八章 去中心化的保险"></a>第八章 去中心化的保险</h2><div class="story post-story"><p>保险基于两个假设运作：</p>
+<ol>
+<li>大数定律：保险承保的损失事件必须是独立的。如果事件足够频繁地重复，结果将收敛到预期值。</li>
+<li>风险池：损失事件具有频率低、影响大的特点。因此，一大群人支付的保险费补贴了几笔大额索赔的损失。</li>
+</ol>
+<p>现在的DeFi行业，毕竟很多代码上的漏洞是很难发现的，所以保险怎么说呢，也算是一种比较必要的东西吧。</p>
+<p><strong>三种保险协议</strong></p>
+<h3 id="1-Nexus-Mutual"><a href="#1-Nexus-Mutual" class="headerlink" title="1. Nexus Mutual"></a>1. Nexus Mutual</h3><p>当前最大的保险协议。</p>
+<p>提供两种保险：</p>
+<ol>
+<li>智能合约遭受攻击时的资金损失，比如遇到经济设计失败、严重的预言机失败、治理攻击等</li>
+<li>监护权保障，承担资金被黑客入侵或停止提款的风险。</li>
+</ol>
+<p>代币：NXM</p>
+<h3 id="2-Armor-Protocol"><a href="#2-Armor-Protocol" class="headerlink" title="2. Armor Protocol"></a>2. Armor Protocol</h3><h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3>
 </div>
   </div>
   
@@ -2499,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-02T21:32:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-02T21:43:11+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月2日</p>
@@ -2582,6 +2596,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/blog/2022/05/04/%E4%BD%BF%E7%94%A8nps%E6%9B%BF%E4%BB%A3%E5%90%91%E6%97%A5%E8%91%B5/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>使用nps替代向日葵</p>
+          <p class='content'>Nps替代ToDesk、向日葵、TV的解决方案1. TV/向日葵痛点常用TV以及向日葵的同学知道，这俩好用是挺好用，但是有一些问题是很讨厌的。比如：
+
+远程登陆后本地的机子还是能看见屏幕上的操作...</p>
+        </a>
+      
       
         <a class='next' href='/blog/2022/05/01/Lcy-%E3%81%AE-4%E6%9C%88/'>
           <p class='title'>Lcy の 4月<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -2634,7 +2655,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E4%BF%9D%E9%99%A9"><span class="toc-text">第八章 去中心化的保险</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E4%BF%9D%E9%99%A9"><span class="toc-text">第八章 去中心化的保险</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Nexus-Mutual"><span class="toc-text">1. Nexus Mutual</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Armor-Protocol"><span class="toc-text">2. Armor Protocol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-text">3.</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2804,8 +2825,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1651498373197')
-      volantis.js('/blog/js/message.js?time=1651498373197', () => {
+      volantis.css('/blog/css/message.css?time=1651601835696')
+      volantis.js('/blog/js/message.js?time=1651601835696', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2850,8 +2871,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1651498373197')
-      volantis.js('/blog/js/message.js?time=1651498373197', () => {
+      volantis.css('/blog/css/message.css?time=1651601835696')
+      volantis.js('/blog/js/message.js?time=1651601835696', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2910,8 +2931,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1651498373197')
-      volantis.js('/blog/js/message.js?time=1651498373197', () => {
+      volantis.css('/blog/css/message.css?time=1651601835696')
+      volantis.js('/blog/js/message.js?time=1651601835696', () => {
         hideMessage(done);
       });
     } else {
@@ -2957,19 +2978,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1651498373197")
+        volantis.js("/blog/js/plugins/sites.js?time=1651601835696")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1651498373197")
+        volantis.js("/blog/js/plugins/friends.js?time=1651601835696")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1651498373197")
+        volantis.js("/blog/js/plugins/contributors.js?time=1651601835696")
       }
     
   };
@@ -3070,7 +3091,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1651498373197').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1651601835696').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3079,7 +3100,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1651498373197.js"></script>
+<script src="/blog/blog/js/app.js?time=1651601835696.js"></script>
 
 
 <!-- optional -->
@@ -3092,7 +3113,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1651498373197");
+    return volantis.js("/blog/js/search/hexo.js?time=1651601835696");
   }
 
   function loadSearchService() {
@@ -3626,7 +3647,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/02/DeFi-Learning-十九/","name":"DeFi Learning(十九)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十九)","description":"","datePublished":"2022-05-02T13:32:02.000Z","dateModified":"2022-05-02T13:32:33.618Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/02/DeFi-Learning-%E5%8D%81%E4%B9%9D/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/02/DeFi-Learning-%E5%8D%81%E4%B9%9D/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/DeFi/","name":"DeFi"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/02/DeFi-Learning-十九/","name":"DeFi Learning(十九)"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DeFi Learning(十九)","description":"","datePublished":"2022-05-02T13:32:02.000Z","dateModified":"2022-05-02T13:43:11.634Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/02/DeFi-Learning-%E5%8D%81%E4%B9%9D/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/02/DeFi-Learning-%E5%8D%81%E4%B9%9D/","wordCount":0,"articleSection":"DeFi","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
