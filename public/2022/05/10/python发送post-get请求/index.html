@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/04/04/qq机器人搭建（一）/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/05/10/python发送post-get请求/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,25 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1652171445964" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1652171445926" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>QQ机器人搭建（一） - Chengyu Luo Blog</title>
-  <meta name="keywords" content="QQrobot,null">
-  <meta name="description" content="QAQQrobot用来干什么好？A：显然QQ机器人被用来做一些简单的消息回复是最基础也是最无聊的工作，调用API查查天气和搜搜H图也是QQrobot的新手玩家部署在机器人上寻乐子的。而我在用了很久QQrobot后发现他更多的可以作为一个提供自动化执行操作的窗口，提供一些脚本化服务。 For Example：  健康日报，简化日报流程，直接让机器人发POST请求，也不用每天自己手动填写重复的信息。">
+  <title>python发送post/get请求 - Chengyu Luo Blog</title>
+  <meta name="keywords" content="Titanium Tech,null">
+  <meta name="description" content="python发送post get请求通常情况下直接向网址请求直接调request包就好了，但是在某些自己写的api进行测试的时候常常有什么application&#x2F;json的格式要求或者要在链接里加上参数，所以写了一个tools在这里remark一下。 12345678910111213141516171819202122232425262728293031323334353637383940414">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QQ机器人搭建（一）">
-<meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="python发送post&#x2F;get请求">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="QAQQrobot用来干什么好？A：显然QQ机器人被用来做一些简单的消息回复是最基础也是最无聊的工作，调用API查查天气和搜搜H图也是QQrobot的新手玩家部署在机器人上寻乐子的。而我在用了很久QQrobot后发现他更多的可以作为一个提供自动化执行操作的窗口，提供一些脚本化服务。 For Example：  健康日报，简化日报流程，直接让机器人发POST请求，也不用每天自己手动填写重复的信息。">
+<meta property="og:description" content="python发送post get请求通常情况下直接向网址请求直接调request包就好了，但是在某些自己写的api进行测试的时候常常有什么application&#x2F;json的格式要求或者要在链接里加上参数，所以写了一个tools在这里remark一下。 12345678910111213141516171819202122232425262728293031323334353637383940414">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-04T10:18:22.000Z">
-<meta property="article:modified_time" content="2022-04-15T05:13:08.359Z">
+<meta property="article:published_time" content="2022-05-10T08:17:13.000Z">
+<meta property="article:modified_time" content="2022-05-10T08:30:38.693Z">
 <meta property="article:author" content="Yiheng Jiang">
-<meta property="article:tag" content="QQrobot">
+<meta property="article:tag" content="Titanium Tech">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1652171445964" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652171445964"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1652171445926" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652171445926"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2384,7 +2384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
@@ -2401,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        QQ机器人搭建（一）
+        python发送post/get请求
       </h1>
       <div class='new-meta-box'>
         
@@ -2420,10 +2420,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/blog/categories/QQRobot/">QQRobot</a>
+    <a class="category-link" href="/blog/categories/Titanium-Tech/">Titanium Tech</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/blog/categories/QQRobot/" itemprop="url"><span itemprop="name">QQRobot</span></a>
+        <a href="/blog/categories/Titanium-Tech/" itemprop="url"><span itemprop="name">Titanium Tech</span></a>
       </span>
     
   </div>
@@ -2432,10 +2432,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-04T18:18:22+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-10T16:17:13+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月4日</p>
+    <p>发布于：2022年5月10日</p>
   </a>
 </div>
 
@@ -2446,7 +2446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-      <div id="lc-pv" data-title="QQ机器人搭建（一）" data-path="/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/">
+      <div id="lc-pv" data-title="python发送post/get请求" data-path="/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2467,20 +2467,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h1><h2 id="QQrobot用来干什么好？"><a href="#QQrobot用来干什么好？" class="headerlink" title="QQrobot用来干什么好？"></a>QQrobot用来干什么好？</h2><div class="story post-story"><p>A：显然QQ机器人被用来做一些简单的消息回复是最基础也是最无聊的工作，调用API查查天气和搜搜H图也是QQrobot的新手玩家部署在机器人上寻乐子的。而我在用了很久QQrobot后发现他更多的可以作为一个提供自动化执行操作的窗口，提供一些脚本化服务。</p>
-<p>For Example：</p>
-<ul>
-<li>健康日报，简化日报流程，直接让机器人发POST请求，也不用每天自己手动填写重复的信息。</li>
-<li>青年大学习，青年大学习目前也是一个POST请求罢了，每周你只需要给自己的robot发个消息就完成，多是一件美事。</li>
-<li>备忘，当然大部分时候专业的软件做这个比自己做好的多，但有些特异化功能可以自己实现。</li>
-<li>球场预约</li>
-<li>……</li>
-</ul>
-<p>总之将QQrobot当成一个命令入口我觉得是当前QQrobot最大价值之一，而他的功能完全由自己编写。</p>
-</div><h2 id="用什么搭建QQ-robot比较好？"><a href="#用什么搭建QQ-robot比较好？" class="headerlink" title="用什么搭建QQ robot比较好？"></a>用什么搭建QQ robot比较好？</h2><div class="story post-story"><p>A：个人推荐使用<a target="_blank" rel="noopener" href="https://v2.nonebot.dev/">NoneBot</a>+<a target="_blank" rel="noopener" href="https://onebot.dev/">OneBot</a>进行搭建，会更加简单也更加快速。</p>
-</div><h2 id="需要会什么？"><a href="#需要会什么？" class="headerlink" title="需要会什么？"></a>需要会什么？</h2><div class="story post-story"><p>A：只要会Python就可以。</p>
+    <h1 id="python发送post-get请求"><a href="#python发送post-get请求" class="headerlink" title="python发送post get请求"></a>python发送post get请求</h1><p>通常情况下直接向网址请求直接调request包就好了，但是在某些自己写的api进行测试的时候常常有什么application/json的格式要求或者要在链接里加上参数，所以写了一个tools在这里remark一下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tools.py</span></span><br><span class="line"><span class="keyword">from</span> dis <span class="keyword">import</span> dis</span><br><span class="line"><span class="keyword">from</span> email <span class="keyword">import</span> header</span><br><span class="line"><span class="keyword">from</span> logging.config <span class="keyword">import</span> stopListening</span><br><span class="line"><span class="keyword">from</span> wsgiref <span class="keyword">import</span> headers</span><br><span class="line"><span class="keyword">import</span> yaml</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> scipy.io <span class="keyword">as</span> io</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">readYaml</span>():</span><br><span class="line">    curPath = os.path.dirname(os.path.realpath(__file__))</span><br><span class="line">    yamlPath = os.path.join(curPath, <span class="string">&quot;config.yaml&quot;</span>)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(yamlPath, encoding=<span class="string">&#x27;utf-8&#x27;</span>)<span class="keyword">as</span> file:</span><br><span class="line">        content = file.read()</span><br><span class="line"></span><br><span class="line">        data = yaml.load(content, Loader=yaml.FullLoader)</span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">urlConcat</span>(<span class="params">ip,endpoint,baseurl,api</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://&quot;</span>+ip+<span class="string">&quot;:&quot;</span>+<span class="built_in">str</span>(endpoint)+baseurl+api</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">queryUrl</span>(<span class="params">baseUrl,data</span>):</span><br><span class="line">    url = baseUrl+<span class="string">&quot;?&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> data.keys():</span><br><span class="line">        url = url+i+<span class="string">&quot;=&quot;</span> + data[i] + <span class="string">&quot;&amp;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">urlTest</span>:</span><br><span class="line">    <span class="comment"># 初始化urlTest类</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ip,endpoint,baseurl,api</span>):</span><br><span class="line">        self.ip = ip</span><br><span class="line">        self.endpoint = endpoint</span><br><span class="line">        self.baseurl = baseurl</span><br><span class="line">        self.api = api</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 支持传入数据直接进行测试并返回结果</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">testURL</span>(<span class="params">self,data,contentType = <span class="string">&quot;application/json&quot;</span>,method = <span class="string">&quot;POST&quot;</span></span>):</span><br><span class="line">        headers = headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: contentType&#125;</span><br><span class="line">        testBaseURL = urlConcat(self.ip,self.endpoint,self.baseurl,self.api)</span><br><span class="line">        testQueryURL = queryUrl(baseUrl=testBaseURL,data=data)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;正在测试&quot;</span>+self.api+<span class="string">&quot;接口，发送数据：&quot;</span>,data,<span class="string">&quot; method = &quot;</span>,method)</span><br><span class="line">        <span class="keyword">if</span> method == <span class="string">&quot;POST&quot;</span>:</span><br><span class="line">            res = requests.post(url=testQueryURL,data=data,headers=headers)</span><br><span class="line">        <span class="keyword">elif</span> method == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">            res = requests.get(url=testQueryURL,data=data,headers=headers)</span><br><span class="line">        <span class="keyword">else</span>: </span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;Wrong Method Specialized&quot;</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
-</div>
+<p>just给自己remark一下，没啥意义哈哈哈</p>
+
+
   </div>
   
   
@@ -2493,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/>http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/</a></p>
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/>http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/</a></p>
               
             
           </blockquote>
@@ -2510,10 +2502,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-15T13:13:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-10T16:30:38+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月15日</p>
+    <p>更新于：2022年5月10日</p>
   </a>
 </div>
 
@@ -2522,8 +2514,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/QQrobot/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>QQrobot</p></a></div>
-  <span hidden itemprop="keywords">QQrobot</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Titanium-Tech/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Titanium Tech</p></a></div>
+  <span hidden itemprop="keywords">Titanium Tech</span>
 
 
         
@@ -2536,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/&title=QQ机器人搭建（一） - Chengyu Luo Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/&title=python发送post/get请求 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2548,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/&title=QQ机器人搭建（一） - Chengyu Luo Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/&title=python发送post/get请求 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2560,7 +2552,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/&title=QQ机器人搭建（一） - Chengyu Luo Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/&title=python发送post/get请求 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2593,20 +2585,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>QQ机器人搭建（二）应用案例</p>
-          <p class='content'>QQ robot 协助博客部署博客工作流说一下我的博客工作流吧，显然可以直接编辑服务器上的博客文件或者直接传到服务器上，但是这里可以提供一个robot的应用案例。
-当前我的博客是在windows...</p>
-        </a>
       
-      
-        <a class='next' href='/blog/2022/04/04/GametheoryResult/'>
-          <p class='title'>博弈论小游戏结果<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>博弈论小游戏的结果[toc]
-其实这两个游戏都是经典猜均值2/3游戏的小小变型。这里就给出简单结果了，先不分析了，以及：
-第二轮链接！！！
+        <a class='next' href='/blog/2022/05/04/%E4%BD%BF%E7%94%A8nps%E6%9B%BF%E4%BB%A3%E5%90%91%E6%97%A5%E8%91%B5/'>
+          <p class='title'>使用nps替代向日葵<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Nps替代ToDesk、向日葵、TV的解决方案1. TV/向日葵痛点常用TV以及向日葵的同学知道，这俩好用是挺好用，但是有一些问题是很讨厌的。比如：
 
-无激励结果首先我先提供一下一份此前无激励的数据，单击...</p>
+远程登陆后本地的机子还是能看见屏幕上的操作...</p>
         </a>
       
     </div>
@@ -2622,7 +2606,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/index.html#comments">
+      <meta itemprop="discussionUrl" content="/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2655,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#QQrobot%E7%94%A8%E6%9D%A5%E5%B9%B2%E4%BB%80%E4%B9%88%E5%A5%BD%EF%BC%9F"><span class="toc-text">QQrobot用来干什么好？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BB%80%E4%B9%88%E6%90%AD%E5%BB%BAQQ-robot%E6%AF%94%E8%BE%83%E5%A5%BD%EF%BC%9F"><span class="toc-text">用什么搭建QQ robot比较好？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E4%BC%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">需要会什么？</span></a></li></ol>
+        
     </div>
   </section>
 
@@ -2711,7 +2695,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="QQ机器人搭建（一）";
+  pdata.postTitle="python发送post/get请求";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2825,8 +2809,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652171445964')
-      volantis.js('/blog/js/message.js?time=1652171445964', () => {
+      volantis.css('/blog/css/message.css?time=1652171445926')
+      volantis.js('/blog/js/message.js?time=1652171445926', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2871,8 +2855,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652171445964')
-      volantis.js('/blog/js/message.js?time=1652171445964', () => {
+      volantis.css('/blog/css/message.css?time=1652171445926')
+      volantis.js('/blog/js/message.js?time=1652171445926', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2931,8 +2915,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652171445964')
-      volantis.js('/blog/js/message.js?time=1652171445964', () => {
+      volantis.css('/blog/css/message.css?time=1652171445926')
+      volantis.js('/blog/js/message.js?time=1652171445926', () => {
         hideMessage(done);
       });
     } else {
@@ -2978,19 +2962,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1652171445964")
+        volantis.js("/blog/js/plugins/sites.js?time=1652171445926")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1652171445964")
+        volantis.js("/blog/js/plugins/friends.js?time=1652171445926")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1652171445964")
+        volantis.js("/blog/js/plugins/contributors.js?time=1652171445926")
       }
     
   };
@@ -3091,7 +3075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1652171445964').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1652171445926').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3100,7 +3084,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1652171445964.js"></script>
+<script src="/blog/blog/js/app.js?time=1652171445926.js"></script>
 
 
 <!-- optional -->
@@ -3113,7 +3097,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1652171445964");
+    return volantis.js("/blog/js/search/hexo.js?time=1652171445926");
   }
 
   function loadSearchService() {
@@ -3580,7 +3564,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/QQRobot/","name":"QQRobot"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/04/QQ机器人搭建（一）/","name":"QQ机器人搭建（一）"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"QQ机器人搭建（一）","description":"","datePublished":"2022-04-04T10:18:22.000Z","dateModified":"2022-04-15T05:13:08.359Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89/","wordCount":0,"articleSection":"QQRobot","keywords":"QQrobot","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Titanium-Tech/","name":"Titanium Tech"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/10/python发送post-get请求/","name":"python发送post/get请求"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python发送post/get请求","description":"","datePublished":"2022-05-10T08:17:13.000Z","dateModified":"2022-05-10T08:30:38.693Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/10/python%E5%8F%91%E9%80%81post-get%E8%AF%B7%E6%B1%82/","wordCount":0,"articleSection":"Titanium Tech","keywords":"Titanium Tech","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
