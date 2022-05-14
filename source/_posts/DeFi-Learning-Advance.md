@@ -264,5 +264,49 @@ Cover Protocol 由 Yearn Finance 孵化，最初是提供 yInsure 的 Safe Proto
 
 # Part Four：Emerging DeFi Categories
 
+## 第九章 去中心化指数
 
+可以把去中心化指数看成ETF
+
+### 指数协议：Index Cooperative
+
+Index Coop 使用户能够广泛接触加密货币行业不同主题的不同协议。指数代币持有者可以拥有、接触并可以直接赎回构成指数的基础资产。
+
+### 指数协议：Indexed Finance（NDX）
+
+Indexed Finance 是一种专注于投资组合管理的协议。用户可以铸造、交换或销毁指数代币和基础资产，Balancer 分叉的集成自动做市商 (AMM) 机制会自动重新平衡其指数。
+
+### 指数协议：PowerPool Concentrated Voting Power (CVP)
+
+PowerPool 的指数是基于 Balancer 的自动做市商 (AMM) 的智能池，具有附加功能。其主要目的是将治理代币汇集在一起，用于借贷和执行元治理。此外，用户可以直接将一种治理代币换成另一种。
+
+### 协议比较
+
+协议费用：
+
+![image-20220514102110851](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220514102110851.png)
+
+基金权重：
+
+![image-20220514102332048](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220514102332048.png)
+
+一般有三种权重计算方式：
+
+- Market Cap Weighted：该方法动态跟踪每项资产的市值，其中每项资产的分配与其相对于指数中其他资产的市值成正比。相对于较小的，使用这种方法的指数将集中在市值较大的代币上，从而使该指数能够密切模仿实际的市场表现。
+- Square Root of Market Cap Weighted:Indexed Finance 上的所有指数均基于相对于每个标的资产的市值的平方根。这种方法抑制了市场表现倾向于更大市值硬币的影响。
+- Equally-Weighted Market Cap Weighted:
+- This method sets asset allocation equally. For example, there are 
+  eight underlying assets in PIPT. Hence each of the assets is set to 
+  12.5% weightage. An equal-weighted strategy is driven by price 
+  momentum and would favor smaller market capitalization coins. 
+  Smaller market capitalization coins are given the same importance 
+  as large market capitalization coins. 
+
+### 风险提示
+
+1. 代码就是法律，防不住黑客，尽管代码确实都经过了审计
+2. Mercenary Capital，大多数指数协议都有流动性挖掘计划，以激励流动性提供者并引导指数代币的流动性。然而，这些资本中的大部分通常被称为“雇佣资本”。这些资金纯粹是在寻求高回报，一旦出现另一个收益率更高的协议，就会退出。因此，一旦流动性挖矿奖励枯竭，可能会导致大量提款，从而导致指数协议呈螺旋式下降。
+3. 系统性风险：在 DeFi 中，协议可以像金钱乐高一样堆叠在一起。然而，可组合性可能是一把双刃剑，因为它引入了系统性风险。例如，PowerPool 的 Yearn Lazy APE (YLA) 从其五个基础 Yearn 的稳定币保险库中有十种不同的风险敞口。
+
+## 第十章 去中心化的预测市场
 
