@@ -4,8 +4,8 @@
   <meta name="generator" content="Hexo 5.4.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.seujyh.cn/blog/tags/"/>
+  
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/05/15/修改微软远程桌面帧率/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,22 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1652592967528" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1652592967536" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>落城雨搞了什么鬼 - Chengyu Luo Blog</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="落城雨搞了什么鬼">
-<meta property="og:url" content="http://www.seujyh.cn/blog/tags/index.html">
+  <title>修改微软远程桌面帧率 - Chengyu Luo Blog</title>
+  <meta name="keywords" content="Tips,null">
+  <meta name="description" content="Step1win+R进入regedit注册表 Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations路径  Step3新增值DWMFRAMEINTERVAL  修改为十进制15  Step4重启电脑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改微软远程桌面帧率">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
+<meta property="og:description" content="Step1win+R进入regedit注册表 Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations路径  Step3新增值DWMFRAMEINTERVAL  修改为十进制15  Step4重启电脑">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-14T06:15:15.000Z">
-<meta property="article:modified_time" content="2022-04-14T15:13:52.007Z">
+<meta property="article:published_time" content="2022-05-15T05:32:47.000Z">
+<meta property="article:modified_time" content="2022-05-15T05:35:56.532Z">
 <meta property="article:author" content="Yiheng Jiang">
+<meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1656,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1652592967528" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652592967528"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1652592967536" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652592967536"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2312,7 +2315,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper tag dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="./img/cover.jpg"></div>
 
@@ -2379,24 +2382,247 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Chengyu Luo Blog">
+  </span>
   
-    
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>落城雨搞了什么鬼</h2>
-          <div class="all-tags">
-            
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Interests/" rel="tag">Interests</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Lcy/" rel="tag">Lcy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Others/" rel="tag">Others</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Personal-Tips/" rel="tag">Personal-Tips</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/QQrobot/" rel="tag">QQrobot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Study/" rel="tag">Study</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Study-Devops/" rel="tag">Study-Devops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Tips/" rel="tag">Tips</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Titanium-Tech/" rel="tag">Titanium Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Tools/" rel="tag">Tools</a><span class="tag-list-count">1</span></li></ul>
-          </div>
-          <br>
-          
 
-        </article>
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        修改微软远程桌面帧率
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="http://www.seujyh.cn" rel="nofollow">
+    <img itemprop="image" src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+    <p itemprop="name">Chengyu Luo</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-15T13:32:47+08:00">
+  <a class='notlink' href="/" onclick="return false;" title="Click me!" >
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年5月15日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink' href="/" onclick="return false;" title="Click me!" >
+      
+      <div id="lc-pv" data-title="修改微软远程桌面帧率" data-path="/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
     
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="Step1"><a href="#Step1" class="headerlink" title="Step1"></a>Step1</h2><div class="story post-story"><p>win+R进入regedit注册表</p>
+</div><h2 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h2><div class="story post-story"><p>找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations路径</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133417595.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133417595.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220515133417595"></p>
+</div><h2 id="Step3"><a href="#Step3" class="headerlink" title="Step3"></a>Step3</h2><div class="story post-story"><p>新增值DWMFRAMEINTERVAL</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133542316.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133542316.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220515133542316"></p>
+<p>修改为十进制15</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133530437.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220515133530437.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220515133530437"></p>
+</div><h2 id="Step4"><a href="#Step4" class="headerlink" title="Step4"></a>Step4</h2><div class="story post-story"><p>重启电脑</p>
+
+</div>
+  </div>
   
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/>http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-15T13:35:56+08:00">
+  <a class='notlink' href="/" onclick="return false;" title="Click me!" >
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年5月15日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tips</p></a></div>
+  <span hidden itemprop="keywords">Tips</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/&title=修改微软远程桌面帧率 - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/&title=修改微软远程桌面帧率 - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/&title=修改微软远程桌面帧率 - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/blog/2022/05/14/DeFi-Learning-Advance/'>
+          <p class='title'>DeFi Learning Advance<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>A reading note for 《How to DeFi Advance》
+Part One： State of DeFi第一章 DeFi SnapshotDeFi 是在2020年夏季开始...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/index.html#comments">
+    </span>
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+  
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2406,9 +2632,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step1"><span class="toc-text">Step1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step2"><span class="toc-text">Step2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step3"><span class="toc-text">Step3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step4"><span class="toc-text">Step4</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2454,14 +2690,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="修改微软远程桌面帧率";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2575,8 +2812,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652592967528')
-      volantis.js('/blog/js/message.js?time=1652592967528', () => {
+      volantis.css('/blog/css/message.css?time=1652592967536')
+      volantis.js('/blog/js/message.js?time=1652592967536', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2621,8 +2858,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652592967528')
-      volantis.js('/blog/js/message.js?time=1652592967528', () => {
+      volantis.css('/blog/css/message.css?time=1652592967536')
+      volantis.js('/blog/js/message.js?time=1652592967536', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2681,8 +2918,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652592967528')
-      volantis.js('/blog/js/message.js?time=1652592967528', () => {
+      volantis.css('/blog/css/message.css?time=1652592967536')
+      volantis.js('/blog/js/message.js?time=1652592967536', () => {
         hideMessage(done);
       });
     } else {
@@ -2728,19 +2965,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1652592967528")
+        volantis.js("/blog/js/plugins/sites.js?time=1652592967536")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1652592967528")
+        volantis.js("/blog/js/plugins/friends.js?time=1652592967536")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1652592967528")
+        volantis.js("/blog/js/plugins/contributors.js?time=1652592967536")
       }
     
   };
@@ -2841,7 +3078,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1652592967528').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1652592967536').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -2850,7 +3087,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1652592967528.js"></script>
+<script src="/blog/blog/js/app.js?time=1652592967536.js"></script>
 
 
 <!-- optional -->
@@ -2863,7 +3100,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1652592967528");
+    return volantis.js("/blog/js/search/hexo.js?time=1652592967536");
   }
 
   function loadSearchService() {
@@ -3330,7 +3567,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","keywords":null,"description":"Blockchain & The Future","author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","description":"Blockchain & The Future"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.seujyh.cn/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Useful-Tools/","name":"Useful Tools"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/15/修改微软远程桌面帧率/","name":"修改微软远程桌面帧率"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"修改微软远程桌面帧率","description":"","datePublished":"2022-05-15T05:32:47.000Z","dateModified":"2022-05-15T05:35:56.532Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/","wordCount":0,"articleSection":"Useful Tools","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
