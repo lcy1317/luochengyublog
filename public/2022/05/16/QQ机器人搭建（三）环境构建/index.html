@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1652717669408" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1652754635975" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-16T15:53:45.000Z">
-<meta property="article:modified_time" content="2022-05-16T16:14:12.852Z">
+<meta property="article:modified_time" content="2022-05-17T02:30:18.740Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="QQrobot">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1652717669408" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652717669408"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1652754635975" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652754635975"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2475,11 +2475,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517000405670.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517000405670.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220517000405670"></p>
 <p>如图选择023就够用了</p>
-<p><font color= red>未完</font></p>
 </div><h2 id="3-修改config-yaml"><a href="#3-修改config-yaml" class="headerlink" title="3. 修改config.yaml"></a>3. 修改config.yaml</h2><div class="story post-story"><p>后半部分参考配置</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"># 连接服务列表</span><br><span class="line">servers<span class="punctuation">:</span></span><br><span class="line">  # 添加方式，同一连接方式可添加多个，具体配置说明请查看文档</span><br><span class="line">  #- http<span class="punctuation">:</span> # http 通信</span><br><span class="line">  #- ws<span class="punctuation">:</span>   # 正向 Websocket</span><br><span class="line">  #- ws-reverse<span class="punctuation">:</span> # 反向 Websocket</span><br><span class="line">  #- pprof<span class="punctuation">:</span> #性能分析服务器</span><br><span class="line"></span><br><span class="line">  - http<span class="punctuation">:</span> # HTTP 通信设置</span><br><span class="line">      host<span class="punctuation">:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> # 服务端监听地址</span><br><span class="line">      port<span class="punctuation">:</span> <span class="number">5700</span>      # 服务端监听端口</span><br><span class="line">      timeout<span class="punctuation">:</span> <span class="number">5</span>      # 反向 HTTP 超时时间<span class="punctuation">,</span> 单位秒，&lt;<span class="number">5</span> 时将被忽略</span><br><span class="line">      long-polling<span class="punctuation">:</span>   # 长轮询拓展</span><br><span class="line">        enabled<span class="punctuation">:</span> <span class="keyword">false</span>       # 是否开启</span><br><span class="line">        max-queue-size<span class="punctuation">:</span> <span class="number">0</span> # 消息队列大小，<span class="number">0</span> 表示不限制队列大小，谨慎使用</span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br><span class="line">      post<span class="punctuation">:</span>           # 反向HTTP POST地址列表</span><br><span class="line">      #- url<span class="punctuation">:</span> &#x27;&#x27;                # 地址</span><br><span class="line">      #  secret<span class="punctuation">:</span> &#x27;&#x27;             # 密钥</span><br><span class="line">	  #  max-retries<span class="punctuation">:</span> <span class="number">3</span>         # 最大重试，<span class="number">0</span> 时禁用</span><br><span class="line">      #  retries-interval<span class="punctuation">:</span> <span class="number">1500</span> # 重试时间，单位毫秒，<span class="number">0</span> 时立即</span><br><span class="line">      #- url<span class="punctuation">:</span> http<span class="punctuation">:</span><span class="comment">//127.0.0.1:5701/ # 地址</span></span><br><span class="line">      #  secret<span class="punctuation">:</span> &#x27;&#x27;                  # 密钥</span><br><span class="line">	  #  max-retries<span class="punctuation">:</span> <span class="number">10</span>             # 最大重试，<span class="number">0</span> 时禁用</span><br><span class="line">      #  retries-interval<span class="punctuation">:</span> <span class="number">1000</span>      # 重试时间，单位毫秒，<span class="number">0</span> 时立即</span><br><span class="line">  # 正向WS设置</span><br><span class="line">  - ws<span class="punctuation">:</span></span><br><span class="line">      # 正向WS服务器监听地址</span><br><span class="line">      host<span class="punctuation">:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">      # 正向WS服务器监听端口</span><br><span class="line">      port<span class="punctuation">:</span> <span class="number">6700</span></span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br><span class="line">  # 反向WS设置</span><br><span class="line">  - ws-reverse<span class="punctuation">:</span></span><br><span class="line">      # 反向WS Universal 地址</span><br><span class="line">      # 注意 设置了此项地址后下面两项将会被忽略</span><br><span class="line">      universal<span class="punctuation">:</span> ws<span class="punctuation">:</span><span class="comment">//127.0.0.1:9191/onebot/v11/ws</span></span><br><span class="line">      # 反向WS API 地址</span><br><span class="line">      api<span class="punctuation">:</span> </span><br><span class="line">      # 反向WS Event 地址</span><br><span class="line">      event<span class="punctuation">:</span> </span><br><span class="line">      # 重连间隔 单位毫秒</span><br><span class="line">      reconnect-interval<span class="punctuation">:</span> <span class="number">3000</span></span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"># 连接服务列表</span><br><span class="line">servers<span class="punctuation">:</span></span><br><span class="line">  # 添加方式，同一连接方式可添加多个，具体配置说明请查看文档</span><br><span class="line">  #- http<span class="punctuation">:</span> # http 通信</span><br><span class="line">  #- ws<span class="punctuation">:</span>   # 正向 Websocket</span><br><span class="line">  #- ws-reverse<span class="punctuation">:</span> # 反向 Websocket</span><br><span class="line">  #- pprof<span class="punctuation">:</span> #性能分析服务器</span><br><span class="line"></span><br><span class="line">  - http<span class="punctuation">:</span> # HTTP 通信设置</span><br><span class="line">      host<span class="punctuation">:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> # 服务端监听地址</span><br><span class="line">      port<span class="punctuation">:</span> <span class="number">5700</span>      # 服务端监听端口</span><br><span class="line">      timeout<span class="punctuation">:</span> <span class="number">5</span>      # 反向 HTTP 超时时间<span class="punctuation">,</span> 单位秒，&lt;<span class="number">5</span> 时将被忽略</span><br><span class="line">      long-polling<span class="punctuation">:</span>   # 长轮询拓展</span><br><span class="line">        enabled<span class="punctuation">:</span> <span class="keyword">false</span>       # 是否开启</span><br><span class="line">        max-queue-size<span class="punctuation">:</span> <span class="number">0</span> # 消息队列大小，<span class="number">0</span> 表示不限制队列大小，谨慎使用</span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br><span class="line">      post<span class="punctuation">:</span>           # 反向HTTP POST地址列表</span><br><span class="line">      #- url<span class="punctuation">:</span> &#x27;&#x27;                # 地址</span><br><span class="line">      #  secret<span class="punctuation">:</span> &#x27;&#x27;             # 密钥</span><br><span class="line">	  #  max-retries<span class="punctuation">:</span> <span class="number">3</span>         # 最大重试，<span class="number">0</span> 时禁用</span><br><span class="line">      #  retries-interval<span class="punctuation">:</span> <span class="number">1500</span> # 重试时间，单位毫秒，<span class="number">0</span> 时立即</span><br><span class="line">      #- url<span class="punctuation">:</span> http<span class="punctuation">:</span><span class="comment">//127.0.0.1:5701/ # 地址</span></span><br><span class="line">      #  secret<span class="punctuation">:</span> &#x27;&#x27;                  # 密钥</span><br><span class="line">	  #  max-retries<span class="punctuation">:</span> <span class="number">10</span>             # 最大重试，<span class="number">0</span> 时禁用</span><br><span class="line">      #  retries-interval<span class="punctuation">:</span> <span class="number">1000</span>      # 重试时间，单位毫秒，<span class="number">0</span> 时立即</span><br><span class="line">  # 正向WS设置</span><br><span class="line">  - ws<span class="punctuation">:</span></span><br><span class="line">      # 正向WS服务器监听地址</span><br><span class="line">      host<span class="punctuation">:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">      # 正向WS服务器监听端口</span><br><span class="line">      port<span class="punctuation">:</span> <span class="number">6700</span></span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br><span class="line">  # 反向WS设置</span><br><span class="line">  - ws-reverse<span class="punctuation">:</span></span><br><span class="line">      # 反向WS Universal 地址</span><br><span class="line">      # 注意 设置了此项地址后下面两项将会被忽略</span><br><span class="line">      universal<span class="punctuation">:</span> ws<span class="punctuation">:</span><span class="comment">//127.0.0.1:8080/onebot/v11/ws</span></span><br><span class="line">      # 反向WS API 地址</span><br><span class="line">      api<span class="punctuation">:</span> </span><br><span class="line">      # 反向WS Event 地址</span><br><span class="line">      event<span class="punctuation">:</span> </span><br><span class="line">      # 重连间隔 单位毫秒</span><br><span class="line">      reconnect-interval<span class="punctuation">:</span> <span class="number">3000</span></span><br><span class="line">      middlewares<span class="punctuation">:</span></span><br><span class="line">        &lt;&lt;<span class="punctuation">:</span> *default # 引用默认中间件</span><br></pre></td></tr></table></figure>
 
-<p><font color= red>未完</font></p>
+</div><h2 id="4-安装协议适配器"><a href="#4-安装协议适配器" class="headerlink" title="4. 安装协议适配器"></a>4. 安装协议适配器</h2><div class="story post-story"><p>这里用的是onebot所以直接：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb adapter install nonebot-adapter-onebot</span><br></pre></td></tr></table></figure>
+
+<p>注意一些nb adapter的操作：</p>
+<p>使用 nb-cli 命令行查看:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb adapter list</span><br></pre></td></tr></table></figure>
+
+<p>前往<a target="_blank" rel="noopener" href="https://nb2.baka.icu/store">商店</a>点击复制 nb-cli 安装命令至命令行执行即可安装。</p>
+<p>或者自行输入命令安装:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb adapter install &lt;adapter-name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者使用交互模式安装:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb adapter install</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用 pip 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;adapter-name&gt;</span><br></pre></td></tr></table></figure>
+
+</div><h2 id="5-创建项目"><a href="#5-创建项目" class="headerlink" title="5. 创建项目"></a>5. 创建项目</h2><div class="story post-story"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nb create</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517101751752.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517101751752.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220517101751752"></p>
+<p>连接上远程可以看到这样一个目录结构：</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102052789.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102052789.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220517102052789"></p>
+</div><h2 id="6-写一个测试的插件"><a href="#6-写一个测试的插件" class="headerlink" title="6. 写一个测试的插件"></a>6. 写一个测试的插件</h2><div class="story post-story"><p>比如我想要写一个能给我发送校历的文件，可以这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nonebot <span class="keyword">import</span> on_command,on_startswith,on_keyword,on_message</span><br><span class="line"><span class="keyword">from</span> nonebot.rule <span class="keyword">import</span> to_me</span><br><span class="line"><span class="keyword">from</span> nonebot.adapters.onebot.v11 <span class="keyword">import</span> Bot, Event, MessageSegment, Message</span><br><span class="line"><span class="comment"># 863152457</span></span><br><span class="line"></span><br><span class="line">blacklist = [<span class="string">&quot;768887710&quot;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test = on_keyword([<span class="string">&quot;校历&quot;</span>],priority = <span class="number">1</span>)</span><br><span class="line"><span class="meta">@test.handle()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">test_handle</span>(<span class="params">bot: Bot, event: Event</span>):</span><br><span class="line">    <span class="keyword">if</span> event.message_type == <span class="string">&quot;group&quot;</span>:</span><br><span class="line">        <span class="keyword">if</span> event.group_id <span class="keyword">in</span> blacklist:</span><br><span class="line">            <span class="keyword">await</span> test.finish()</span><br><span class="line">    message = MessageSegment.image(file=<span class="string">&quot;https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20210908230617690.png&quot;</span>)</span><br><span class="line">    <span class="keyword">await</span> test.finish(message=message)</span><br></pre></td></tr></table></figure>
+
+<p>实现的效果如下：</p>
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102854597.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102854597.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220517102854597"></p>
+<p>Fine 至此环境构建成功。下一步就是写各种脚本了。</p>
 
 </div>
   </div>
@@ -2511,7 +2537,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-17T00:14:12+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-17T10:30:18+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月17日</p>
@@ -2647,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85nonebot2"><span class="toc-text">1. 安装nonebot2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85go-cqhttp"><span class="toc-text">2. 安装go-cqhttp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9config-yaml"><span class="toc-text">3. 修改config.yaml</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85nonebot2"><span class="toc-text">1. 安装nonebot2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85go-cqhttp"><span class="toc-text">2. 安装go-cqhttp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9config-yaml"><span class="toc-text">3. 修改config.yaml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85%E5%8D%8F%E8%AE%AE%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-text">4. 安装协议适配器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">5. 创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%86%99%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="toc-text">6. 写一个测试的插件</span></a></li></ol>
     </div>
   </section>
 
@@ -2817,8 +2843,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652717669408')
-      volantis.js('/blog/js/message.js?time=1652717669408', () => {
+      volantis.css('/blog/css/message.css?time=1652754635975')
+      volantis.js('/blog/js/message.js?time=1652754635975', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2863,8 +2889,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652717669408')
-      volantis.js('/blog/js/message.js?time=1652717669408', () => {
+      volantis.css('/blog/css/message.css?time=1652754635975')
+      volantis.js('/blog/js/message.js?time=1652754635975', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2923,8 +2949,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652717669408')
-      volantis.js('/blog/js/message.js?time=1652717669408', () => {
+      volantis.css('/blog/css/message.css?time=1652754635975')
+      volantis.js('/blog/js/message.js?time=1652754635975', () => {
         hideMessage(done);
       });
     } else {
@@ -2970,19 +2996,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1652717669408")
+        volantis.js("/blog/js/plugins/sites.js?time=1652754635975")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1652717669408")
+        volantis.js("/blog/js/plugins/friends.js?time=1652754635975")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1652717669408")
+        volantis.js("/blog/js/plugins/contributors.js?time=1652754635975")
       }
     
   };
@@ -3083,7 +3109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1652717669408').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1652754635975').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3092,7 +3118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1652717669408.js"></script>
+<script src="/blog/blog/js/app.js?time=1652754635975.js"></script>
 
 
 <!-- optional -->
@@ -3105,7 +3131,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1652717669408");
+    return volantis.js("/blog/js/search/hexo.js?time=1652754635975");
   }
 
   function loadSearchService() {
@@ -3572,7 +3598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/QQRobot/","name":"QQRobot"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/16/QQ机器人搭建（三）环境构建/","name":"QQ机器人搭建（三）环境构建"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"QQ机器人搭建（三）环境构建","description":"","datePublished":"2022-05-16T15:53:45.000Z","dateModified":"2022-05-16T16:14:12.852Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/16/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/16/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/","wordCount":0,"articleSection":"QQRobot","keywords":"QQrobot","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/QQRobot/","name":"QQRobot"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/16/QQ机器人搭建（三）环境构建/","name":"QQ机器人搭建（三）环境构建"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"QQ机器人搭建（三）环境构建","description":"","datePublished":"2022-05-16T15:53:45.000Z","dateModified":"2022-05-17T02:30:18.740Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/16/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/16/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/","wordCount":0,"articleSection":"QQRobot","keywords":"QQrobot","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

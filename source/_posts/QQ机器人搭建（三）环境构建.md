@@ -34,8 +34,6 @@ go-cqhttp
 
 如图选择023就够用了
 
-<font color= red>未完</font>
-
 ## 3. 修改config.yaml
 
 后半部分参考配置
@@ -79,7 +77,7 @@ servers:
   - ws-reverse:
       # 反向WS Universal 地址
       # 注意 设置了此项地址后下面两项将会被忽略
-      universal: ws://127.0.0.1:9191/onebot/v11/ws
+      universal: ws://127.0.0.1:8080/onebot/v11/ws
       # 反向WS API 地址
       api: 
       # 反向WS Event 地址
@@ -90,4 +88,81 @@ servers:
         <<: *default # 引用默认中间件
 ```
 
-<font color= red>未完</font>
+## 4. 安装协议适配器
+
+这里用的是onebot所以直接：
+
+```shell
+nb adapter install nonebot-adapter-onebot
+```
+
+注意一些nb adapter的操作：
+
+使用 nb-cli 命令行查看:
+
+```bash
+nb adapter list
+```
+
+前往[商店](https://nb2.baka.icu/store)点击复制 nb-cli 安装命令至命令行执行即可安装。
+
+或者自行输入命令安装:
+
+```bash
+nb adapter install <adapter-name>
+```
+
+或者使用交互模式安装:
+
+```bash
+nb adapter install
+```
+
+也可以使用 pip 安装
+
+```bash
+pip install <adapter-name>
+```
+
+## 5. 创建项目
+
+```shell
+nb create
+```
+
+![image-20220517101751752](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517101751752.png)
+
+连接上远程可以看到这样一个目录结构：
+
+![image-20220517102052789](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102052789.png)
+
+## 6. 写一个测试的插件
+
+比如我想要写一个能给我发送校历的文件，可以这样：
+
+```python
+from nonebot import on_command,on_startswith,on_keyword,on_message
+from nonebot.rule import to_me
+from nonebot.adapters.onebot.v11 import Bot, Event, MessageSegment, Message
+# 863152457
+
+blacklist = ["768887710"]
+
+
+test = on_keyword(["校历"],priority = 1)
+@test.handle()
+async def test_handle(bot: Bot, event: Event):
+    if event.message_type == "group":
+        if event.group_id in blacklist:
+            await test.finish()
+    message = MessageSegment.image(file="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20210908230617690.png")
+    await test.finish(message=message)
+```
+
+实现的效果如下：
+
+![image-20220517102854597](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220517102854597.png)
+
+
+
+Fine 至此环境构建成功。下一步就是写各种脚本了。
