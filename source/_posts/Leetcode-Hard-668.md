@@ -9,11 +9,8 @@ plugins:
 - katex
 ---
 
-# 乘法表中第k小的数
 
-## Leetcode-668
-
-#### [668. 乘法表中第k小的数](https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/)
+# [668. 乘法表中第k小的数](https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/)
 
 几乎每一个人都用 [乘法表](https://baike.baidu.com/item/乘法表)。但是你能在乘法表中快速找到第`k`小的数字吗？
 
