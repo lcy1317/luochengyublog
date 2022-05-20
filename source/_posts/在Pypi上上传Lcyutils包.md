@@ -25,6 +25,10 @@ import lcyutils.qqmessage as qq
 qq.lcy_qqmessage(qq="1157***882就是你的QQ",message = "来一条测试消息~")
 ```
 
+然后你就可以在QQ上接受到他给你发送的消息：
+
+![image-20220520104023056](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220520104023056.png)
+
 这个lcy_message函数有两个参数：
 
 - qq：你接受消息推送的QQ号
