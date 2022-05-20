@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/05/19/在pypi上上传包/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/05/19/在pypi上上传lcyutils包/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,23 +20,23 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1652977338035" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1653013526837" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>在Pypi上上传包 - Chengyu Luo Blog</title>
+  <title>在Pypi上上传Lcyutils包 - Chengyu Luo Blog</title>
   <meta name="keywords" content="Tips,null">
-  <meta name="description" content="根据setup.py生成包 1python setup.py sdist bdist_wheel  上传 1twine upload dist&#x2F;*  安装 1pip install lcyutils&#x3D;&#x3D;0.0.1 -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple">
+  <meta name="description" content="最近写了一个自己的工具库，现在实现的是两个功能，一个是可以调用给我发邮件 ，另一个是通过1794957373的QQ号通过简单调用一个python函数来进行一个QQ消息的推送。 lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消息的反推功能。 当前仅仅在lcyutils.qqmessage模块里提供了一个消息的发送接口lcy_message 比如这样调用： 12import lcyu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Pypi上上传包">
-<meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/index.html">
+<meta property="og:title" content="在Pypi上上传Lcyutils包">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="根据setup.py生成包 1python setup.py sdist bdist_wheel  上传 1twine upload dist&#x2F;*  安装 1pip install lcyutils&#x3D;&#x3D;0.0.1 -i https:&#x2F;&#x2F;pypi.python.org&#x2F;simple">
+<meta property="og:description" content="最近写了一个自己的工具库，现在实现的是两个功能，一个是可以调用给我发邮件 ，另一个是通过1794957373的QQ号通过简单调用一个python函数来进行一个QQ消息的推送。 lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消息的反推功能。 当前仅仅在lcyutils.qqmessage模块里提供了一个消息的发送接口lcy_message 比如这样调用： 12import lcyu">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-19T08:42:49.000Z">
-<meta property="article:modified_time" content="2022-05-19T08:46:55.181Z">
+<meta property="article:modified_time" content="2022-05-20T02:25:18.316Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1652977338035" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1652977338035"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1653013526837" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1653013526837"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2384,7 +2384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
@@ -2401,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        在Pypi上上传包
+        在Pypi上上传Lcyutils包
       </h1>
       <div class='new-meta-box'>
         
@@ -2446,7 +2446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-      <div id="lc-pv" data-title="在Pypi上上传包" data-path="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/">
+      <div id="lc-pv" data-title="在Pypi上上传Lcyutils包" data-path="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2467,7 +2467,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>根据setup.py生成包</p>
+    <p>最近写了一个自己的工具库，现在实现的是两个功能，一个是可以调用给我发邮件 ，另一个是通过1794957373的QQ号通过简单调用一个python函数来进行一个QQ消息的推送。</p>
+<h2 id="lcyutils包"><a href="#lcyutils包" class="headerlink" title="lcyutils包"></a>lcyutils包</h2><div class="story post-story"><p>先来自我介绍一下自己的这个包，主要介绍一下QQ消息的反推功能。</p>
+<p>当前仅仅在lcyutils.qqmessage模块里提供了一个消息的发送接口lcy_message</p>
+<p>比如这样调用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lcyutils.qqmessage <span class="keyword">as</span> qq</span><br><span class="line">qq.lcy_qqmessage(qq=<span class="string">&quot;1157***882就是你的QQ&quot;</span>,message = <span class="string">&quot;来一条测试消息~&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这个lcy_message函数有两个参数：</p>
+<ul>
+<li>qq：你接受消息推送的QQ号</li>
+<li>message：你想要发送的消息，一个string格式的字符串</li>
+</ul>
+</div><h2 id="QQ消息推送的实现"><a href="#QQ消息推送的实现" class="headerlink" title="QQ消息推送的实现"></a>QQ消息推送的实现</h2><div class="story post-story"><p>这个实现其实毕竟利用到了QQ机器人，所以借助了我在服务器上跑的一个QQ机器人。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph </span><br><span class="line">	调用函数 --&gt; 向服务器发送get/post请求</span><br><span class="line">	向服务器发送get/post请求 --&gt; 利用go-cqhttp解析</span><br><span class="line">	利用go-cqhttp解析 --&gt; 推送QQ消息</span><br></pre></td></tr></table></figure>
+
+<p>大致是这样一个流程，主要使用了go-cqhttp协议。</p>
+</div><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO:"></a>TODO:</h2><div class="story post-story"><p>显然这里呢有一系列的问题，不管是传包时候的问题还是我自己写包时候的问题都有很多问题。这里总结一下希望有空能够一个个fix：</p>
+<ul>
+<li>pypi上的包的setup没有处理过包依赖的问题（未解决）</li>
+<li>设置消息token/转移后端端口（未解决）</li>
+<li>qqmessage支持更多的消息格式，图片/文件等（未解决）</li>
+<li>包的结构需要调整，以及需要调整git的流程保证我这边开发和github以及包生成的一致性（未解决）</li>
+<li>支持更多的工具（未解决）</li>
+</ul>
+</div><h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><div class="story post-story"><h3 id="setup编写"><a href="#setup编写" class="headerlink" title="setup编写"></a>setup编写</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> find_packages</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;README.md&quot;</span>, <span class="string">&quot;r&quot;</span>,encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">  long_description = f.read()</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">&quot;lcyutils&quot;</span>,   <span class="comment"># python包的名字</span></span><br><span class="line">    version=<span class="string">&quot;0.0.1&quot;</span>,                <span class="comment"># 版本号</span></span><br><span class="line">    description=<span class="string">&#x27;LCY Personal Tools&#x27;</span>,           <span class="comment"># 描述</span></span><br><span class="line">    long_description=long_description,                  <span class="comment"># 详细描述，这里将readme的内容放置于此</span></span><br><span class="line">    author=<span class="string">&#x27;luochengyu&#x27;</span>,                                      <span class="comment"># 作者</span></span><br><span class="line">    author_email=<span class="string">&#x27;luochengyu1317@163.com&#x27;</span>,              <span class="comment"># 作者邮箱</span></span><br><span class="line">    maintainer=<span class="string">&#x27;luochengyu&#x27;</span>,                               <span class="comment"># 维护人</span></span><br><span class="line">    maintainer_email=<span class="string">&#x27;luochengyu1317@163.com&#x27;</span>,       <span class="comment"># 维护人邮箱</span></span><br><span class="line">    license=<span class="string">&#x27;MIT License&#x27;</span>,                                    <span class="comment"># 遵守协议</span></span><br><span class="line">    packages=find_packages(),</span><br><span class="line">    install_requires=[                                               <span class="comment"># lamb-common依赖的第三方库</span></span><br><span class="line">    ],</span><br><span class="line">    platforms=[<span class="string">&quot;all&quot;</span>],                                                <span class="comment"># 支持的平台</span></span><br><span class="line">    url=<span class="string">&#x27;https://github.com/lcy1317/lcytools&#x27;</span>,          <span class="comment"># github代码仓地址</span></span><br><span class="line">    classifiers=[</span><br><span class="line">        <span class="string">&quot;Programming Language :: Python :: 3&quot;</span>,</span><br><span class="line">        <span class="string">&quot;License :: OSI Approved :: MIT License&quot;</span>,</span><br><span class="line">        <span class="string">&quot;Operating System :: OS Independent&quot;</span>,</span><br><span class="line">    ],</span><br><span class="line">    python_requires=<span class="string">&#x27;&gt;=3.6&#x27;</span>,    <span class="comment">#对python的最低版本要求</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>根据setup.py生成包</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python setup.py sdist bdist_wheel</span><br></pre></td></tr></table></figure>
 
 <p>上传</p>
@@ -2477,7 +2504,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install lcyutils==0.0.1 -i https://pypi.python.org/simple</span><br></pre></td></tr></table></figure>
 
 
-
+</div>
   </div>
   
   
@@ -2490,7 +2517,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/>http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/</a></p>
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/>http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/</a></p>
               
             
           </blockquote>
@@ -2507,10 +2534,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-19T16:46:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T10:25:18+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月19日</p>
+    <p>更新于：2022年5月20日</p>
   </a>
 </div>
 
@@ -2533,7 +2560,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/&title=在Pypi上上传包 - Chengyu Luo Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/&title=在Pypi上上传Lcyutils包 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2545,7 +2572,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/&title=在Pypi上上传包 - Chengyu Luo Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/&title=在Pypi上上传Lcyutils包 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2557,7 +2584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/&title=在Pypi上上传包 - Chengyu Luo Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/&title=在Pypi上上传Lcyutils包 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2611,7 +2638,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/index.html#comments">
+      <meta itemprop="discussionUrl" content="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2634,9 +2661,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#lcyutils%E5%8C%85"><span class="toc-text">lcyutils包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QQ%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">QQ消息推送的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TODO"><span class="toc-text">TODO:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0"><span class="toc-text">上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#setup%E7%BC%96%E5%86%99"><span class="toc-text">setup编写</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2690,7 +2727,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="在Pypi上上传包";
+  pdata.postTitle="在Pypi上上传Lcyutils包";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2804,8 +2841,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652977338035')
-      volantis.js('/blog/js/message.js?time=1652977338035', () => {
+      volantis.css('/blog/css/message.css?time=1653013526837')
+      volantis.js('/blog/js/message.js?time=1653013526837', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2850,8 +2887,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652977338035')
-      volantis.js('/blog/js/message.js?time=1652977338035', () => {
+      volantis.css('/blog/css/message.css?time=1653013526837')
+      volantis.js('/blog/js/message.js?time=1653013526837', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2910,8 +2947,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1652977338035')
-      volantis.js('/blog/js/message.js?time=1652977338035', () => {
+      volantis.css('/blog/css/message.css?time=1653013526837')
+      volantis.js('/blog/js/message.js?time=1653013526837', () => {
         hideMessage(done);
       });
     } else {
@@ -2957,19 +2994,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1652977338035")
+        volantis.js("/blog/js/plugins/sites.js?time=1653013526837")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1652977338035")
+        volantis.js("/blog/js/plugins/friends.js?time=1653013526837")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1652977338035")
+        volantis.js("/blog/js/plugins/contributors.js?time=1653013526837")
       }
     
   };
@@ -3070,7 +3107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1652977338035').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1653013526837').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3079,7 +3116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1652977338035.js"></script>
+<script src="/blog/blog/js/app.js?time=1653013526837.js"></script>
 
 
 <!-- optional -->
@@ -3092,7 +3129,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1652977338035");
+    return volantis.js("/blog/js/search/hexo.js?time=1653013526837");
   }
 
   function loadSearchService() {
@@ -3559,7 +3596,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Useful-Tools/","name":"Useful Tools"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/19/在Pypi上上传包/","name":"在Pypi上上传包"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"在Pypi上上传包","description":"","datePublished":"2022-05-19T08:42:49.000Z","dateModified":"2022-05-19T08:46:55.181Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0%E5%8C%85/","wordCount":0,"articleSection":"Useful Tools","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Useful-Tools/","name":"Useful Tools"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/19/在Pypi上上传Lcyutils包/","name":"在Pypi上上传Lcyutils包"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"在Pypi上上传Lcyutils包","description":"","datePublished":"2022-05-19T08:42:49.000Z","dateModified":"2022-05-20T02:25:18.316Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/","wordCount":0,"articleSection":"Useful Tools","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
