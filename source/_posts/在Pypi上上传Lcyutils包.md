@@ -51,7 +51,7 @@ graph
 
 显然这里呢有一系列的问题，不管是传包时候的问题还是我自己写包时候的问题都有很多问题。这里总结一下希望有空能够一个个fix：
 
-- pypi上的包的setup没有处理过包依赖的问题（未解决）
+- pypi上的包的setup没有处理过包依赖的问题（Fixed）
 - 设置消息token/转移后端端口（未解决）
 - qqmessage支持更多的消息格式，图片/文件等（未解决）
 - 包的结构需要调整，以及需要调整git的流程保证我这边开发和github以及包生成的一致性（未解决）
@@ -73,7 +73,7 @@ with open("README.md", "r",encoding="utf-8") as f:
 
 setup(
     name="lcyutils",   # python包的名字
-    version="0.0.1",                # 版本号
+    version="0.0.2",                # 版本号
     description='LCY Personal Tools',           # 描述
     long_description=long_description,                  # 详细描述，这里将readme的内容放置于此
     author='luochengyu',                                      # 作者
@@ -83,6 +83,7 @@ setup(
     license='MIT License',                                    # 遵守协议
     packages=find_packages(),
     install_requires=[                                               # lamb-common依赖的第三方库
+      'requests>=2.26.0',
     ],
     platforms=["all"],                                                # 支持的平台
     url='https://github.com/lcy1317/lcytools',          # github代码仓地址
