@@ -1,8 +1,8 @@
 ---
 title: Leetcode-Hard-668
 date: 2022-05-18 08:33:13
-tags: Leetcode
-categories: Leetcode
+tags: leetcode
+categories: leetcode
 author: Lcy
 plugins: 
 - mathjax

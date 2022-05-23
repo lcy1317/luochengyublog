@@ -1,8 +1,8 @@
 ---
 title: Leetcode-Hard-675
 date: 2022-05-23 13:43:55
-tags: Leetcode
-categories: Leetcode
+tags: leetcode
+categories: leetcode
 author: Lcy
 plugins: 
 - mathjax
