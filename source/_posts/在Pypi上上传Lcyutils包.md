@@ -53,7 +53,7 @@ graph
 
 - pypi上的包的setup没有处理过包依赖的问题（Fixed）
 - 设置消息token/转移后端端口（未解决）
-- qqmessage支持更多的消息格式，图片/文件等（未解决）
+- qqmessage支持更多的消息格式，图片/文件等（未解决，已更新链接图片发送）
 - 包的结构需要调整，以及需要调整git的流程保证我这边开发和github以及包生成的一致性（未解决）
 - 支持更多的工具（未解决）
 
@@ -73,7 +73,7 @@ with open("README.md", "r",encoding="utf-8") as f:
 
 setup(
     name="lcyutils",   # python包的名字
-    version="0.0.2",                # 版本号
+    version="0.0.3",                # 版本号
     description='LCY Personal Tools',           # 描述
     long_description=long_description,                  # 详细描述，这里将readme的内容放置于此
     author='luochengyu',                                      # 作者
@@ -113,6 +113,6 @@ twine upload dist/*
 安装
 
 ```shell
-pip install lcyutils==0.0.1 -i https://pypi.python.org/simple
+pip install lcyutils==0.0.3 -i https://pypi.python.org/simple
 ```
 
