@@ -38,12 +38,7 @@ qq.lcy_qqmessage(qq="1157***882就是你的QQ",message = "来一条测试消息~
 
 这个实现其实毕竟利用到了QQ机器人，所以借助了我在服务器上跑的一个QQ机器人。
 
-```mermaid
-graph 
-	调用函数 --> 向服务器发送get/post请求
-	向服务器发送get/post请求 --> 利用go-cqhttp解析
-	利用go-cqhttp解析 --> 推送QQ消息
-```
+![image-20220529011909893](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220529011909893.png)
 
 大致是这样一个流程，主要使用了go-cqhttp协议。
 
