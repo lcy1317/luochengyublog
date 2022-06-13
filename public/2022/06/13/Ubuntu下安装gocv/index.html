@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1655108864063" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1655111711375" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-13T08:04:39.000Z">
-<meta property="article:modified_time" content="2022-06-13T08:27:01.022Z">
+<meta property="article:modified_time" content="2022-06-13T09:14:58.476Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1655108864063" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1655108864063"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1655111711375" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1655111711375"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2482,7 +2482,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>看到gocv和opencvlib的版本信息就编译完成了</p>
 <h3 id="Step3-测试Gocv读取文件"><a href="#Step3-测试Gocv读取文件" class="headerlink" title="Step3 测试Gocv读取文件"></a>Step3 测试Gocv读取文件</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;gocv.io/x/gocv&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	image := gocv.IMRead(<span class="string">&quot;./test.png&quot;</span>, gocv.IMReadColor)</span><br><span class="line">	<span class="comment">//构建窗口</span></span><br><span class="line">	window := gocv.NewWindow(<span class="string">&quot;img&quot;</span>)</span><br><span class="line">	window.ResizeWindow(<span class="number">500</span>, <span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//在窗口展示图片</span></span><br><span class="line">	window.IMShow(image)</span><br><span class="line">	window.WaitKey(<span class="number">0</span>)</span><br><span class="line">	window.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</div><h2 id="GoCV读取图片三通道-float32"><a href="#GoCV读取图片三通道-float32" class="headerlink" title="GoCV读取图片三通道[]float32"></a>GoCV读取图片三通道[]float32</h2><div class="story post-story"><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"> <span class="string">&quot;gocv.io/x/gocv&quot;</span></span><br><span class="line"> <span class="string">&quot;log&quot;</span></span><br><span class="line"> <span class="string">&quot;math&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Image []<span class="type">float32</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"> imageFilePath := <span class="string">&quot;../../data/Lena.png&quot;</span></span><br><span class="line"> originalMat := gocv.IMRead(imageFilePath, gocv.IMReadGrayScale)</span><br><span class="line"> <span class="keyword">if</span> originalMat.Empty() &#123;</span><br><span class="line">  log.Panic(<span class="string">&quot;Can not read image: &quot;</span> + imageFilePath)</span><br><span class="line">  <span class="keyword">return</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> originalImage := originalMat.ToBytes()</span><br><span class="line"> targetImage := <span class="built_in">make</span>(Image, <span class="built_in">len</span>(originalImage))</span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(targetImage); i++ &#123;</span><br><span class="line">  targetImage[i] = <span class="type">float32</span>(originalImage[i]) / <span class="number">255</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> targetImage.zeroAverageMatrix()</span><br><span class="line"> log.Println(targetImage)</span><br><span class="line"></span><br><span class="line"> targetImage.dispersionMatrix()</span><br><span class="line"> log.Println(targetImage)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(image *Image)</span></span> zeroAverageMatrix() &#123;</span><br><span class="line"> average := image.average()</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(*image); i++ &#123;</span><br><span class="line">  (*image)[i] = (*image)[i] - average</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(image *Image)</span></span> dispersionMatrix() &#123;</span><br><span class="line"> average := image.average()</span><br><span class="line"> tempImage := image.clone()</span><br><span class="line"> length := <span class="built_in">len</span>(tempImage)</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;</span><br><span class="line">  tempImage[i] = <span class="type">float32</span>(math.Pow(<span class="type">float64</span>(tempImage[i]-average), <span class="number">2</span>))</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> sum := tempImage.sum()</span><br><span class="line"></span><br><span class="line"> standardDeviation := sum / <span class="type">float32</span>(length<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;</span><br><span class="line">  (*image)[i] = (*image)[i] / standardDeviation</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(image Image)</span></span> sum() <span class="type">float32</span> &#123;</span><br><span class="line"> length := <span class="built_in">len</span>(image)</span><br><span class="line"> <span class="keyword">var</span> sum <span class="type">float32</span> = <span class="number">0</span></span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;</span><br><span class="line">  sum = sum + image[i]</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(image Image)</span></span> average() <span class="type">float32</span> &#123;</span><br><span class="line"> length := <span class="built_in">len</span>(image)</span><br><span class="line"> sum := image.sum()</span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> sum / <span class="type">float32</span>(length)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(image Image)</span></span> clone() Image &#123;</span><br><span class="line"> length := <span class="built_in">len</span>(image)</span><br><span class="line"> cloneImage := <span class="built_in">make</span>([]<span class="type">float32</span>, length)</span><br><span class="line"> <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;</span><br><span class="line">  cloneImage[i] = image[i]</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> cloneImage</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </div><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/hybridgroup/gocv">hybridgroup/gocv: Go package for computer vision using OpenCV 4 and beyond. (github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/428249664">https://zhuanlan.zhihu.com/p/428249664</a></p>
 
 </div>
   </div>
@@ -2514,7 +2519,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T16:27:01+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-13T17:14:58+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月13日</p>
@@ -2649,7 +2654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E5%AE%89%E8%A3%85%E6%8C%87%E5%AF%BC"><span class="toc-text">Ubuntu 安装指导</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-text">Step1 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-make-install"><span class="toc-text">Step2 make install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-%E6%B5%8B%E8%AF%95Gocv%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-text">Step3 测试Gocv读取文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E5%AE%89%E8%A3%85%E6%8C%87%E5%AF%BC"><span class="toc-text">Ubuntu 安装指导</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-text">Step1 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-make-install"><span class="toc-text">Step2 make install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-%E6%B5%8B%E8%AF%95Gocv%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-text">Step3 测试Gocv读取文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GoCV%E8%AF%BB%E5%8F%96%E5%9B%BE%E7%89%87%E4%B8%89%E9%80%9A%E9%81%93-float32"><span class="toc-text">GoCV读取图片三通道[]float32</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
     </div>
   </section>
 
@@ -2819,8 +2824,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1655108864063')
-      volantis.js('/blog/js/message.js?time=1655108864063', () => {
+      volantis.css('/blog/css/message.css?time=1655111711375')
+      volantis.js('/blog/js/message.js?time=1655111711375', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2865,8 +2870,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1655108864063')
-      volantis.js('/blog/js/message.js?time=1655108864063', () => {
+      volantis.css('/blog/css/message.css?time=1655111711375')
+      volantis.js('/blog/js/message.js?time=1655111711375', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2925,8 +2930,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1655108864063')
-      volantis.js('/blog/js/message.js?time=1655108864063', () => {
+      volantis.css('/blog/css/message.css?time=1655111711375')
+      volantis.js('/blog/js/message.js?time=1655111711375', () => {
         hideMessage(done);
       });
     } else {
@@ -2972,19 +2977,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1655108864063")
+        volantis.js("/blog/js/plugins/sites.js?time=1655111711375")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1655108864063")
+        volantis.js("/blog/js/plugins/friends.js?time=1655111711375")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1655108864063")
+        volantis.js("/blog/js/plugins/contributors.js?time=1655111711375")
       }
     
   };
@@ -3085,7 +3090,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1655108864063').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1655111711375').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3094,7 +3099,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1655108864063.js"></script>
+<script src="/blog/blog/js/app.js?time=1655111711375.js"></script>
 
 
 <!-- optional -->
@@ -3107,7 +3112,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1655108864063");
+    return volantis.js("/blog/js/search/hexo.js?time=1655111711375");
   }
 
   function loadSearchService() {
@@ -3574,7 +3579,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Tips/","name":"Tips"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/06/13/Ubuntu下安装gocv/","name":"Ubuntu下安装gocv"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ubuntu下安装gocv","description":"","datePublished":"2022-06-13T08:04:39.000Z","dateModified":"2022-06-13T08:27:01.022Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/","wordCount":0,"articleSection":"Tips","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Tips/","name":"Tips"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/06/13/Ubuntu下安装gocv/","name":"Ubuntu下安装gocv"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ubuntu下安装gocv","description":"","datePublished":"2022-06-13T08:04:39.000Z","dateModified":"2022-06-13T09:14:58.476Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/","wordCount":0,"articleSection":"Tips","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
