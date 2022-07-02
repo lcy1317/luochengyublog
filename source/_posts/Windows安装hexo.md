@@ -1,5 +1,5 @@
 ---
-title: Windows安装hexo
+title: windows安装hexo
 date: 2022-07-02 23:37:50
 tags: Tips
 categories: Useful Tools
@@ -56,8 +56,3 @@ npm install hexo-cli -g
 
 然后测试一下hexo g & hexo s是否能生成博客就行了。
 
-## Reference
-
-[windows环境下NPM / NodeJS的安装配置-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/832078#:~:text=windows环境下NPM %2F NodeJS的安装配置 1 一、下载NodeJS安装包 2 二、安装NodeJS,3 三、验证安装 4 四、修改模块目录 5 五、配置自定义镜像 6 六、重新安装NPM)
-
-[Hexo](https://hexo.io/zh-cn/index.html)
