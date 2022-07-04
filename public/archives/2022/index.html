@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1656780092895" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1656917300737" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1656,8 +1656,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1656780092895" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1656780092895"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1656917300737" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1656917300737"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2413,6 +2413,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Chengyu Luo Blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/"  itemprop="url">
+        ubuntu设置root登陆
+      </a>
+    </h2>
+  
+  <div class='md' itemprop="articleBody">
+    
+      
+        Step 1 给root用户设置账户密码123sudo passwd root# 切换用户su root
+
+Step 2 修改gdm-autologin文件1vim /etc/pam.d/gdm-autologin
+
+注释掉：auth required pam_succeed_if.so user != root quiet_success
+
+Step 3 修改gdm-password文件1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-07-04T14:02:04+08:00">2022-07-04</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
@@ -2984,71 +3049,6 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/18/Leetcode-Hard-668/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/05/18/Leetcode-Hard-668/"  itemprop="url">
-        Leetcode-Hard-668
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        668. 乘法表中第k小的数几乎每一个人都用 乘法表。但是你能在乘法表中快速找到第k小的数字吗？
-给定高度m 、宽度n 的一张 m * n的乘法表，以及正整数k，你需要返回表中第k 小的数字。
-例 1：
-123456789输入: m = 3, n = 3, k = 5输出: 3解释: 乘法表:1	2	32	4	63	6	9第5小的数字是 3 (1, 2, 2, 3, 3).
-
-例 2：
-12...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-18T08:33:13+08:00">2022-05-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/leetcode/">leetcode</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/leetcode/" itemprop="url"><span itemprop="name">leetcode</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/05/18/Leetcode-Hard-668/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3191,7 +3191,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
           <li><a class="flat-box"
             title="/blog/categories/Useful-Tools/" href="/blog/categories/Useful-Tools/"
             active-action="action-blogcategoriesUseful-Tools"
-            ><div class='name'>Useful Tools</div><div class='badge'>(8)</div></a></li>
+            ><div class='name'>Useful Tools</div><div class='badge'>(9)</div></a></li>
         
           <li><a class="flat-box"
             title="/blog/categories/Work-Prepare/" href="/blog/categories/Work-Prepare/"
@@ -3387,8 +3387,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1656780092895')
-      volantis.js('/blog/js/message.js?time=1656780092895', () => {
+      volantis.css('/blog/css/message.css?time=1656917300737')
+      volantis.js('/blog/js/message.js?time=1656917300737', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3433,8 +3433,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1656780092895')
-      volantis.js('/blog/js/message.js?time=1656780092895', () => {
+      volantis.css('/blog/css/message.css?time=1656917300737')
+      volantis.js('/blog/js/message.js?time=1656917300737', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3493,8 +3493,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1656780092895')
-      volantis.js('/blog/js/message.js?time=1656780092895', () => {
+      volantis.css('/blog/css/message.css?time=1656917300737')
+      volantis.js('/blog/js/message.js?time=1656917300737', () => {
         hideMessage(done);
       });
     } else {
@@ -3540,19 +3540,19 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1656780092895")
+        volantis.js("/blog/js/plugins/sites.js?time=1656917300737")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1656780092895")
+        volantis.js("/blog/js/plugins/friends.js?time=1656917300737")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1656780092895")
+        volantis.js("/blog/js/plugins/contributors.js?time=1656917300737")
       }
     
   };
@@ -3653,7 +3653,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1656780092895').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1656917300737').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3662,7 +3662,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
 
 
-<script src="/blog/blog/js/app.js?time=1656780092895.js"></script>
+<script src="/blog/blog/js/app.js?time=1656917300737.js"></script>
 
 
 <!-- optional -->
@@ -3675,7 +3675,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1656780092895");
+    return volantis.js("/blog/js/search/hexo.js?time=1656917300737");
   }
 
   function loadSearchService() {
