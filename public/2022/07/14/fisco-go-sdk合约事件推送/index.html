@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk合约事件推送/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,25 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1657782256843" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1657782256602" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>k8s token generate - Chengyu Luo Blog</title>
-  <meta name="keywords" content="Personal-Tips,null">
-  <meta name="description" content="Personal Tips. Only for my k8s. 12ssh root@api.k8s-prod-hkg01.prod.bcollie.netkubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount kubernetes-dashboard-user -n kubernetes-dashboard">
+  <title>fisco go sdk合约事件推送 - Chengyu Luo Blog</title>
+  <meta name="keywords" content="Study,null">
+  <meta name="description" content="合约事件推送标签：go-sdk 事件订阅 Event 正好最近在研究fisco go sdk的合约推送如何使用，官方又没有文档，折腾了半天最后用起来了就顺便写了了文档还提了pr也被官方合入了还挺快乐的，合约事件推送 — FISCO BCOS v2.9.0 文档所以要快乐的记录一下成为一个水货的fisco开源贡献者。  1. 功能简介合约事件推送功能提供了合约事件的异步推送机制，客户端向节点发送注册">
 <meta property="og:type" content="article">
-<meta property="og:title" content="k8s token generate">
-<meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/index.html">
+<meta property="og:title" content="fisco go sdk合约事件推送">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Personal Tips. Only for my k8s. 12ssh root@api.k8s-prod-hkg01.prod.bcollie.netkubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount kubernetes-dashboard-user -n kubernetes-dashboard">
+<meta property="og:description" content="合约事件推送标签：go-sdk 事件订阅 Event 正好最近在研究fisco go sdk的合约推送如何使用，官方又没有文档，折腾了半天最后用起来了就顺便写了了文档还提了pr也被官方合入了还挺快乐的，合约事件推送 — FISCO BCOS v2.9.0 文档所以要快乐的记录一下成为一个水货的fisco开源贡献者。  1. 功能简介合约事件推送功能提供了合约事件的异步推送机制，客户端向节点发送注册">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-08T07:58:27.000Z">
-<meta property="article:modified_time" content="2022-07-02T15:49:59.942Z">
+<meta property="article:published_time" content="2022-07-14T07:00:40.000Z">
+<meta property="article:modified_time" content="2022-07-14T07:04:11.052Z">
 <meta property="article:author" content="Yiheng Jiang">
-<meta property="article:tag" content="Personal-Tips">
+<meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1657782256843" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1657782256843"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1657782256602" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1657782256602"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2384,7 +2384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
@@ -2401,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        k8s token generate
+        fisco go sdk合约事件推送
       </h1>
       <div class='new-meta-box'>
         
@@ -2420,10 +2420,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/blog/categories/Titanium-Tech/">Titanium Tech</a>
+    <a class="category-link" href="/blog/categories/FISCO/">FISCO</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/blog/categories/Titanium-Tech/" itemprop="url"><span itemprop="name">Titanium Tech</span></a>
+        <a href="/blog/categories/FISCO/" itemprop="url"><span itemprop="name">FISCO</span></a>
       </span>
     
   </div>
@@ -2432,10 +2432,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-08T15:58:27+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-07-14T15:00:40+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月8日</p>
+    <p>发布于：2022年7月14日</p>
   </a>
 </div>
 
@@ -2446,7 +2446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-      <div id="lc-pv" data-title="k8s token generate" data-path="/blog/2022/04/08/k8s-token-generate/">
+      <div id="lc-pv" data-title="fisco go sdk合约事件推送" data-path="/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2467,12 +2467,76 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Personal Tips. Only for my k8s.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh root@api.k8s-prod-hkg01.prod.bcollie.net</span><br><span class="line">kubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount kubernetes-dashboard-user -n kubernetes-dashboard -o jsonpath=&quot;&#123;.secrets[0].name&#125;&quot;) -o jsonpath=&quot;&#123;.data.token&#125;&quot; | base64 --decode</span><br></pre></td></tr></table></figure>
-<p>Webpage：</p>
-<p><a target="_blank" rel="noopener" href="https://k8s-dashboard.corp.bcollie.net/#/service?namespace=default">https://k8s-dashboard.corp.bcollie.net/#/service?namespace=default</a></p>
+    <h1 id="合约事件推送"><a href="#合约事件推送" class="headerlink" title="合约事件推送"></a>合约事件推送</h1><p>标签：<code>go-sdk</code> <code>事件订阅</code> <code>Event</code></p>
+<p>正好最近在研究fisco go sdk的合约推送如何使用，官方又没有文档，折腾了半天最后用起来了就顺便写了了文档还提了pr也被官方合入了还挺快乐的，<a target="_blank" rel="noopener" href="https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/go_sdk/event_sub.html">合约事件推送 — FISCO BCOS v2.9.0 文档</a>所以要快乐的记录一下成为一个水货的fisco开源贡献者。</p>
+<hr>
+<h2 id="1-功能简介"><a href="#1-功能简介" class="headerlink" title="1. 功能简介"></a>1. 功能简介</h2><div class="story post-story"><p>合约事件推送功能提供了合约事件的异步推送机制，客户端向节点发送注册请求，在请求中携带客户端关注的合约事件的参数，节点根据请求参数对请求区块范围的<code>Event Log</code>进行过滤，将结果分次推送给客户端。</p>
+</div><h2 id="2-交互协议"><a href="#2-交互协议" class="headerlink" title="2. 交互协议"></a>2. 交互协议</h2><div class="story post-story"><p>客户端与节点的交互基于<a target="_blank" rel="noopener" href="https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/design/protocol_description.html#id4"><code>Channel</code></a>协议。交互分为三个阶段：注册请求，节点回复，<code>Event Log</code>数据推送。</p>
+<h3 id="注册请求"><a href="#注册请求" class="headerlink" title="注册请求"></a>注册请求</h3><p>客户端向节点发送事件推送的注册请求:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// request sample:</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;fromBlock&quot;</span><span class="punctuation">:</span> <span class="string">&quot;latest&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;toBlock&quot;</span><span class="punctuation">:</span> <span class="string">&quot;latest&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;addresses&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;0x1f3119043aaee8e5080967e6f80eb3135086c138&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;topics&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;0x91c95f04198617c60eaf2180fbca88fc192db379657df0e412a9f7dd4ebbe95d&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;groupID&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;filterID&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bb31e4ec086c48e18f21cb994e2e5967&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>filerID：字符串类型，每次请求唯一，标记一次注册任务  </li>
+<li>groupID：字符串类型，群组ID  </li>
+<li>fromBlock：整形字符串，初始区块。“latest” 当前块高  </li>
+<li>toBlock：整形字符串，最终区块。“latest” 处理至当前块高时，继续等待新区块  </li>
+<li>addresses：字符串或者字符串数组：字符串表示单个合约地址，数组为多个合约地址，数组可以为空</li>
+<li>topics：字符串类型或者数组类型：字符串表示单个topic，数组为多个topic，数组可以为空</li>
+</ul>
+<h3 id="节点回复"><a href="#节点回复" class="headerlink" title="节点回复"></a>节点回复</h3><p>节点接受客户端注册请求时，会对请求参数进行校验，将是否成功接受该注册请求结果回复给客户端。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// response sample:</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;filterID&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bb31e4ec086c48e18f21cb994e2e5967&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;result&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>filterID：字符串类型，每次请求唯一，标记一次注册任务  </li>
+<li>result：整形，返回结果。0成功，其余为失败状态码</li>
+</ul>
+<h3 id="Event-Log数据推送"><a href="#Event-Log数据推送" class="headerlink" title="Event Log数据推送"></a>Event Log数据推送</h3><p>节点验证客户端注册请求成功之后，根据客户端请求参数条件，向客户端推送<code>Event Log</code>数据。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// event log push sample:</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;filterID&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bb31e4ec086c48e18f21cb994e2e5967&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;result&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;logs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    </span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>filterID：字符串类型，每次请求唯一，标记一次注册任务  </li>
+<li>result：整形 0：<code>Event Log</code>数据推送 1：推送完成。客户端一次注册请求对应节点的数据推送会有多次（请求区块范围比较大或者等待新的区块），<code>result</code>字段为1时说明节点推送已经结束  </li>
+<li>logs：Log对象数组，result为0时有效  </li>
+</ul>
+</div><h2 id="3-Go-SDK教程"><a href="#3-Go-SDK教程" class="headerlink" title="3. Go SDK教程"></a>3. Go SDK教程</h2><div class="story post-story"><h3 id="注册接口"><a href="#注册接口" class="headerlink" title="注册接口"></a>注册接口</h3><p>在FISCO-BCOS Go SDK中<code>client.Client</code>类提供合约事件的注册接口，用户可以调用<code>SubscribeEventLogs</code>向节点发送注册请求，并设置回调函数。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Client)</span></span> SubscribeEventLogs(eventLogParams types.EventLogParams, handler <span class="function"><span class="keyword">func</span><span class="params">(<span class="type">int</span>, []types.Log)</span></span>) <span class="type">error</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> c.apiHandler.SubscribeEventLogs(eventLogParams, handler)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="types-EventLogParams注册参数"><a href="#types-EventLogParams注册参数" class="headerlink" title="types.EventLogParams注册参数"></a><code>types.EventLogParams</code>注册参数</h4><p>事件回调请求注册的参数：  </p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> EventLogParams <span class="keyword">struct</span> &#123;</span><br><span class="line">	FromBlock <span class="type">string</span>   <span class="string">`json:&quot;fromBlock&quot;`</span>   <span class="comment">// 订阅起始区块 latest表示最新区块</span></span><br><span class="line">	ToBlock   <span class="type">string</span>   <span class="string">`json:&quot;toBlock&quot;`</span>     <span class="comment">// 订阅结束区块 latest表示最新区块</span></span><br><span class="line">	Addresses []<span class="type">string</span> <span class="string">`json:&quot;addresses&quot;`</span>   <span class="comment">// 订阅的合约地址</span></span><br><span class="line">	Topics    []<span class="type">string</span> <span class="string">`json:&quot;topics&quot;`</span>      <span class="comment">// 订阅的事件</span></span><br><span class="line">	GroupID   <span class="type">string</span>   <span class="string">`json:&quot;groupID&quot;`</span>     </span><br><span class="line">	FilterID  <span class="type">string</span>   <span class="string">`json:&quot;filterID&quot;`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+<h4 id="topic计算"><a href="#topic计算" class="headerlink" title="topic计算"></a>topic计算</h4><p>Go语言可以使用<code>github.com/ethereum/go-ethereum/common</code>包根据合约中定义的事件进行Topic的计算：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">topic = common.BytesToHash(crypto.Keccak256([]<span class="type">byte</span>(<span class="string">&quot;testEventLog(address,string,uint256)&quot;</span>))).Hex()</span><br></pre></td></tr></table></figure>
+
+<p><em>需要注意的是uint及int为uint256及int256的别名，即使合约中使用的类型为uint及int，在topic的计算中仍需使用uint256与int256</em></p>
+</div><h2 id="4-示例"><a href="#4-示例" class="headerlink" title="4. 示例"></a>4. 示例</h2><div class="story post-story"><p>此处以一个进行数值更改并计算更改次数的<code>eventDemo.sol</code>合约进行事件订阅举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity &gt;=0.4.24;</span><br><span class="line"></span><br><span class="line">contract eventDemo &#123;</span><br><span class="line">    </span><br><span class="line">    uint256 public count = 0;</span><br><span class="line">    uint256 public num = 0;</span><br><span class="line"></span><br><span class="line">    event setNum(address caller,uint256 cnt,uint256 value);   // Declare A Event</span><br><span class="line"></span><br><span class="line">    function setNumber(uint256 v) public &#123; </span><br><span class="line">        count += 1;</span><br><span class="line">        num = v;</span><br><span class="line">        emit setNum(msg.sender,count,num); </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function getNumber()public returns (uint)&#123;</span><br><span class="line">        return num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该合约提供了<code>setNumber</code>及<code>getNumber</code>方法，其中调用前者将获得一个抛出事件。</p>
+<p>在Fisco Go SDK中有两种事件订阅方式，分别为使用<code>client</code>直接进行事件订阅与调用Abigen工具生成的代码中函数进行订阅两种，其中后者须建立<code>session</code>。</p>
+<h3 id="4-1-使用client进行事件订阅"><a href="#4-1-使用client进行事件订阅" class="headerlink" title="4.1 使用client进行事件订阅"></a>4.1 使用client进行事件订阅</h3><p><strong>事件推送订阅</strong></p>
+<p>在Go SDK中给出了<a target="_blank" rel="noopener" href="https://github.com/FISCO-BCOS/go-sdk/blob/master/examples/eventLog/sub/subscriber.go">subscriber.go</a>合约事件订阅样例</p>
+<p><em>需要注意的是Topic及Address不可置空，置空将无法接收到相应事件。</em></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	...... <span class="comment">// 省略</span></span><br><span class="line">    endpoint := <span class="string">&quot;127.0.0.1:20200&quot;</span> <span class="comment">// 部署的Fisco链的ip:channel_port</span></span><br><span class="line">	privateKey, _ := hex.DecodeString(<span class="string">&quot;145e247e170ba3afd6ae97e88f00dbc976c2345d511b0f6713355d19d8b80b58&quot;</span>) <span class="comment">//用户私钥</span></span><br><span class="line">	config := &amp;conf.Config&#123;IsHTTP: <span class="literal">false</span>, ChainID: <span class="number">1</span>, CAFile: <span class="string">&quot;ca.crt&quot;</span>, Key: <span class="string">&quot;sdk.key&quot;</span>, Cert: <span class="string">&quot;sdk.crt&quot;</span>, </span><br><span class="line">		IsSMCrypto: <span class="literal">false</span>, GroupID: <span class="number">1</span>, PrivateKey: privateKey, NodeURL: endpoint&#125;</span><br><span class="line">	<span class="keyword">var</span> c *client.Client</span><br><span class="line">	<span class="keyword">var</span> err <span class="type">error</span></span><br><span class="line">	...... <span class="comment">// 省略</span></span><br><span class="line">	<span class="keyword">var</span> eventLogParams types.EventLogParams</span><br><span class="line">	eventLogParams.FromBlock = <span class="string">&quot;1&quot;</span></span><br><span class="line">	eventLogParams.ToBlock = <span class="string">&quot;latest&quot;</span> <span class="comment">// 当前配置订阅了从创世区块至最新区块的链上所有事件</span></span><br><span class="line">	eventLogParams.GroupID = <span class="string">&quot;1&quot;</span></span><br><span class="line">	<span class="keyword">var</span> topics = <span class="built_in">make</span>([]<span class="type">string</span>, <span class="number">1</span>)</span><br><span class="line">	topics[<span class="number">0</span>] = common.BytesToHash(crypto.Keccak256([]<span class="type">byte</span>(<span class="string">&quot;setNum(address,uint256,uint256)&quot;</span>))).Hex() <span class="comment">// 事件的Topic计算，注意使用uint256及int256替代uint及int</span></span><br><span class="line">	eventLogParams.Topics = topics</span><br><span class="line">	<span class="keyword">var</span> addresses = <span class="built_in">make</span>([]<span class="type">string</span>, <span class="number">1</span>)</span><br><span class="line">	addresses[<span class="number">0</span>] = <span class="string">&quot;0xd2cf82e18f3d2c5cae0de87d29994be622f3fdd3&quot;</span> <span class="comment">// 所订阅事件对应的合约地址</span></span><br><span class="line"></span><br><span class="line">	eventLogParams.Addresses = addresses</span><br><span class="line">	timeout := <span class="number">30</span> * time.Second</span><br><span class="line">	queryTicker := time.NewTicker(timeout)</span><br><span class="line">	<span class="keyword">defer</span> queryTicker.Stop()</span><br><span class="line">	done := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="type">bool</span>)</span><br><span class="line">	err = c.SubscribeEventLogs(eventLogParams, <span class="function"><span class="keyword">func</span><span class="params">(status <span class="type">int</span>, logs []types.Log)</span></span> &#123; <span class="comment">// 调用SubscribeEventLogs函数订阅事件</span></span><br><span class="line">		...... <span class="comment">// 省略</span></span><br><span class="line">	&#125;)</span><br><span class="line">    ......	<span class="comment">// 省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Log数据解析</strong></p>
+<p>在使用sdk提供的客户端订阅事件的方式中，获取到的数据需要<code>abi</code>进行解析，</p>
+<p>首先需要根据事件包含的变量类型构建一个用于解析的结构体：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> setNum <span class="keyword">struct</span> &#123;</span><br><span class="line">	Caller common.Address</span><br><span class="line">	Cnt    *big.Int</span><br><span class="line">	Value  *big.Int</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此后可采用<code>abi</code>工具进行解析：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">err = c.SubscribeEventLogs(eventLogParams, <span class="function"><span class="keyword">func</span><span class="params">(status <span class="type">int</span>, logs []types.Log)</span></span> &#123;</span><br><span class="line">	fmt.Println(logs[<span class="number">0</span>].Data)</span><br><span class="line">	<span class="keyword">for</span> k, v := <span class="keyword">range</span> logs &#123;</span><br><span class="line">		<span class="keyword">var</span> tempABI abi.ABI</span><br><span class="line">		<span class="keyword">var</span> temp setNum</span><br><span class="line">		tempABI, err := abi.JSON(strings.NewReader(EventDemoABI))</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			logrus.Println(err.Error())</span><br><span class="line">		&#125;</span><br><span class="line">		err = tempABI.Unpack(&amp;temp, <span class="string">&quot;setNum&quot;</span>, v.Data)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			logrus.Println(err.Error())</span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(<span class="string">&quot;log number:&quot;</span>, k, temp)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>此处<code>abi.Json</code>所使用到的数据需要使用<code>abigen</code>工具生成对应的go文件后获得:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// EventDemoABI is the input ABI used to generate the binding from.</span></span><br><span class="line"><span class="keyword">const</span> EventDemoABI = <span class="string">&quot;[&#123;\&quot;constant\&quot;:true,\&quot;inputs\&quot;:[],\&quot;name\&quot;:\&quot;count\&quot;,\&quot;outputs\&quot;:[&#123;\&quot;name\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;],\&quot;payable\&quot;:false,\&quot;stateMutability\&quot;:\&quot;view\&quot;,\&quot;type\&quot;:\&quot;function\&quot;&#125;,&#123;\&quot;constant\&quot;:false,\&quot;inputs\&quot;:[&#123;\&quot;name\&quot;:\&quot;v\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;],\&quot;name\&quot;:\&quot;setNumber\&quot;,\&quot;outputs\&quot;:[],\&quot;payable\&quot;:false,\&quot;stateMutability\&quot;:\&quot;nonpayable\&quot;,\&quot;type\&quot;:\&quot;function\&quot;&#125;,&#123;\&quot;constant\&quot;:true,\&quot;inputs\&quot;:[],\&quot;name\&quot;:\&quot;num\&quot;,\&quot;outputs\&quot;:[&#123;\&quot;name\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;],\&quot;payable\&quot;:false,\&quot;stateMutability\&quot;:\&quot;view\&quot;,\&quot;type\&quot;:\&quot;function\&quot;&#125;,&#123;\&quot;constant\&quot;:true,\&quot;inputs\&quot;:[],\&quot;name\&quot;:\&quot;getNumber\&quot;,\&quot;outputs\&quot;:[&#123;\&quot;name\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;],\&quot;payable\&quot;:false,\&quot;stateMutability\&quot;:\&quot;view\&quot;,\&quot;type\&quot;:\&quot;function\&quot;&#125;,&#123;\&quot;anonymous\&quot;:false,\&quot;inputs\&quot;:[&#123;\&quot;indexed\&quot;:false,\&quot;name\&quot;:\&quot;caller\&quot;,\&quot;type\&quot;:\&quot;address\&quot;&#125;,&#123;\&quot;indexed\&quot;:false,\&quot;name\&quot;:\&quot;cnt\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;,&#123;\&quot;indexed\&quot;:false,\&quot;name\&quot;:\&quot;value\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;&#125;],\&quot;name\&quot;:\&quot;setNum\&quot;,\&quot;type\&quot;:\&quot;event\&quot;&#125;]&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-2-使用Abigen工具生成后的函数进行事件订阅"><a href="#4-2-使用Abigen工具生成后的函数进行事件订阅" class="headerlink" title="4.2 使用Abigen工具生成后的函数进行事件订阅"></a>4.2 使用Abigen工具生成后的函数进行事件订阅</h3><p>该方式进行事件订阅需先构建与合约的<code>session</code>连接，后直接调用<code>abigen</code>生成的go文件中函数即可进行事件的订阅与解析：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据配置文件构建eventDemoSession</span></span><br><span class="line">err := eventDemoSession.WatchAllSetNum(from, <span class="function"><span class="keyword">func</span><span class="params">(status <span class="type">int</span>, logs []types.Log)</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Status Code:&quot;</span>,status)	</span><br><span class="line">	<span class="keyword">for</span> k, v := <span class="keyword">range</span> logs &#123;</span><br><span class="line">			log, errs := eventDemoSession.ParseSetNum(v) <span class="comment">// 解析数据</span></span><br><span class="line">			<span class="keyword">if</span> errs != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(errs)</span><br><span class="line">			&#125;</span><br><span class="line">        fmt.Println(<span class="string">&quot;Log id:&quot;</span>, k, <span class="string">&quot;Log Content:&quot;</span>,log)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>关于Session的构建请参考<a target="_blank" rel="noopener" href="https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/go_sdk/contractExamples.html">合约开发样例</a>部分中例程。</p>
+
+</div>
   </div>
   
   
@@ -2485,7 +2549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/>http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/</a></p>
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/>http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/</a></p>
               
             
           </blockquote>
@@ -2502,10 +2566,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-02T23:49:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-14T15:04:11+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年7月2日</p>
+    <p>更新于：2022年7月14日</p>
   </a>
 </div>
 
@@ -2514,8 +2578,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Personal-Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Personal-Tips</p></a></div>
-  <span hidden itemprop="keywords">Personal-Tips</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Study/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Study</p></a></div>
+  <span hidden itemprop="keywords">Study</span>
 
 
         
@@ -2528,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/&title=fisco go sdk合约事件推送 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2540,7 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/&title=fisco go sdk合约事件推送 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2552,7 +2616,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/&title=fisco go sdk合约事件推送 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2585,20 +2649,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/blog/2022/04/15/DeFi-Learning-Beginner/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>DeFi Learning Beginner</p>
-          <p class='content'>A reading note for 《How to DeFi Beginner》
-Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
-        </a>
       
-      
-        <a class='next' href='/blog/2022/04/08/GametheoryResult2/'>
-          <p class='title'>博弈论小游戏结果2<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>在猜均值2/3的游戏中我们最终获得了366个数字，他们平均值的2/3结果是：19.149962487030315
-对应的游戏获胜者：
+        <a class='next' href='/blog/2022/07/11/Docker%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>Docker学习<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Docker 学习[toc]
+Docker 概述Docker文档
+DockerHub
 
-填报数字：18.9
-距离平均数：0.24996248703...</p>
+
+
+特性
+传统
+Docker
+
+
+
+应用的更快速的交付和部署
+一堆帮助文档，安装程序
+打包镜像发布测试，一...</p>
         </a>
       
     </div>
@@ -2614,7 +2682,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/blog/2022/04/08/k8s-token-generate/index.html#comments">
+      <meta itemprop="discussionUrl" content="/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2637,9 +2705,19 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"><span class="toc-text">1. 功能简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BA%A4%E4%BA%92%E5%8D%8F%E8%AE%AE"><span class="toc-text">2. 交互协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E8%AF%B7%E6%B1%82"><span class="toc-text">注册请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%9B%9E%E5%A4%8D"><span class="toc-text">节点回复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event-Log%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81"><span class="toc-text">Event Log数据推送</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go-SDK%E6%95%99%E7%A8%8B"><span class="toc-text">3. Go SDK教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3"><span class="toc-text">注册接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#types-EventLogParams%E6%B3%A8%E5%86%8C%E5%8F%82%E6%95%B0"><span class="toc-text">types.EventLogParams注册参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#topic%E8%AE%A1%E7%AE%97"><span class="toc-text">topic计算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%A4%BA%E4%BE%8B"><span class="toc-text">4. 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%BD%BF%E7%94%A8client%E8%BF%9B%E8%A1%8C%E4%BA%8B%E4%BB%B6%E8%AE%A2%E9%98%85"><span class="toc-text">4.1 使用client进行事件订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E4%BD%BF%E7%94%A8Abigen%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E5%90%8E%E7%9A%84%E5%87%BD%E6%95%B0%E8%BF%9B%E8%A1%8C%E4%BA%8B%E4%BB%B6%E8%AE%A2%E9%98%85"><span class="toc-text">4.2 使用Abigen工具生成后的函数进行事件订阅</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2693,7 +2771,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="k8s token generate";
+  pdata.postTitle="fisco go sdk合约事件推送";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2807,8 +2885,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1657782256843')
-      volantis.js('/blog/js/message.js?time=1657782256843', () => {
+      volantis.css('/blog/css/message.css?time=1657782256602')
+      volantis.js('/blog/js/message.js?time=1657782256602', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2853,8 +2931,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1657782256843')
-      volantis.js('/blog/js/message.js?time=1657782256843', () => {
+      volantis.css('/blog/css/message.css?time=1657782256602')
+      volantis.js('/blog/js/message.js?time=1657782256602', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2913,8 +2991,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1657782256843')
-      volantis.js('/blog/js/message.js?time=1657782256843', () => {
+      volantis.css('/blog/css/message.css?time=1657782256602')
+      volantis.js('/blog/js/message.js?time=1657782256602', () => {
         hideMessage(done);
       });
     } else {
@@ -2960,19 +3038,19 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1657782256843")
+        volantis.js("/blog/js/plugins/sites.js?time=1657782256602")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1657782256843")
+        volantis.js("/blog/js/plugins/friends.js?time=1657782256602")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1657782256843")
+        volantis.js("/blog/js/plugins/contributors.js?time=1657782256602")
       }
     
   };
@@ -3073,7 +3151,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1657782256843').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1657782256602').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3082,7 +3160,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
 
 
-<script src="/blog/blog/js/app.js?time=1657782256843.js"></script>
+<script src="/blog/blog/js/app.js?time=1657782256602.js"></script>
 
 
 <!-- optional -->
@@ -3095,7 +3173,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1657782256843");
+    return volantis.js("/blog/js/search/hexo.js?time=1657782256602");
   }
 
   function loadSearchService() {
@@ -3562,7 +3640,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Titanium-Tech/","name":"Titanium Tech"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/08/k8s-token-generate/","name":"k8s token generate"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"k8s token generate","description":"","datePublished":"2022-04-08T07:58:27.000Z","dateModified":"2022-07-02T15:49:59.942Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/","wordCount":0,"articleSection":"Titanium Tech","keywords":"Personal-Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/FISCO/","name":"FISCO"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/07/14/fisco-go-sdk合约事件推送/","name":"fisco go sdk合约事件推送"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fisco go sdk合约事件推送","description":"","datePublished":"2022-07-14T07:00:40.000Z","dateModified":"2022-07-14T07:04:11.052Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/","wordCount":0,"articleSection":"FISCO","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
