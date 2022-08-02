@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/05/16/ubuntu-安装anaconda配置python环境/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/08/01/写第一篇paper的一些记录/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,25 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1659407501660" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1659407501628" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>ubuntu 安装anaconda配置python环境 - Chengyu Luo Blog</title>
-  <meta name="keywords" content="Tips,null">
-  <meta name="description" content="Ubuntu 安装anaconda1.下载anaconda直接使用清华源下载anaconda 1wget https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;archive&#x2F;Anaconda3-2022.05-Linux-x86_64.sh  2. 安装anaconda123bash Anaconda3-2022.05-Linux-x86_64.shsour">
+  <title>写第一篇paper的一些记录 - Chengyu Luo Blog</title>
+  <meta name="keywords" content="Study,null">
+  <meta name="description" content="1. 万恶之源这都怪7.15的时候，老板在我跑步刚刚结束还搁那大喘气呢，来了一个电话，上来第一句：  你太不上进了！  我快速反思了一下最近干了什么，0.5s之后反应过来肯定是有话要说虚晃一枪，而后果然就：  WCSP你投一下，7.30截稿，把毕设写成论文，下周给我初稿。  虽然吧是个三区的会议但是对我这种废物菜鸡躺平人士来说，我真的我也不会写论文啊，但是也就嗯啊嗯下来了，所以度过了痛苦的两周。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu 安装anaconda配置python环境">
-<meta property="og:url" content="http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/index.html">
+<meta property="og:title" content="写第一篇paper的一些记录">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Ubuntu 安装anaconda1.下载anaconda直接使用清华源下载anaconda 1wget https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;archive&#x2F;Anaconda3-2022.05-Linux-x86_64.sh  2. 安装anaconda123bash Anaconda3-2022.05-Linux-x86_64.shsour">
+<meta property="og:description" content="1. 万恶之源这都怪7.15的时候，老板在我跑步刚刚结束还搁那大喘气呢，来了一个电话，上来第一句：  你太不上进了！  我快速反思了一下最近干了什么，0.5s之后反应过来肯定是有话要说虚晃一枪，而后果然就：  WCSP你投一下，7.30截稿，把毕设写成论文，下周给我初稿。  虽然吧是个三区的会议但是对我这种废物菜鸡躺平人士来说，我真的我也不会写论文啊，但是也就嗯啊嗯下来了，所以度过了痛苦的两周。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-16T14:06:48.000Z">
-<meta property="article:modified_time" content="2022-07-02T15:49:59.943Z">
+<meta property="article:published_time" content="2022-08-01T15:45:11.000Z">
+<meta property="article:modified_time" content="2022-08-02T02:31:20.920Z">
 <meta property="article:author" content="Yiheng Jiang">
-<meta property="article:tag" content="Tips">
+<meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1659407501660" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1659407501660"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1659407501628" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1659407501628"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2384,7 +2384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
@@ -2401,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        ubuntu 安装anaconda配置python环境
+        写第一篇paper的一些记录
       </h1>
       <div class='new-meta-box'>
         
@@ -2420,10 +2420,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/blog/categories/Tips/">Tips</a>
+    <a class="category-link" href="/blog/categories/Study/">Study</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
+        <a href="/blog/categories/Study/" itemprop="url"><span itemprop="name">Study</span></a>
       </span>
     
   </div>
@@ -2432,10 +2432,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-16T22:06:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-01T23:45:11+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年5月16日</p>
+    <p>发布于：2022年8月1日</p>
   </a>
 </div>
 
@@ -2446,7 +2446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-      <div id="lc-pv" data-title="ubuntu 安装anaconda配置python环境" data-path="/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/">
+      <div id="lc-pv" data-title="写第一篇paper的一些记录" data-path="/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2467,19 +2467,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Ubuntu-安装anaconda"><a href="#Ubuntu-安装anaconda" class="headerlink" title="Ubuntu 安装anaconda"></a>Ubuntu 安装anaconda</h1><h2 id="1-下载anaconda"><a href="#1-下载anaconda" class="headerlink" title="1.下载anaconda"></a>1.下载anaconda</h2><div class="story post-story"><p>直接使用清华源下载anaconda</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2022.05-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
-
-</div><h2 id="2-安装anaconda"><a href="#2-安装anaconda" class="headerlink" title="2. 安装anaconda"></a>2. 安装anaconda</h2><div class="story post-story"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda3-2022.05-Linux-x86_64.sh</span><br><span class="line">source ~/.bashrc</span><br><span class="line">conda --version</span><br></pre></td></tr></table></figure>
-
-<img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220516230009483.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20220516230009483.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220516230009483" style="zoom:90%;" />
-
-</div><h2 id="3-新建一个conda环境（可选）"><a href="#3-新建一个conda环境（可选）" class="headerlink" title="3. 新建一个conda环境（可选）"></a>3. 新建一个conda环境（可选）</h2><div class="story post-story"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n bot python==3.9</span><br></pre></td></tr></table></figure>
-
-<h1 id="常用conda命令"><a href="#常用conda命令" class="headerlink" title="常用conda命令"></a>常用conda命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建虚拟环境</span></span><br><span class="line">conda create -n your_env_name python=X.X（3.6、3.7等）</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">激活虚拟环境</span></span><br><span class="line">source activate your_env_name(虚拟环境名称)</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">退出虚拟环境</span></span><br><span class="line">source deactivate your_env_name(虚拟环境名称)</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除虚拟环境</span></span><br><span class="line">conda remove -n your_env_name(虚拟环境名称) --all</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看安装了哪些包</span></span><br><span class="line">conda list</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装包</span></span><br><span class="line">conda install package_name(包名)</span><br><span class="line">conda install scrapy==1.3 # 安装指定版本的包</span><br><span class="line">conda install -n 环境名 包名 # 在conda指定的某个环境中安装包</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看当前存在哪些虚拟环境</span></span><br><span class="line">conda env list </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">或</span> </span><br><span class="line">conda info -e</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">或</span></span><br><span class="line">conda info --envs</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">检查更新当前conda</span></span><br><span class="line">conda update conda</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">更新anaconda</span></span><br><span class="line">conda update anaconda</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">更新所有库</span></span><br><span class="line">conda update --all</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">更新python</span></span><br><span class="line">conda update python</span><br></pre></td></tr></table></figure>
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[Ubuntu 安装 conda - 知乎 (zhihu.com)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/459607806#:~:text=%E5%AE%89%E8%A3%85Anaconda">https://zhuanlan.zhihu.com/p/459607806#:~:text=安装Anaconda</a> (Linux%2FUbuntu) 1 安装Anaconda首先先得到权限，然后再使用sh进行安装。 sudo chown,-R henchli Anaconda3-2020.07-Linux-x86_64.sh sudo sh Anaconda3-2020.07-Linux-x86_64.sh按着enter看完简介之后，输…)</p>
-
+    <h1 id="1-万恶之源"><a href="#1-万恶之源" class="headerlink" title="1. 万恶之源"></a>1. 万恶之源</h1><p>这都怪7.15的时候，老板在我跑步刚刚结束还搁那大喘气呢，来了一个电话，上来第一句：</p>
+<blockquote>
+<p>你太不上进了！</p>
+</blockquote>
+<p>我快速反思了一下最近干了什么，0.5s之后反应过来肯定是有话要说虚晃一枪，而后果然就：</p>
+<blockquote>
+<p>WCSP你投一下，7.30截稿，把毕设写成论文，下周给我初稿。</p>
+</blockquote>
+<p>虽然吧是个三区的会议但是对我这种废物菜鸡躺平人士来说，我真的我也不会写论文啊，但是也就嗯啊嗯下来了，所以度过了痛苦的两周。</p>
+<h1 id="2-踩坑"><a href="#2-踩坑" class="headerlink" title="2. 踩坑"></a>2. 踩坑</h1><p>时间毕竟是紧迫的，所以写论文的过程中遇到了一系列的问题，我来回想回想来一下一一列举。</p>
+<h2 id="a-正文"><a href="#a-正文" class="headerlink" title="a. 正文"></a>a. 正文</h2><div class="story post-story"><p>首先是按照写作的顺序，从正文开始写作。对于正文的写作还是要先深入理清楚整体的思路。时间紧所以我就按照毕设里的思路一通瞎写，又因为毕设的东西太多，会议的篇幅也不够表述，删删减减之中逻辑就丢失掉了。所以要注意这么些个事情：</p>
+<h3 id="1-意识流地表述因果关系、转折关系、承接关系"><a href="#1-意识流地表述因果关系、转折关系、承接关系" class="headerlink" title="1.意识流地表述因果关系、转折关系、承接关系"></a>1.意识流地表述因果关系、转折关系、承接关系</h3><p>（这个错误大多数中文使用者都能发现）</p>
+<p>写文章的时候写着写着就一定程度上丢了一些逻辑，比如想着A，但A还没写完就写到B；又比如想着从A转折到B，结果写着写着就顺着写下去了，忘了加转折关系。最后呈现出来的感觉就是不断地跳变。</p>
+<p>所以这就要求在写paper的时候不要赶时间，（大佬除外），每一句话写的时候深入思考一下，一点点的写一写。</p>
+<h3 id="2-主谓语搭配错误，of-in-with-on等介词使用错误"><a href="#2-主谓语搭配错误，of-in-with-on等介词使用错误" class="headerlink" title="2.主谓语搭配错误，of/in/with/on等介词使用错误"></a>2.主谓语搭配错误，of/in/with/on等介词使用错误</h3><p>（这个大多是由中式思维引发）</p>
+<p>介词这个其实是小问题，毕竟写完论文去过Grammarly还是非常的快速的，过Grammarly的同时学一下一些表述也问题不大。</p>
+<h3 id="3-表述过冗余"><a href="#3-表述过冗余" class="headerlink" title="3.表述过冗余"></a>3.表述过冗余</h3><p>（需要摆脱口语化思维，尽量压迫自己在每句话开头说点有用的话，先不要在句子里加过多定语、副词，先把核心意思写出来）</p>
+<p>这个乐博给了一个要求，在每一句的前6个词最好出现一点实际的东西。比如我这篇文章在写的时候经常写到了一些什么<code>Therefore, it is able to </code>这样上来5个词全在说废话，Reviewer就会发现看不见这句话想要表达什么，所以不要在每一句话的开头说太多的废话。</p>
+</div><h2 id="b-Simulation"><a href="#b-Simulation" class="headerlink" title="b. Simulation"></a>b. Simulation</h2><div class="story post-story"><h2 id="c-Introduction"><a href="#c-Introduction" class="headerlink" title="c. Introduction"></a>c. Introduction</h2><h2 id="d-Conclusion"><a href="#d-Conclusion" class="headerlink" title="d. Conclusion"></a>d. Conclusion</h2><h2 id="e-Abstract"><a href="#e-Abstract" class="headerlink" title="e. Abstract"></a>e. Abstract</h2><h2 id="f-Ref"><a href="#f-Ref" class="headerlink" title="f. Ref"></a>f. Ref</h2>
 </div>
   </div>
   
@@ -2493,7 +2499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/>http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/</a></p>
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/>http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</a></p>
               
             
           </blockquote>
@@ -2510,10 +2516,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-02T23:49:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-08-02T10:31:20+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年7月2日</p>
+    <p>更新于：2022年8月2日</p>
   </a>
 </div>
 
@@ -2522,8 +2528,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tips</p></a></div>
-  <span hidden itemprop="keywords">Tips</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Study/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Study</p></a></div>
+  <span hidden itemprop="keywords">Study</span>
 
 
         
@@ -2536,7 +2542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/&title=ubuntu 安装anaconda配置python环境 - Chengyu Luo Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/&title=写第一篇paper的一些记录 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2548,7 +2554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/&title=ubuntu 安装anaconda配置python环境 - Chengyu Luo Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/&title=写第一篇paper的一些记录 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2560,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/&title=ubuntu 安装anaconda配置python环境 - Chengyu Luo Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/&title=写第一篇paper的一些记录 - Chengyu Luo Blog&summary="
           
           >
           
@@ -2593,18 +2599,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/blog/2022/05/16/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%89%EF%BC%89%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>QQ机器人搭建（三）环境构建</p>
-          <p class='content'>QQrobot 环境搭建1. 安装nonebot2123pip install nonebot2# 安装nonebot脚手架pip install nb-cli
-
-2. 安装go-cqhttpg...</p>
-        </a>
       
-      
-        <a class='next' href='/blog/2022/05/15/%E4%BF%AE%E6%94%B9%E5%BE%AE%E8%BD%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E5%B8%A7%E7%8E%87/'>
-          <p class='title'>修改微软远程桌面帧率<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Step1win+R进入regedit注册表
-Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server...</p>
+        <a class='next' href='/blog/2022/07/14/fisco-go-sdk%E5%90%88%E7%BA%A6%E4%BA%8B%E4%BB%B6%E6%8E%A8%E9%80%81/'>
+          <p class='title'>fisco go sdk合约事件推送<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>合约事件推送标签：go-sdk 事件订阅 Event
+正好最近在研究fisco go sdk的合约推送如何使用，官方又没有文档，折腾了半天最后用起来了就顺便写了了文档还提了pr也被官方合入了还挺...</p>
         </a>
       
     </div>
@@ -2620,7 +2619,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/index.html#comments">
+      <meta itemprop="discussionUrl" content="/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2653,7 +2652,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BDanaconda"><span class="toc-text">1.下载anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85anaconda"><span class="toc-text">2. 安装anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAconda%E7%8E%AF%E5%A2%83%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-text">3. 新建一个conda环境（可选）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#a-%E6%AD%A3%E6%96%87"><span class="toc-text">a. 正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%84%8F%E8%AF%86%E6%B5%81%E5%9C%B0%E8%A1%A8%E8%BF%B0%E5%9B%A0%E6%9E%9C%E5%85%B3%E7%B3%BB%E3%80%81%E8%BD%AC%E6%8A%98%E5%85%B3%E7%B3%BB%E3%80%81%E6%89%BF%E6%8E%A5%E5%85%B3%E7%B3%BB"><span class="toc-text">1.意识流地表述因果关系、转折关系、承接关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BB%E8%B0%93%E8%AF%AD%E6%90%AD%E9%85%8D%E9%94%99%E8%AF%AF%EF%BC%8Cof-in-with-on%E7%AD%89%E4%BB%8B%E8%AF%8D%E4%BD%BF%E7%94%A8%E9%94%99%E8%AF%AF"><span class="toc-text">2.主谓语搭配错误，of&#x2F;in&#x2F;with&#x2F;on等介词使用错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A1%A8%E8%BF%B0%E8%BF%87%E5%86%97%E4%BD%99"><span class="toc-text">3.表述过冗余</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b-Simulation"><span class="toc-text">b. Simulation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c-Introduction"><span class="toc-text">c. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d-Conclusion"><span class="toc-text">d. Conclusion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#e-Abstract"><span class="toc-text">e. Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f-Ref"><span class="toc-text">f. Ref</span></a></li></ol>
     </div>
   </section>
 
@@ -2709,7 +2708,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="ubuntu 安装anaconda配置python环境";
+  pdata.postTitle="写第一篇paper的一些记录";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2823,8 +2822,8 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1659407501660')
-      volantis.js('/blog/js/message.js?time=1659407501660', () => {
+      volantis.css('/blog/css/message.css?time=1659407501628')
+      volantis.js('/blog/js/message.js?time=1659407501628', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2869,8 +2868,8 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1659407501660')
-      volantis.js('/blog/js/message.js?time=1659407501660', () => {
+      volantis.css('/blog/css/message.css?time=1659407501628')
+      volantis.js('/blog/js/message.js?time=1659407501628', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2929,8 +2928,8 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1659407501660')
-      volantis.js('/blog/js/message.js?time=1659407501660', () => {
+      volantis.css('/blog/css/message.css?time=1659407501628')
+      volantis.js('/blog/js/message.js?time=1659407501628', () => {
         hideMessage(done);
       });
     } else {
@@ -2976,19 +2975,19 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1659407501660")
+        volantis.js("/blog/js/plugins/sites.js?time=1659407501628")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1659407501660")
+        volantis.js("/blog/js/plugins/friends.js?time=1659407501628")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1659407501660")
+        volantis.js("/blog/js/plugins/contributors.js?time=1659407501628")
       }
     
   };
@@ -3089,7 +3088,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1659407501660').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1659407501628').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3098,7 +3097,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 
 
 
-<script src="/blog/blog/js/app.js?time=1659407501660.js"></script>
+<script src="/blog/blog/js/app.js?time=1659407501628.js"></script>
 
 
 <!-- optional -->
@@ -3111,7 +3110,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1659407501660");
+    return volantis.js("/blog/js/search/hexo.js?time=1659407501628");
   }
 
   function loadSearchService() {
@@ -3578,7 +3577,7 @@ Step2找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server..
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Tips/","name":"Tips"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/05/16/ubuntu-安装anaconda配置python环境/","name":"ubuntu 安装anaconda配置python环境"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ubuntu 安装anaconda配置python环境","description":"","datePublished":"2022-05-16T14:06:48.000Z","dateModified":"2022-07-02T15:49:59.943Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/05/16/ubuntu-%E5%AE%89%E8%A3%85anaconda%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83/","wordCount":0,"articleSection":"Tips","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Study/","name":"Study"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/08/01/写第一篇paper的一些记录/","name":"写第一篇paper的一些记录"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"写第一篇paper的一些记录","description":"","datePublished":"2022-08-01T15:45:11.000Z","dateModified":"2022-08-02T02:31:20.920Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/08/01/%E5%86%99%E7%AC%AC%E4%B8%80%E7%AF%87paper%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/","wordCount":0,"articleSection":"Study","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
