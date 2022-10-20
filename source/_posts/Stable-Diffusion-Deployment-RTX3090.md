@@ -31,3 +31,6 @@ pip install transformers==4.19.2 diffusers invisible-watermark
 pip install -e .
 ```
 
+## 新活来了 断更！
+
+部署了Novel AI 但是AI能画色图所以。。。。。Whatever ai.seujyh.cn提供给大家，但是可能绝大部分时间都是关掉的，避免出现法律问题
