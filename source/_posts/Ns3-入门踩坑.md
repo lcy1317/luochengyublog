@@ -75,4 +75,93 @@ terminate called without an active exception
 
 他喵总算可以可视化了。
 
-## 还在研究 断更！！
+## 3. 建立一些小东西
+
+### I. 建立一个P2P连接
+
+使用`PointToPointHelper` 可以建立两个`Ptr<Node>`之间的P2P连接。
+
+```C++
+  // 创建一个放置信号远端的容器
+  NodeContainer remoteHostContainer;
+  // 创建remote_n个
+  uint32_t remote_n = 2;
+  remoteHostContainer.Create (remote_n);
+
+  //TO Confirm remoteHost是从容器中获取第一个远端。
+  Ptr<Node> remoteHost0 = remoteHostContainer.Get (0);
+  Ptr<Node> remoteHost1 = remoteHostContainer.Get (1);
+
+  std::cout <<"Remote Host Nums -> "<< remoteHostContainer.GetN() <<std::endl;
+  std::cout <<"Remote Host 0 -> " << remoteHostContainer.Get (0) <<std::endl;
+  std::cout <<"Remote Host 1 -> " << remoteHostContainer.Get (1) <<std::endl;
+  
+  // 初始化网络
+  InternetStackHelper internet;
+  // 根据远端容器建立网络internet
+  internet.Install (remoteHostContainer);
+
+  // 创建一个 PointToPointHelper p2ph以简化创建点对点网络
+  PointToPointHelper p2ph;
+  // 初始化相关参数，设置要传播到创建的每个 网络设备 的属性值。
+  p2ph.SetDeviceAttribute ("DataRate", DataRateValue (DataRate ("100Gb/s")));
+  p2ph.SetDeviceAttribute ("Mtu", UintegerValue (1500));
+  p2ph.SetChannelAttribute ("Delay", TimeValue (MilliSeconds (10))); // 10ms 延时
+  
+  NetDeviceContainer internetDevices = p2ph.Install (remoteHost0, remoteHost1);
+```
+
+
+
+![image-20221020190505670](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020190505670.png)
+
+### II. 创建几个enB或者UE
+
+```C++
+  NodeContainer ueNodes;
+  NodeContainer enbNodes;
+  ueNodes.Create (numNodePairs);
+  enbNodes.Create (numNodePairs);
+
+  // Install Mobility Model
+  // 这里初始化了节点对的初始位置。
+  Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
+  for (uint16_t i = 0; i < 4; i++)
+    {
+      positionAlloc->Add (Vector (50 * i, 0, 0));
+    }
+
+  MobilityHelper mobility; // 设置选项，即使用什么定位方案以及分配什么移动模型,将助手应用到 NodeContainer 以定位节点并为其分配移动模型
+  mobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
+  //使用NS3 自带的位置初始化模型 MinX和MinY为初始位置，Delta X Delta Y 为节点之间的间距，Gridwidth为每行节点数目，layoutType为布局方式
+  mobility.SetPositionAllocator (positionAlloc);
+  mobility.Install(enbNodes);
+  mobility.Install(ueNodes);
+
+```
+
+
+
+![image-20221020191243471](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020191243471.png)
+
+### c. 创建一个核心网
+
+首先我们要创建一个核心网：
+
+```C++
+  Ptr<PointToPointEpcHelper> epcHelper = CreateObject<PointToPointEpcHelper> ();
+```
+
+![image-20221020193132200](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193132200.png)
+
+他会创建上图一样的一个拥有三个节点的普通的核心网。
+
+那么如何将核心网和UE连接呢？使用ltehelper去设置这个epc网络：
+
+```C++
+  lteHelper->SetEpcHelper (epcHelper);
+```
+
+![image-20221020193313753](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193313753.png)
+
+## 还在研究！！

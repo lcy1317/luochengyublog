@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1666262276484" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1666265779939" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-10-18T14:11:24.000Z">
-<meta property="article:modified_time" content="2022-10-20T10:29:33.692Z">
+<meta property="article:modified_time" content="2022-10-20T11:36:08.896Z">
 <meta property="article:author" content="Yiheng Jiang">
 <meta property="article:tag" content="Study">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1666262276484" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1666262276484"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1666265779939" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1666265779939"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2491,7 +2491,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>然后，要怎么才能跑起来程序呢？那就是root用户+ns3.35，反正不能非root会跑不起vis，也不能root3.36，他不给你运行。嗯就是如此扯淡。</p>
 <p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221018221019689.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221018221019689.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221018221019689"></p>
 <p>他喵总算可以可视化了。</p>
-</div><h2 id="还在研究-断更！！"><a href="#还在研究-断更！！" class="headerlink" title="还在研究 断更！！"></a>还在研究 断更！！</h2><div class="story post-story">
+</div><h2 id="3-建立一些小东西"><a href="#3-建立一些小东西" class="headerlink" title="3. 建立一些小东西"></a>3. 建立一些小东西</h2><div class="story post-story"><h3 id="I-建立一个P2P连接"><a href="#I-建立一个P2P连接" class="headerlink" title="I. 建立一个P2P连接"></a>I. 建立一个P2P连接</h3><p>使用<code>PointToPointHelper</code> 可以建立两个<code>Ptr&lt;Node&gt;</code>之间的P2P连接。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个放置信号远端的容器</span></span><br><span class="line">NodeContainer remoteHostContainer;</span><br><span class="line"><span class="comment">// 创建remote_n个</span></span><br><span class="line"><span class="type">uint32_t</span> remote_n = <span class="number">2</span>;</span><br><span class="line">remoteHostContainer.<span class="built_in">Create</span> (remote_n);</span><br><span class="line"></span><br><span class="line"><span class="comment">//TO Confirm remoteHost是从容器中获取第一个远端。</span></span><br><span class="line">Ptr&lt;Node&gt; remoteHost0 = remoteHostContainer.<span class="built_in">Get</span> (<span class="number">0</span>);</span><br><span class="line">Ptr&lt;Node&gt; remoteHost1 = remoteHostContainer.<span class="built_in">Get</span> (<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">std::cout &lt;&lt;<span class="string">&quot;Remote Host Nums -&gt; &quot;</span>&lt;&lt; remoteHostContainer.<span class="built_in">GetN</span>() &lt;&lt;std::endl;</span><br><span class="line">std::cout &lt;&lt;<span class="string">&quot;Remote Host 0 -&gt; &quot;</span> &lt;&lt; remoteHostContainer.<span class="built_in">Get</span> (<span class="number">0</span>) &lt;&lt;std::endl;</span><br><span class="line">std::cout &lt;&lt;<span class="string">&quot;Remote Host 1 -&gt; &quot;</span> &lt;&lt; remoteHostContainer.<span class="built_in">Get</span> (<span class="number">1</span>) &lt;&lt;std::endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化网络</span></span><br><span class="line">InternetStackHelper internet;</span><br><span class="line"><span class="comment">// 根据远端容器建立网络internet</span></span><br><span class="line">internet.<span class="built_in">Install</span> (remoteHostContainer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个 PointToPointHelper p2ph以简化创建点对点网络</span></span><br><span class="line">PointToPointHelper p2ph;</span><br><span class="line"><span class="comment">// 初始化相关参数，设置要传播到创建的每个 网络设备 的属性值。</span></span><br><span class="line">p2ph.<span class="built_in">SetDeviceAttribute</span> (<span class="string">&quot;DataRate&quot;</span>, <span class="built_in">DataRateValue</span> (<span class="built_in">DataRate</span> (<span class="string">&quot;100Gb/s&quot;</span>)));</span><br><span class="line">p2ph.<span class="built_in">SetDeviceAttribute</span> (<span class="string">&quot;Mtu&quot;</span>, <span class="built_in">UintegerValue</span> (<span class="number">1500</span>));</span><br><span class="line">p2ph.<span class="built_in">SetChannelAttribute</span> (<span class="string">&quot;Delay&quot;</span>, <span class="built_in">TimeValue</span> (<span class="built_in">MilliSeconds</span> (<span class="number">10</span>))); <span class="comment">// 10ms 延时</span></span><br><span class="line"></span><br><span class="line">NetDeviceContainer internetDevices = p2ph.<span class="built_in">Install</span> (remoteHost0, remoteHost1);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020190505670.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020190505670.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221020190505670"></p>
+<h3 id="II-创建几个enB或者UE"><a href="#II-创建几个enB或者UE" class="headerlink" title="II. 创建几个enB或者UE"></a>II. 创建几个enB或者UE</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">NodeContainer ueNodes;</span><br><span class="line">NodeContainer enbNodes;</span><br><span class="line">ueNodes.<span class="built_in">Create</span> (numNodePairs);</span><br><span class="line">enbNodes.<span class="built_in">Create</span> (numNodePairs);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Install Mobility Model</span></span><br><span class="line"><span class="comment">// 这里初始化了节点对的初始位置。</span></span><br><span class="line">Ptr&lt;ListPositionAllocator&gt; positionAlloc = <span class="built_in">CreateObject</span>&lt;ListPositionAllocator&gt; ();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">uint16_t</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    positionAlloc-&gt;<span class="built_in">Add</span> (<span class="built_in">Vector</span> (<span class="number">50</span> * i, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">MobilityHelper mobility; <span class="comment">// 设置选项，即使用什么定位方案以及分配什么移动模型,将助手应用到 NodeContainer 以定位节点并为其分配移动模型</span></span><br><span class="line">mobility.<span class="built_in">SetMobilityModel</span>(<span class="string">&quot;ns3::ConstantPositionMobilityModel&quot;</span>);</span><br><span class="line"><span class="comment">//使用NS3 自带的位置初始化模型 MinX和MinY为初始位置，Delta X Delta Y 为节点之间的间距，Gridwidth为每行节点数目，layoutType为布局方式</span></span><br><span class="line">mobility.<span class="built_in">SetPositionAllocator</span> (positionAlloc);</span><br><span class="line">mobility.<span class="built_in">Install</span>(enbNodes);</span><br><span class="line">mobility.<span class="built_in">Install</span>(ueNodes);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020191243471.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020191243471.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221020191243471"></p>
+<h3 id="c-创建一个核心网"><a href="#c-创建一个核心网" class="headerlink" title="c. 创建一个核心网"></a>c. 创建一个核心网</h3><p>首先我们要创建一个核心网：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ptr&lt;PointToPointEpcHelper&gt; epcHelper = <span class="built_in">CreateObject</span>&lt;PointToPointEpcHelper&gt; ();</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193132200.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193132200.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221020193132200"></p>
+<p>他会创建上图一样的一个拥有三个节点的普通的核心网。</p>
+<p>那么如何将核心网和UE连接呢？使用ltehelper去设置这个epc网络：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lteHelper-&gt;<span class="built_in">SetEpcHelper</span> (epcHelper);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193313753.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193313753.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20221020193313753"></p>
+</div><h2 id="还在研究！！"><a href="#还在研究！！" class="headerlink" title="还在研究！！"></a>还在研究！！</h2><div class="story post-story">
 </div>
   </div>
   
@@ -2522,7 +2542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-20T18:29:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-20T19:36:08+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年10月20日</p>
@@ -2665,7 +2685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%BA%E8%BF%90%E8%A1%8C%E7%9A%84ns3%E7%A8%8B%E5%BA%8F%E6%8C%87%E5%AE%9A%E5%8F%82%E6%95%B0"><span class="toc-text">1. 为运行的ns3程序指定参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Ns3%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98"><span class="toc-text">2.Ns3可视化安装问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Assert-in-TypeId-LookupByName"><span class="toc-text">Assert in TypeId::LookupByName</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E5%9C%A8%E7%A0%94%E7%A9%B6-%E6%96%AD%E6%9B%B4%EF%BC%81%EF%BC%81"><span class="toc-text">还在研究 断更！！</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%BA%E8%BF%90%E8%A1%8C%E7%9A%84ns3%E7%A8%8B%E5%BA%8F%E6%8C%87%E5%AE%9A%E5%8F%82%E6%95%B0"><span class="toc-text">1. 为运行的ns3程序指定参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Ns3%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98"><span class="toc-text">2.Ns3可视化安装问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Assert-in-TypeId-LookupByName"><span class="toc-text">Assert in TypeId::LookupByName</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%BA%9B%E5%B0%8F%E4%B8%9C%E8%A5%BF"><span class="toc-text">3. 建立一些小东西</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#I-%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AAP2P%E8%BF%9E%E6%8E%A5"><span class="toc-text">I. 建立一个P2P连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#II-%E5%88%9B%E5%BB%BA%E5%87%A0%E4%B8%AAenB%E6%88%96%E8%80%85UE"><span class="toc-text">II. 创建几个enB或者UE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%BD%91"><span class="toc-text">c. 创建一个核心网</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E5%9C%A8%E7%A0%94%E7%A9%B6%EF%BC%81%EF%BC%81"><span class="toc-text">还在研究！！</span></a></li></ol>
     </div>
   </section>
 
@@ -2835,8 +2855,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1666262276484')
-      volantis.js('/blog/js/message.js?time=1666262276484', () => {
+      volantis.css('/blog/css/message.css?time=1666265779939')
+      volantis.js('/blog/js/message.js?time=1666265779939', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2881,8 +2901,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1666262276484')
-      volantis.js('/blog/js/message.js?time=1666262276484', () => {
+      volantis.css('/blog/css/message.css?time=1666265779939')
+      volantis.js('/blog/js/message.js?time=1666265779939', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2941,8 +2961,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1666262276484')
-      volantis.js('/blog/js/message.js?time=1666262276484', () => {
+      volantis.css('/blog/css/message.css?time=1666265779939')
+      volantis.js('/blog/js/message.js?time=1666265779939', () => {
         hideMessage(done);
       });
     } else {
@@ -2988,19 +3008,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1666262276484")
+        volantis.js("/blog/js/plugins/sites.js?time=1666265779939")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1666262276484")
+        volantis.js("/blog/js/plugins/friends.js?time=1666265779939")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1666262276484")
+        volantis.js("/blog/js/plugins/contributors.js?time=1666265779939")
       }
     
   };
@@ -3101,7 +3121,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1666262276484').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1666265779939').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3110,7 +3130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/blog/blog/js/app.js?time=1666262276484.js"></script>
+<script src="/blog/blog/js/app.js?time=1666265779939.js"></script>
 
 
 <!-- optional -->
@@ -3123,7 +3143,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1666262276484");
+    return volantis.js("/blog/js/search/hexo.js?time=1666265779939");
   }
 
   function loadSearchService() {
@@ -3590,7 +3610,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Study/","name":"Study"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/10/18/Ns3-入门踩坑/","name":"Ns3 入门踩坑"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ns3 入门踩坑","description":"","datePublished":"2022-10-18T14:11:24.000Z","dateModified":"2022-10-20T10:29:33.692Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/10/18/Ns3-%E5%85%A5%E9%97%A8%E8%B8%A9%E5%9D%91/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/10/18/Ns3-%E5%85%A5%E9%97%A8%E8%B8%A9%E5%9D%91/","wordCount":0,"articleSection":"Study","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Study/","name":"Study"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/10/18/Ns3-入门踩坑/","name":"Ns3 入门踩坑"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ns3 入门踩坑","description":"","datePublished":"2022-10-18T14:11:24.000Z","dateModified":"2022-10-20T11:36:08.896Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/10/18/Ns3-%E5%85%A5%E9%97%A8%E8%B8%A9%E5%9D%91/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/10/18/Ns3-%E5%85%A5%E9%97%A8%E8%B8%A9%E5%9D%91/","wordCount":0,"articleSection":"Study","keywords":"Study","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
