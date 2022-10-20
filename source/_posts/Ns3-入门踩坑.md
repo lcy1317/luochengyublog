@@ -144,7 +144,7 @@ terminate called without an active exception
 
 ![image-20221020191243471](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020191243471.png)
 
-### c. 创建一个核心网
+### III. 创建一个核心网
 
 首先我们要创建一个核心网：
 
@@ -163,5 +163,28 @@ terminate called without an active exception
 ```
 
 ![image-20221020193313753](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020193313753.png)
+
+设置核心网后，他会自动与所有的enB基站进行连接。
+
+### IV.设定pgw和sgw节点位置
+
+同时，我们还可以给sgw以及pgw节点设定他们的位置
+
+```C++
+  MobilityHelper pos_EPC;  
+  Ptr<ListPositionAllocator> pos_sgw_node = CreateObject<ListPositionAllocator> ();
+  pos_sgw_node->Add(Vector (75, -20, 0));
+  Ptr<ListPositionAllocator> pos_pgw_node = CreateObject<ListPositionAllocator> ();
+  pos_pgw_node->Add(Vector (75, 50, 0));
+  mobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
+  mobility.SetPositionAllocator (pos_sgw_node);
+  mobility.Install(sgw);
+  mobility.SetPositionAllocator (pos_pgw_node);
+  mobility.Install(pgw);
+```
+
+![image-20221020200538798](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020200538798.png)
+
+==这边有一个扯淡的地方，就是他提供的设定位置的工具只能不断的AddVector进去，他不能进行修改，这十分的麻烦，同时初始化EPC中的另一个节点，猜测为RH的节点似乎很难获取到。==
 
 ## 还在研究！！
