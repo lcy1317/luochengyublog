@@ -187,4 +187,30 @@ terminate called without an active exception
 
 ==这边有一个扯淡的地方，就是他提供的设定位置的工具只能不断的AddVector进去，他不能进行修改，这十分的麻烦，同时初始化EPC中的另一个节点，猜测为RH的节点似乎很难获取到。==
 
+
+
+### V. 设置所有Epc网络中节点的位置
+
+![image-20221020204135221](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/image-20221020204135221.png)
+
+实现上述的效果的话，其实 。有点扯淡，我们注意`no-backhaul-epc-helper.cc`文件中没有获得第三个节点的方法，所以我们要对两个文件进行修改：
+
+`no-backhaul-epc-helper.h`中增加获得Mme节点的定义。
+
+```C++
+  virtual Ptr<Node> GetMmeNode () const;
+```
+
+`no-backhaul-epc-helper.cc`中新增获得Mme节点的方法。
+
+```C++
+Ptr<Node>
+NoBackhaulEpcHelper::GetMmeNode () const
+{
+  return m_mme;
+}
+```
+
+之后就可以获得Mme节点并设定位置了~
+
 ## 还在研究！！
