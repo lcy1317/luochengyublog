@@ -109,23 +109,25 @@ source /etc/profile
 
 　　首先进入 bin 目录，开启服务：
 
-　　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151615524-2121055604.png)
+　　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721151615524-2121055604.png)
 
 　　再启动 CLI 连接服务：
 
-　　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151712334-1531304093.png)
+　　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721151712334-1531304093.png)
 
 # 3. 安装kafka服务
 
 下载 Kafka：http://kafka.apache.org/downloads。
 
-　　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721152234927-1538569344.png)
+　　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721152234927-1538569344.png)
 
 　　下载好之后解压，再执行如下命令：
 
-> sudo mv kafka_2.13-2.5.0/ /usr/local/kafka
->
-> cd /usr/local/kafka
+```shell
+sudo mv kafka_2.13-2.5.0/ /usr/local/kafka
+
+cd /usr/local/kafka
+```
 
 #### 2）测试
 
@@ -137,7 +139,7 @@ bin/kafka-server-start.sh config/server.properties
 
 　　通过输出信息可以看到 Kafka 服务已经成功开启了，截图如下：
 
-　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721153048100-504650557.png)
+　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721153048100-504650557.png)
 
 　　但这样开启之后是阻塞的了，我们可以在中间加一个“-daemon”即开一个守护进程来运行，则命令如下：
 
@@ -151,7 +153,7 @@ bin/kafka-server-start.sh -daemon config/server.properties
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic mytopic
 ```
 
-　　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722113046117-2137815088.png)
+　　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200722113046117-2137815088.png)
 
 　　这样就已经创建成功了，然后可以使用如下命令查看主题：
 
@@ -165,7 +167,7 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic mytopic
 ```
 
-　　![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114234272-715512594.png)　
+　　![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200722114234272-715512594.png)　
 
 　　同样的，Kafka 还有一个命令行客户端，可以从 Kafka 集群中获取消息：
 
@@ -173,7 +175,7 @@ bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic mytopic
 bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic mytopic --from-beginning
 ```
 
-![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114616581-765248744.png)
+![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200722114616581-765248744.png)
 
 # 4. 安装python-kafka并调用
 
@@ -208,7 +210,7 @@ producer.close()
 
 　　先运行消费者程序，再运行生产者程序，消费者一直在监听，等到生产者发送消息，消费者就把消息取出，运行结果如下：
 
-![img](https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722110455346-807003907.png)
+![img](https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200722110455346-807003907.png)
 
  　可以看到其中每个消息都包含了主题、分区、消息内容、时间戳等信息。
 
