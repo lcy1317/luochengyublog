@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.seujyh.cn/blog/tags/tips/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/blog/archives/2023/07/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,17 +20,17 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1688887689884" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1688887689862" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：Tips - Chengyu Luo Blog</title>
+  <title>归档：2023/7 - Chengyu Luo Blog</title>
   <meta name="keywords" content="null">
   <meta name="description" content="Blockchain &amp; The Future">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Chengyu Luo Blog">
-<meta property="og:url" content="http://www.seujyh.cn/blog/tags/Tips/index.html">
+<meta property="og:url" content="http://www.seujyh.cn/blog/archives/2023/07/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
 <meta property="og:description" content="Blockchain &amp; The Future">
 <meta property="og:locale" content="zh_CN">
@@ -1656,8 +1656,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1688887689884" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1688887689884"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1688887689862" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1688887689862"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2078,7 +2078,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2312,7 +2312,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="half" class='cover-wrapper  dock' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="./img/cover.jpg"></div>
 
@@ -2379,32 +2379,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
+	
+		
   <section class="post-list">
     
       
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
         
           
         
@@ -2474,610 +2454,14 @@ Kafka 作为一个集群运行在一个或...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/"  itemprop="url">
-        Ubuntu20.04批量添加用户
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        网上有很多批量增加用户的方式，但是还是看到的有一个方式最为简单，也最为有效：
-（1）先编辑一个文本用户文件首先创建一个文本文件：serc.txt
-由于/etc/passwd中一行记录对应着一个用户，每行记录又被冒号(:)分隔为7个字段，其格式和具体含义如下：
-1用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell
-
-要注意每个用户的用户名、UID、宿主目录都不可以相同，其中...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-11-16T16:41:52+08:00">2022-11-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"  itemprop="url">
-        XRDP 安装注意事项
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        XRDP 安装注意事项XRdp 安装如何在Ubuntu 20.04 上安装 Xrdp 服务器（远程桌面）-阿里云开发者社区 (aliyun.com)
-1sudo apt install xubuntu-desktop
-
-XRdp 设置允许root登录修改配置文件：
-1vim /etc/xdrp/startwm.sh
-
-
-
-
-如图位置增加如下两句话：
-12unset DBUS_SESSION_...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-20T18:31:21+08:00">2022-10-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/"  itemprop="url">
-        ubuntu设置root登陆
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 给root用户设置账户密码123sudo passwd root# 切换用户su root
-
-Step 2 修改gdm-autologin文件1vim /etc/pam.d/gdm-autologin
-
-注释掉：auth required pam_succeed_if.so user != root quiet_success
-
-Step 3 修改gdm-password文件1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-04T14:02:04+08:00">2022-07-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/"  itemprop="url">
-        windows安装arcanist
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 安装PHP这是安装arcanist最讨厌的事情因为我被ubuntu的php坑过很多次，所以一看到要装php就头大，不过windows下php好像不会出什么离谱事情。
-首先下载一个php：PHP: Downloads
-将php的目录添加到环境变量：
-
-在php目录下放置ini文件，可以下载我这个：
-https://luochengyu.oss-cn-beijing.aliyunc...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-03T00:07:19+08:00">2022-07-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/"  itemprop="url">
-        windows安装hexo
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 npm安装如已安装npm可以跳过本步骤。
-在nodejs官网上下载nodejs
-
-一路next安装下去并检查：
-123# 查看系统的环境变量echo %PATH%node -v
-
-
-如上图所示即为安装成功。
-如果需要配置自定义镜像提升速度，可以为NodeJS配置自定义的镜像，命令如下：
-1npm config set registry=http://registry.npm.t...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-02T23:37:50+08:00">2022-07-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/"  itemprop="url">
-        windows 专业版破解RDP链接限制
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Windows 10 破解RDP 连接限制I.几个有用的链接：
-适用于20H2版本的破解文件：https://github.com/sebaxakerhtc/rdpwrap.ini
-RDP Wrap 的官方github仓库：https://github.com/stascorp/rdpwrap/issues需要在issue中找新版本的破解文件
-一个比较有用的破解的博客：https://www...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-18T00:11:51+08:00">2022-06-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/"  itemprop="url">
-        Ubuntu下安装gocv
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Ubuntu 安装指导当前的仓库要求的还是安装opencv4.6
-gocv想要用就必须使用make进行编译。
-Step1 克隆仓库1git clone https://github.com/hybridgroup/gocv.git
-
-
-Step2 make installOnce you have cloned the repo, the following commands should ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-13T16:04:39+08:00">2022-06-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"  itemprop="url">
-        ubuntu 安装科学上网
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        1.安装ShadowSocks123apt-get install python3-pipapt install libsodium-devpip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
-
-2.ShadowSocks配置找到ShadowSocks的安装位置1find / -name sh...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-09T23:03:07+08:00">2022-06-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/"  itemprop="url">
-        在Pypi上上传Lcyutils包
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        最近写了一个自己的工具库，现在实现的是两个功能，一个是可以调用给我发邮件 ，另一个是通过1794957373的QQ号通过简单调用一个python函数来进行一个QQ消息的推送。
-lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消息的反推功能。
-当前仅仅在lcyutils.qqmessage模块里提供了一个消息的发送接口lcy_message
-比如这样调用：
-12import l...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-19T16:42:49+08:00">2022-05-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
     
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/blog/tags/Tips/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
   
 
 
-    
-  
+	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3298,14 +2682,14 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.add("show");
+    l_header.classList.remove("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
+      cover_wrapper.id="half";
+      cover_wrapper.style.display="";
       scroll_down.style.display="none";
     
   
@@ -3403,8 +2787,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689862')
+      volantis.js('/blog/js/message.js?time=1688887689862', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3449,8 +2833,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689862')
+      volantis.js('/blog/js/message.js?time=1688887689862', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3509,8 +2893,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689862')
+      volantis.js('/blog/js/message.js?time=1688887689862', () => {
         hideMessage(done);
       });
     } else {
@@ -3556,19 +2940,19 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/sites.js?time=1688887689862")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/friends.js?time=1688887689862")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/contributors.js?time=1688887689862")
       }
     
   };
@@ -3669,7 +3053,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1688887689884').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1688887689862').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3678,7 +3062,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
 
 
-<script src="/blog/blog/js/app.js?time=1688887689884.js"></script>
+<script src="/blog/blog/js/app.js?time=1688887689862.js"></script>
 
 
 <!-- optional -->
@@ -3691,7 +3075,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1688887689884");
+    return volantis.js("/blog/js/search/hexo.js?time=1688887689862");
   }
 
   function loadSearchService() {
@@ -4158,7 +3542,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/tags/Tips/","name":"Tips"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","keywords":null,"description":"Blockchain & The Future","author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","description":"Blockchain & The Future"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.seujyh.cn/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://www.seujyh.cn/blog/blog/archives/2023/7/","name":"7月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","keywords":null,"description":"Blockchain & The Future","author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","description":"Blockchain & The Future"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.seujyh.cn/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
 
 
 <!-- more -->

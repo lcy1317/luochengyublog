@@ -4,8 +4,8 @@
   <meta name="generator" content="Hexo 5.4.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.seujyh.cn/blog/tags/tips/"/>
+  
+  <link rel="canonical" href="http://www.seujyh.cn/blog/2023/07/09/ubuntu安装kafka/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,22 +20,25 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1688887689884" as="style">
+  <link rel="preload" href="/blog/css/style.css?time=1688887689639" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>标签：Tips - Chengyu Luo Blog</title>
-  <meta name="keywords" content="null">
-  <meta name="description" content="Blockchain &amp; The Future">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chengyu Luo Blog">
-<meta property="og:url" content="http://www.seujyh.cn/blog/tags/Tips/index.html">
+  <title>ubuntu安装kafka - Chengyu Luo Blog</title>
+  <meta name="keywords" content="Tips,null">
+  <meta name="description" content="0. kafka简介1.基本概念　　Kafka 是一个分布式的基于发布&#x2F;订阅消息系统，主要应用于大数据实时处理领域，其官网是：http:&#x2F;&#x2F;kafka.apache.org&#x2F;。Kafka 是一个分布式、支持分区的（Partition）、多副本的（Replica），基于 ZooKeeper 协调的发布&#x2F;订阅消息系统。 　　Kafka 有以下三个基本概念：  Kafka 作为一个集群运行在一个或多个服">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu安装kafka">
+<meta property="og:url" content="http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
-<meta property="og:description" content="Blockchain &amp; The Future">
+<meta property="og:description" content="0. kafka简介1.基本概念　　Kafka 是一个分布式的基于发布&#x2F;订阅消息系统，主要应用于大数据实时处理领域，其官网是：http:&#x2F;&#x2F;kafka.apache.org&#x2F;。Kafka 是一个分布式、支持分区的（Partition）、多副本的（Replica），基于 ZooKeeper 协调的发布&#x2F;订阅消息系统。 　　Kafka 有以下三个基本概念：  Kafka 作为一个集群运行在一个或多个服">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-07-09T07:15:01.000Z">
+<meta property="article:modified_time" content="2023-07-09T07:28:01.133Z">
 <meta property="article:author" content="Yiheng Jiang">
+<meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1656,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1688887689884" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1688887689884"></noscript>
+  <link rel="stylesheet" href="/blog/css/style.css?time=1688887689639" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1688887689639"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2312,7 +2315,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="./img/cover.jpg"></div>
 
@@ -2379,705 +2382,337 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         ubuntu安装kafka
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        0. kafka简介1.基本概念　　Kafka 是一个分布式的基于发布/订阅消息系统，主要应用于大数据实时处理领域，其官网是：http://kafka.apache.org/。Kafka 是一个分布式、支持分区的（Partition）、多副本的（Replica），基于 ZooKeeper 协调的发布/订阅消息系统。
-　　Kafka 有以下三个基本概念：
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="http://www.seujyh.cn" rel="nofollow">
+    <img itemprop="image" src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+    <p itemprop="name">Chengyu Luo</p>
+  </a>
+</div>
 
-Kafka 作为一个集群运行在一个或...
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/blog/categories/Tips/">Tips</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-09T15:15:01+08:00">2023-07-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-09T15:15:01+08:00">
+  <a class='notlink' href="/" onclick="return false;" title="Click me!" >
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年7月9日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-        <div>
-          <a class='readmore' href='/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/' itemprop="url">
-            阅读全文
-          </a>
+      <div id="lc-pv" data-title="ubuntu安装kafka" data-path="/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="0-kafka简介"><a href="#0-kafka简介" class="headerlink" title="0. kafka简介"></a>0. kafka简介</h1><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h3><p>　　Kafka 是一个分布式的基于发布/订阅消息系统，主要应用于大数据实时处理领域，其官网是：<a target="_blank" rel="noopener" href="http://kafka.apache.org/%E3%80%82Kafka">http://kafka.apache.org/。Kafka</a> 是一个分布式、支持分区的（Partition）、多副本的（Replica），基于 ZooKeeper 协调的发布/订阅消息系统。</p>
+<p>　　Kafka 有以下三个基本概念：</p>
+<ul>
+<li>Kafka 作为一个集群运行在一个或多个服务器上；</li>
+<li>Kafka 集群存储的消息是以 Topic 为类别记录的；</li>
+<li>每个消息是由一个 Key，一个 Value 和时间戳构成。</li>
+</ul>
+<h3 id="2-基本架构"><a href="#2-基本架构" class="headerlink" title="2.基本架构"></a>2.基本架构</h3><p>　　Kafka 的基本架构图如下：</p>
+<p>　　<img src="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721224046586-1139724284.png" class="lazyload" data-srcset="https://luochengyu.oss-cn-beijing.aliyuncs.com/img/1450803-20200721224046586-1139724284.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<ul>
+<li>Producer：生产者，就是向 Broker 发消息的客户端；</li>
+<li>Consumer：消费者，就是从 Broker 取消息的客户端；</li>
+<li>Consumer Group：消费者组，由多个消费者组成。组内每个消费者负责消费不同分区的数据，一个分区的数据只能由一个组内的消费者进行消费，组内消费者之间互不影响；</li>
+<li>Broker：一个 Kafka 服务器就是一个 Broker，一个集群由多个 Broker 组成；</li>
+<li>Topic：主题，可以理解为队列，生成者和消费者都是用的同一个队列；</li>
+<li>Partition：分区，为实现扩展性，一个大的 Topic 可以分散到多个 Broker 上，一个 Topic 可以分为多个 Partition；</li>
+<li>Replica：副本，保证集群中某个节点发生故障时，该节点上的数据不丢失。</li>
+</ul>
+<h1 id="1-安装JAVA"><a href="#1-安装JAVA" class="headerlink" title="1. 安装JAVA"></a>1. 安装JAVA</h1><p>　　更新软件包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>　　安装 openjdk-8-jdk</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+
+<p>　　查看 Java 版本，检查是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openjdk version &quot;1.8.0_362&quot;</span><br><span class="line">OpenJDK Runtime Environment (build 1.8.0_362-8u372-ga~us1-0ubuntu1~20.04-b09)</span><br><span class="line">OpenJDK 64-Bit Server VM (build 25.362-b09, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-安装zookeeper"><a href="#2-安装zookeeper" class="headerlink" title="2. 安装zookeeper"></a>2. 安装zookeeper</h1><p>下载 ZooKeeper：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/zookeeper/zookeeper-3.5.8/apache-zookeeper-3.5.8-bin.tar.gz">https://archive.apache.org/dist/zookeeper/zookeeper-3.5.8/apache-zookeeper-3.5.8-bin.tar.gz</a></p>
+<p>历史版本：<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/zookeeper/">Index of /dist/zookeeper (apache.org)</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压</span></span><br><span class="line">tar -zxvf apache-zookeeper-3.5.8-bin.tar.gz</span><br><span class="line">sudo mv apache-zookeeper-3.5.8-bin /usr/local/zookeeper</span><br><span class="line">cd /usr/local/zookeeper</span><br><span class="line">cp conf/zoo_sample.cfg conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<p>　　下载好之后解压（注意：3.5.5之后的版本应该下载文件名中带“bin”的压缩包），再执行如下命令：</p>
+<p>　　其中有一些配置参数：</p>
+<ul>
+<li>tickTime：Zookeeper 使用的基本时间单元，默认值2000；</li>
+<li>initLimit：Zookeeper 中连接同步的最大时间，默认值为10；</li>
+<li>syncLimit：Zookeeper 中进行心跳检测的最大时间，默认值为5；</li>
+<li>dataDir：数据库更新事物保存的目录；</li>
+<li>clientPort：Zookeeper 服务监听的端口，默认值为2181。</li>
+</ul>
+<p>由于8080端口经常被占用，所以需要顺便修改一下admin server的端口，在最后加上：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin.serverPort=18080</span><br></pre></td></tr></table></figure>
+
+<h4 id="2）配置"><a href="#2）配置" class="headerlink" title="2）配置"></a>2）配置</h4><p>　　修改 /etc/profile 文件，增加如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ZOOKEEPER_HOME=/usr/local/zookeeper/</span><br><span class="line">export PATH=$PATH:$ZOOKEEPER_HOME/bin</span><br></pre></td></tr></table></figure>
+
+<p>　　更新环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h4 id="3）测试"><a href="#3）测试" class="headerlink" title="3）测试"></a>3）测试</h4><p>　　首先进入 bin 目录，开启服务：</p>
+<p>　　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151615524-2121055604.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151615524-2121055604.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p>　　再启动 CLI 连接服务：</p>
+<p>　　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151712334-1531304093.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721151712334-1531304093.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<h1 id="3-安装kafka服务"><a href="#3-安装kafka服务" class="headerlink" title="3. 安装kafka服务"></a>3. 安装kafka服务</h1><p>下载 Kafka：<a target="_blank" rel="noopener" href="http://kafka.apache.org/downloads%E3%80%82">http://kafka.apache.org/downloads。</a></p>
+<p>　　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721152234927-1538569344.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721152234927-1538569344.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p>　　下载好之后解压，再执行如下命令：</p>
+<blockquote>
+<p>sudo mv kafka_2.13-2.5.0/ /usr/local/kafka</p>
+<p>cd /usr/local/kafka</p>
+</blockquote>
+<h4 id="2）测试"><a href="#2）测试" class="headerlink" title="2）测试"></a>2）测试</h4><p>　　由于前面已经启动了 Zookeeper 服务，所以这里只需要执行如下命令来开启 Kafka 服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-server-start.sh config/server.properties</span><br></pre></td></tr></table></figure>
+
+<p>　　通过输出信息可以看到 Kafka 服务已经成功开启了，截图如下：</p>
+<p>　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721153048100-504650557.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200721153048100-504650557.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p>　　但这样开启之后是阻塞的了，我们可以在中间加一个“-daemon”即开一个守护进程来运行，则命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br></pre></td></tr></table></figure>
+
+<p>　　创建一个主题，用一个分区和一个副本创建一个名为“mytopic”的主题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic mytopic</span><br></pre></td></tr></table></figure>
+
+<p>　　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722113046117-2137815088.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722113046117-2137815088.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p>　　这样就已经创建成功了，然后可以使用如下命令查看主题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --list --bootstrap-server localhost:9092</span><br></pre></td></tr></table></figure>
+
+<p>　　Kafka 有一个命令行服务端，它将从文件或标准输入中获取输入，并将其作为消息发送到 Kafka 集群。默认情况下，每行将作为单独的消息发送：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic mytopic</span><br></pre></td></tr></table></figure>
+
+<p>　　<img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114234272-715512594.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114234272-715512594.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img">　</p>
+<p>　　同样的，Kafka 还有一个命令行客户端，可以从 Kafka 集群中获取消息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic mytopic --from-beginning</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114616581-765248744.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722114616581-765248744.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<h1 id="4-安装python-kafka并调用"><a href="#4-安装python-kafka并调用" class="headerlink" title="4. 安装python-kafka并调用"></a>4. 安装python-kafka并调用</h1><h3 id="1-安装-kafka-python"><a href="#1-安装-kafka-python" class="headerlink" title="1.安装 kafka-python"></a>1.安装 kafka-python</h3><blockquote>
+<p>pip3 install kafka-python</p>
+</blockquote>
+<h3 id="2-创建-Consumer"><a href="#2-创建-Consumer" class="headerlink" title="2.创建 Consumer"></a>2.创建 Consumer</h3><p>　　Consumer 消费者负责从 Kafka 中获取消息进行处理，需要实例化 KafkaConsumer 这个类。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from kafka import KafkaConsumer</span><br><span class="line">consumer = KafkaConsumer(&quot;test&quot;, bootstrap_servers=[&quot;localhost:9092&quot;])</span><br><span class="line">for msg in consumer:</span><br><span class="line">    print(msg)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-创建-Producer"><a href="#3-创建-Producer" class="headerlink" title="3.创建 Producer"></a>3.创建 Producer</h3><p>　　Producer 生产者负责向 Kafka 生产和发送消息，需要实例化 KafkaProducer 这个类。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from kafka import KafkaProducer</span><br><span class="line">producer = KafkaProducer(bootstrap_servers=&quot;localhost:9092&quot;)</span><br><span class="line">for i in range(10):</span><br><span class="line">    producer.send(&quot;test&quot;, &quot;Hello &#123;&#125;&quot;.format(i).encode(&quot;utf-8&quot;))</span><br><span class="line">producer.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-运行测试"><a href="#4-运行测试" class="headerlink" title="4.运行测试"></a>4.运行测试</h3><p>　　先运行消费者程序，再运行生产者程序，消费者一直在监听，等到生产者发送消息，消费者就把消息取出，运行结果如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722110455346-807003907.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1450803/202007/1450803-20200722110455346-807003907.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></p>
+<p> 　可以看到其中每个消息都包含了主题、分区、消息内容、时间戳等信息。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/TM0831/p/13355383.html">Kafka 入门（一）–安装配置和 kafka-python 调用 - TM0831 - 博客园 (cnblogs.com)</a></p>
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/>http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-09T15:28:01+08:00">
+  <a class='notlink' href="/" onclick="return false;" title="Click me!" >
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年7月9日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tips</p></a></div>
+  <span hidden itemprop="keywords">Tips</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/&title=ubuntu安装kafka - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/&title=ubuntu安装kafka - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/&title=ubuntu安装kafka - Chengyu Luo Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/blog/2023/05/03/%E5%9C%A8mac%E4%B8%8A%E9%83%A8%E7%BD%B2mlc-chat/'>
+          <p class='title'>在mac上部署mlc-chat<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Mlc-Chat部署MLC LLM 是一种通用解决方案，它允许将任何语言模型本地部署在一组不同的硬件后端和本地应用程序上，此外还有一个高效的框架，供每个人进一步优化自己用例的模型性能。一切都在本...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/"  itemprop="url">
-        Ubuntu20.04批量添加用户
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
     
-      
-        网上有很多批量增加用户的方式，但是还是看到的有一个方式最为简单，也最为有效：
-（1）先编辑一个文本用户文件首先创建一个文本文件：serc.txt
-由于/etc/passwd中一行记录对应着一个用户，每行记录又被冒号(:)分隔为7个字段，其格式和具体含义如下：
-1用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell
+    <div id="layoutHelper-comments"></div>
 
-要注意每个用户的用户名、UID、宿主目录都不可以相同，其中...
-      
-    
-  </div>
+  </article>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-11-16T16:41:52+08:00">2022-11-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/11/16/Ubuntu20-04%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"  itemprop="url">
-        XRDP 安装注意事项
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        XRDP 安装注意事项XRdp 安装如何在Ubuntu 20.04 上安装 Xrdp 服务器（远程桌面）-阿里云开发者社区 (aliyun.com)
-1sudo apt install xubuntu-desktop
-
-XRdp 设置允许root登录修改配置文件：
-1vim /etc/xdrp/startwm.sh
 
 
 
 
-如图位置增加如下两句话：
-12unset DBUS_SESSION_...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-20T18:31:21+08:00">2022-10-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/10/20/XRDP-%E5%AE%89%E8%A3%85%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/"  itemprop="url">
-        ubuntu设置root登陆
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 给root用户设置账户密码123sudo passwd root# 切换用户su root
-
-Step 2 修改gdm-autologin文件1vim /etc/pam.d/gdm-autologin
-
-注释掉：auth required pam_succeed_if.so user != root quiet_success
-
-Step 3 修改gdm-password文件1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-04T14:02:04+08:00">2022-07-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/04/ubuntu%E8%AE%BE%E7%BD%AEroot%E7%99%BB%E9%99%86/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/"  itemprop="url">
-        windows安装arcanist
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 安装PHP这是安装arcanist最讨厌的事情因为我被ubuntu的php坑过很多次，所以一看到要装php就头大，不过windows下php好像不会出什么离谱事情。
-首先下载一个php：PHP: Downloads
-将php的目录添加到环境变量：
-
-在php目录下放置ini文件，可以下载我这个：
-https://luochengyu.oss-cn-beijing.aliyunc...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-03T00:07:19+08:00">2022-07-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/03/windows%E5%AE%89%E8%A3%85arcanist/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/"  itemprop="url">
-        windows安装hexo
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Step 1 npm安装如已安装npm可以跳过本步骤。
-在nodejs官网上下载nodejs
-
-一路next安装下去并检查：
-123# 查看系统的环境变量echo %PATH%node -v
-
-
-如上图所示即为安装成功。
-如果需要配置自定义镜像提升速度，可以为NodeJS配置自定义的镜像，命令如下：
-1npm config set registry=http://registry.npm.t...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-07-02T23:37:50+08:00">2022-07-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/07/02/Windows%E5%AE%89%E8%A3%85hexo/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/"  itemprop="url">
-        windows 专业版破解RDP链接限制
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Windows 10 破解RDP 连接限制I.几个有用的链接：
-适用于20H2版本的破解文件：https://github.com/sebaxakerhtc/rdpwrap.ini
-RDP Wrap 的官方github仓库：https://github.com/stascorp/rdpwrap/issues需要在issue中找新版本的破解文件
-一个比较有用的破解的博客：https://www...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-18T00:11:51+08:00">2022-06-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/18/windows-%E4%B8%93%E4%B8%9A%E7%89%88%E7%A0%B4%E8%A7%A3RDP%E9%93%BE%E6%8E%A5%E9%99%90%E5%88%B6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/"  itemprop="url">
-        Ubuntu下安装gocv
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        Ubuntu 安装指导当前的仓库要求的还是安装opencv4.6
-gocv想要用就必须使用make进行编译。
-Step1 克隆仓库1git clone https://github.com/hybridgroup/gocv.git
-
-
-Step2 make installOnce you have cloned the repo, the following commands should ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-13T16:04:39+08:00">2022-06-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/13/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gocv/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"  itemprop="url">
-        ubuntu 安装科学上网
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        1.安装ShadowSocks123apt-get install python3-pipapt install libsodium-devpip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
-
-2.ShadowSocks配置找到ShadowSocks的安装位置1find / -name sh...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-09T23:03:07+08:00">2022-06-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Tips/">Tips</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Tips/" itemprop="url"><span itemprop="name">Tips</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/06/09/ubuntu-%E5%AE%89%E8%A3%85%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Chengyu Luo Blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/"  itemprop="url">
-        在Pypi上上传Lcyutils包
-      </a>
-    </h2>
-  
-  <div class='md' itemprop="articleBody">
-    
-      
-        最近写了一个自己的工具库，现在实现的是两个功能，一个是可以调用给我发邮件 ，另一个是通过1794957373的QQ号通过简单调用一个python函数来进行一个QQ消息的推送。
-lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消息的反推功能。
-当前仅仅在lcyutils.qqmessage模块里提供了一个消息的发送接口lcy_message
-比如这样调用：
-12import l...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-05-19T16:42:49+08:00">2022-05-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/Useful-Tools/">Useful Tools</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/Useful-Tools/" itemprop="url"><span itemprop="name">Useful Tools</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2022/05/19/%E5%9C%A8Pypi%E4%B8%8A%E4%B8%8A%E4%BC%A0Lcyutils%E5%8C%85/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/blog/tags/Tips/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
-
-
-    
-  
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3085,171 +2720,34 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/blog/about/'>
-          <img no-lazy src='/blog/img/avatar.png' alt="This is a picture without description" />
-        </a>
-      
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:luochengyu1317@gmail.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/lcy1317/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/blog/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/blog/categories/AI/" href="/blog/categories/AI/"
-            active-action="action-blogcategoriesAI"
-            ><div class='name'>AI</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Blockchain/" href="/blog/categories/Blockchain/"
-            active-action="action-blogcategoriesBlockchain"
-            ><div class='name'>Blockchain</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/DeFi/" href="/blog/categories/DeFi/"
-            active-action="action-blogcategoriesDeFi"
-            ><div class='name'>DeFi</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Dirty-Work/" href="/blog/categories/Dirty-Work/"
-            active-action="action-blogcategoriesDirty-Work"
-            ><div class='name'>Dirty Work</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/FISCO/" href="/blog/categories/FISCO/"
-            active-action="action-blogcategoriesFISCO"
-            ><div class='name'>FISCO</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Lcy/" href="/blog/categories/Lcy/"
-            active-action="action-blogcategoriesLcy"
-            ><div class='name'>Lcy</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Others/" href="/blog/categories/Others/"
-            active-action="action-blogcategoriesOthers"
-            ><div class='name'>Others</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/QQRobot/" href="/blog/categories/QQRobot/"
-            active-action="action-blogcategoriesQQRobot"
-            ><div class='name'>QQRobot</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Study/" href="/blog/categories/Study/"
-            active-action="action-blogcategoriesStudy"
-            ><div class='name'>Study</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Tips/" href="/blog/categories/Tips/"
-            active-action="action-blogcategoriesTips"
-            ><div class='name'>Tips</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Titanium-Tech/" href="/blog/categories/Titanium-Tech/"
-            active-action="action-blogcategoriesTitanium-Tech"
-            ><div class='name'>Titanium Tech</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Useful-Tools/" href="/blog/categories/Useful-Tools/"
-            active-action="action-blogcategoriesUseful-Tools"
-            ><div class='name'>Useful Tools</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/Work-Prepare/" href="/blog/categories/Work-Prepare/"
-            active-action="action-blogcategoriesWork-Prepare"
-            ><div class='name'>Work Prepare</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/blog/categories/leetcode/" href="/blog/categories/leetcode/"
-            active-action="action-blogcategoriesleetcode"
-            ><div class='name'>leetcode</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1.基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84"><span class="toc-text">2.基本架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E9%85%8D%E7%BD%AE"><span class="toc-text">2）配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E6%B5%8B%E8%AF%95"><span class="toc-text">3）测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E6%B5%8B%E8%AF%95"><span class="toc-text">2）测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-kafka-python"><span class="toc-text">1.安装 kafka-python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA-Consumer"><span class="toc-text">2.创建 Consumer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA-Producer"><span class="toc-text">3.创建 Producer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-text">4.运行测试</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/blog/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/blog/tags/Interests/" style="font-size: 16px; color: #8b8b8b">Interests</a> <a href="/blog/tags/Lcy/" style="font-size: 16px; color: #8b8b8b">Lcy</a> <a href="/blog/tags/Personal-Tips/" style="font-size: 14px; color: #999">Personal-Tips</a> <a href="/blog/tags/QQrobot/" style="font-size: 18px; color: #7e7e7e">QQrobot</a> <a href="/blog/tags/Study/" style="font-size: 22px; color: #636363">Study</a> <a href="/blog/tags/Study-Devops/" style="font-size: 14px; color: #999">Study-Devops</a> <a href="/blog/tags/Tips/" style="font-size: 24px; color: #555">Tips</a> <a href="/blog/tags/Titanium-Tech/" style="font-size: 14px; color: #999">Titanium Tech</a> <a href="/blog/tags/Tools/" style="font-size: 14px; color: #999">Tools</a> <a href="/blog/tags/leetcode/" style="font-size: 20px; color: #707070">leetcode</a>
-    </div>
-  </section>
-
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3282,14 +2780,15 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="ubuntu安装kafka";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3403,8 +2902,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689639')
+      volantis.js('/blog/js/message.js?time=1688887689639', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3449,8 +2948,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689639')
+      volantis.js('/blog/js/message.js?time=1688887689639', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3509,8 +3008,8 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688887689884')
-      volantis.js('/blog/js/message.js?time=1688887689884', () => {
+      volantis.css('/blog/css/message.css?time=1688887689639')
+      volantis.js('/blog/js/message.js?time=1688887689639', () => {
         hideMessage(done);
       });
     } else {
@@ -3556,19 +3055,19 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/sites.js?time=1688887689639")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/friends.js?time=1688887689639")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1688887689884")
+        volantis.js("/blog/js/plugins/contributors.js?time=1688887689639")
       }
     
   };
@@ -3669,7 +3168,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1688887689884').then(pjax_valine)
+  volantis.js('/blog/js/valine.js?time=1688887689639').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3678,7 +3177,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
 
 
-<script src="/blog/blog/js/app.js?time=1688887689884.js"></script>
+<script src="/blog/blog/js/app.js?time=1688887689639.js"></script>
 
 
 <!-- optional -->
@@ -3691,7 +3190,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1688887689884");
+    return volantis.js("/blog/js/search/hexo.js?time=1688887689639");
   }
 
   function loadSearchService() {
@@ -4158,7 +3657,7 @@ lcyutils包先来自我介绍一下自己的这个包，主要介绍一下QQ消�
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/tags/Tips/","name":"Tips"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","keywords":null,"description":"Blockchain & The Future","author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","description":"Blockchain & The Future"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.seujyh.cn/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Tips/","name":"Tips"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2023/07/09/ubuntu安装kafka/","name":"ubuntu安装kafka"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ubuntu安装kafka","description":"","datePublished":"2023-07-09T07:15:01.000Z","dateModified":"2023-07-09T07:28:01.133Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2023/07/09/ubuntu%E5%AE%89%E8%A3%85kafka/","wordCount":0,"articleSection":"Tips","keywords":"Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
