@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/"/>
+  <link rel="canonical" href="http://www.seujyh.cn/2022/04/08/k8s-token-generate/"/>
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,7 +20,7 @@
   <meta content="Chengyu Luo Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/blog/css/style.css?time=1688907507464" as="style">
+  <link rel="preload" href="/css/style.css?time=1699954313315" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -30,7 +30,7 @@
   <meta name="description" content="Personal Tips. Only for my k8s. 12ssh root@api.k8s-prod-hkg01.prod.bcollie.netkubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount kubernetes-dashboard-user -n kubernetes-dashboard">
 <meta property="og:type" content="article">
 <meta property="og:title" content="k8s token generate">
-<meta property="og:url" content="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/index.html">
+<meta property="og:url" content="http://www.seujyh.cn/2022/04/08/k8s-token-generate/index.html">
 <meta property="og:site_name" content="Chengyu Luo Blog">
 <meta property="og:description" content="Personal Tips. Only for my k8s. 12ssh root@api.k8s-prod-hkg01.prod.bcollie.netkubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount kubernetes-dashboard-user -n kubernetes-dashboard">
 <meta property="og:locale" content="zh_CN">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/blog/css/style.css?time=1688907507464" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/blog/css/style.css?time=1688907507464"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1699954313315" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1699954313315"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -2096,7 +2096,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/blog/'>
+        <a class="title flat-box" target="_self" href='/'>
           
             <img no-lazy class='logo' src='/blog/img/avatar.png' alt="This is a picture without description" />
           
@@ -2114,11 +2114,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/" title="博客"
+                href="/" title="博客"
                   
                   
                   
-                    active-action="action-blog"
+                    active-action="action-home"
                   >
                   <i class='fas fa-rss fa-fw'></i>博客
                 </a>
@@ -2131,11 +2131,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-blogcategories"
+                    active-action="action-categories"
                   >
                   <i class='fas fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2148,11 +2148,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-blogtags"
+                    active-action="action-tags"
                   >
                   <i class='fas fa-tags fa-fw'></i>标签
                 </a>
@@ -2165,11 +2165,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-blogarchives"
+                    active-action="action-archives"
                   >
                   <i class='fas fa-archive fa-fw'></i>归档
                 </a>
@@ -2182,11 +2182,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/about/" title="关于"
+                href="/about/" title="关于"
                   
                   
                   
-                    active-action="action-blogabout"
+                    active-action="action-about"
                   >
                   <i class='fas fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2217,11 +2217,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/" title="博客"
+                href="/" title="博客"
                   
                   
                   
-                    active-action="action-blog"
+                    active-action="action-home"
                   >
                   <i class='fas fa-rss fa-fw'></i>博客
                 </a>
@@ -2234,11 +2234,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/categories/" title="分类"
+                href="/categories/" title="分类"
                   
                   
                   
-                    active-action="action-blogcategories"
+                    active-action="action-categories"
                   >
                   <i class='fas fa-folder-open fa-fw'></i>分类
                 </a>
@@ -2251,11 +2251,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/tags/" title="标签"
+                href="/tags/" title="标签"
                   
                   
                   
-                    active-action="action-blogtags"
+                    active-action="action-tags"
                   >
                   <i class='fas fa-tags fa-fw'></i>标签
                 </a>
@@ -2268,11 +2268,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/archives/" title="归档"
+                href="/archives/" title="归档"
                   
                   
                   
-                    active-action="action-blogarchives"
+                    active-action="action-archives"
                   >
                   <i class='fas fa-archive fa-fw'></i>归档
                 </a>
@@ -2285,11 +2285,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" 
-                href="/blog/about/" title="关于"
+                href="/about/" title="关于"
                   
                   
                   
-                    active-action="action-blogabout"
+                    active-action="action-about"
                   >
                   <i class='fas fa-info-circle fa-fw'></i>关于
                 </a>
@@ -2332,31 +2332,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class='list-h'>
         
           
-            <a href="/blog/categories/"
+            <a href="/categories/"
               
               
-              active-action="action-blogcategories">
+              active-action="action-categories">
               <img src='/blog/img/categories.svg' alt="This is a picture without description" ><p>分类</p>
             </a>
           
-            <a href="/blog/tags/"
+            <a href="/tags/"
               
               
-              active-action="action-blogtags">
+              active-action="action-tags">
               <img src='/blog/img/tag.svg' alt="This is a picture without description" ><p>标签</p>
             </a>
           
-            <a href="/blog/about/"
+            <a href="/about/"
               
               
-              active-action="action-blogabout">
+              active-action="action-about">
               <img src='/blog/img/about.svg' alt="This is a picture without description" ><p>关于</p>
             </a>
           
-            <a href="/blog/archives/"
+            <a href="/archives/"
               
               
-              active-action="action-blogarchives">
+              active-action="action-archives">
               <img src='/blog/img/guidang.svg' alt="This is a picture without description" ><p>归档</p>
             </a>
           
@@ -2384,7 +2384,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/">
+  <link itemprop="mainEntityOfPage" href="http://www.seujyh.cn/2022/04/08/k8s-token-generate/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Chengyu Luo Blog">
   </span>
@@ -2420,10 +2420,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/blog/categories/Titanium-Tech/">Titanium Tech</a>
+    <a class="category-link" href="/categories/Titanium-Tech/">Titanium Tech</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/blog/categories/Titanium-Tech/" itemprop="url"><span itemprop="name">Titanium Tech</span></a>
+        <a href="/categories/Titanium-Tech/" itemprop="url"><span itemprop="name">Titanium Tech</span></a>
       </span>
     
   </div>
@@ -2446,7 +2446,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       
-      <div id="lc-pv" data-title="k8s token generate" data-path="/blog/2022/04/08/k8s-token-generate/">
+      <div id="lc-pv" data-title="k8s token generate" data-path="/2022/04/08/k8s-token-generate/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2485,7 +2485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/>http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/</a></p>
+                <p>本文永久链接是：<a href=http://www.seujyh.cn/2022/04/08/k8s-token-generate/>http://www.seujyh.cn/2022/04/08/k8s-token-generate/</a></p>
               
             
           </blockquote>
@@ -2514,7 +2514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Personal-Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Personal-Tips</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Personal-Tips/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Personal-Tips</p></a></div>
   <span hidden itemprop="keywords">Personal-Tips</span>
 
 
@@ -2528,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.seujyh.cn/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
           
           >
           
@@ -2540,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.seujyh.cn/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
           
           >
           
@@ -2552,7 +2552,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.seujyh.cn/2022/04/08/k8s-token-generate/&title=k8s token generate - Chengyu Luo Blog&summary="
           
           >
           
@@ -2585,14 +2585,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/blog/2022/04/15/DeFi-Learning-Beginner/'>
+        <a class='prev' href='/2022/04/15/DeFi-Learning-Beginner/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>DeFi Learning Beginner</p>
           <p class='content'>A reading note for 《How to DeFi Beginner》
 Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
         </a>
       
       
-        <a class='next' href='/blog/2022/04/08/GametheoryResult2/'>
+        <a class='next' href='/2022/04/08/GametheoryResult2/'>
           <p class='title'>博弈论小游戏结果2<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>在猜均值2/3的游戏中我们最终获得了366个数字，他们平均值的2/3结果是：19.149962487030315
 对应的游戏获胜者：
@@ -2614,7 +2614,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/blog/2022/04/08/k8s-token-generate/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/04/08/k8s-token-generate/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2807,8 +2807,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688907507464')
-      volantis.js('/blog/js/message.js?time=1688907507464', () => {
+      volantis.css('/css/message.css?time=1699954313315')
+      volantis.js('/js/message.js?time=1699954313315', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2853,8 +2853,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688907507464')
-      volantis.js('/blog/js/message.js?time=1688907507464', () => {
+      volantis.css('/css/message.css?time=1699954313315')
+      volantis.js('/js/message.js?time=1699954313315', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2913,8 +2913,8 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/blog/css/message.css?time=1688907507464')
-      volantis.js('/blog/js/message.js?time=1688907507464', () => {
+      volantis.css('/css/message.css?time=1699954313315')
+      volantis.js('/js/message.js?time=1699954313315', () => {
         hideMessage(done);
       });
     } else {
@@ -2960,19 +2960,19 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/blog/js/plugins/sites.js?time=1688907507464")
+        volantis.js("/js/plugins/sites.js?time=1699954313315")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/friends.js?time=1688907507464")
+        volantis.js("/js/plugins/friends.js?time=1699954313315")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/blog/js/plugins/contributors.js?time=1688907507464")
+        volantis.js("/js/plugins/contributors.js?time=1699954313315")
       }
     
   };
@@ -3073,7 +3073,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
       emojiMaps: emojiMaps,
     }),pdata.commentConfig))
   }
-  volantis.js('/blog/js/valine.js?time=1688907507464').then(pjax_valine)
+  volantis.js('/js/valine.js?time=1699954313315').then(pjax_valine)
   volantis.pjax.push(pjax_valine);
 </script>
 
@@ -3082,20 +3082,20 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
 
 
-<script src="/blog/blog/js/app.js?time=1688907507464.js"></script>
+<script src="/js/app.js?time=1699954313315.js"></script>
 
 
 <!-- optional -->
 
   <script>
-  const SearchServiceDataPathRoot = ("/blog/" || "/").endsWith("/")
-    ? "/blog/" || "/"
-    : "/blog//" || "/";
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/")
+    ? "/" || "/"
+    : "//" || "/";
   const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/blog/js/search/hexo.js?time=1688907507464");
+    return volantis.js("/js/search/hexo.js?time=1699954313315");
   }
 
   function loadSearchService() {
@@ -3257,7 +3257,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://www.seujyh.cn/blog' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://www.seujyh.cn' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -3275,7 +3275,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://www.seujyh.cn/blog' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://www.seujyh.cn' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -3297,7 +3297,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://www.seujyh.cn/blog' + pv.getAttribute('data-path');
+          var url = 'http://www.seujyh.cn' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
@@ -3562,7 +3562,7 @@ Part One: Centralized &amp; Decentralized Finance第一章 中心...</p>
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/blog/blog/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/blog/blog/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/blog/blog/categories/Titanium-Tech/","name":"Titanium Tech"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/blog/blog/2022/04/08/k8s-token-generate/","name":"k8s token generate"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"k8s token generate","description":"","datePublished":"2022-04-08T07:58:27.000Z","dateModified":"2022-07-02T15:49:59.942Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/blog/blog/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/blog/2022/04/08/k8s-token-generate/","wordCount":0,"articleSection":"Titanium Tech","keywords":"Personal-Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Chengyu Luo Blog","url":"http://www.seujyh.cn/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/","sameAs":["https://github.com/volantis-x"],"description":"Blockchain & The Future"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.seujyh.cn/","name":"Chengyu Luo Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.seujyh.cn/categories/Titanium-Tech/","name":"Titanium Tech"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.seujyh.cn/2022/04/08/k8s-token-generate/","name":"k8s token generate"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"k8s token generate","description":"","datePublished":"2022-04-08T07:58:27.000Z","dateModified":"2022-07-02T15:49:59.942Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.seujyh.cn/2022/04/08/k8s-token-generate/"},"author":{"@type":"Person","name":"Yiheng Jiang","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://www.seujyh.cn/"},"publisher":{"@type":"Organization","name":"Chengyu Luo Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.seujyh.cn/2022/04/08/k8s-token-generate/","wordCount":0,"articleSection":"Titanium Tech","keywords":"Personal-Tips","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
