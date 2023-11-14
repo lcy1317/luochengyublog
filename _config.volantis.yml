@@ -41,7 +41,7 @@ navbar:
     #   url: friends/
     - name: 关于
       icon: fas fa-info-circle
-      url: about/
+      url: http://0.0.0.0:14141 #about/
   search: Search...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
